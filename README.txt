@@ -1,0 +1,1 @@
+Landing page NeumoPractice con AI Clínica integrada como módulo visible y sección azul como explicación ampliada.
