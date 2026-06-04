@@ -155,6 +155,81 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   .feature.ai-feature .icon{margin-bottom:14px}
 }
 
+
+/* NeumoPractice Landing V2 Operativa */
+.cta.whatsapp{background:#22C55E;box-shadow:0 14px 30px rgba(34,197,94,.25)}
+.hero-card{background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 55%,#2563EB 100%)!important;border:1px solid rgba(255,255,255,.16)!important;color:#fff}
+.app-preview{background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important}
+.preview-top{background:rgba(255,255,255,.14)!important;border-bottom:1px solid rgba(255,255,255,.16)!important}
+.preview-sidebar{background:rgba(255,255,255,.10)!important;border-right:1px solid rgba(255,255,255,.14)!important}
+.preview-line{background:rgba(219,234,254,.42)!important}.preview-main{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+.kpi{background:rgba(255,255,255,.13)!important;border:1px solid rgba(255,255,255,.18)!important;color:#fff}.kpi span{color:#DBEAFE!important}
+.calendar-mini{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.18)!important}
+.day{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.12)!important;color:#E0F2FE!important}
+.ai-clinical-deep{background:#fff;border:1px solid #DBEAFE;border-radius:34px;padding:38px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1.05fr;gap:26px;align-items:center}
+.soap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.soap-card{background:linear-gradient(135deg,#EFF6FF,#FFFFFF);border:1px solid #BFDBFE;border-radius:18px;padding:16px}
+.soap-card strong{display:block;color:#1D4ED8;font-size:22px;margin-bottom:4px}.soap-card span{color:#475569;font-size:13px;line-height:1.4}
+.demo-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.demo-strip span{display:inline-flex;border-radius:999px;background:#F8FAFC;border:1px solid #E5E7EB;color:#475569;padding:8px 11px;font-size:12px;font-weight:850}
+.plan-badge{display:inline-flex;border-radius:999px;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:950;padding:6px 10px;margin-bottom:10px}.price-card.featured .plan-badge{background:#2563EB;color:#fff}
+.price-card small.note{display:block;color:#64748B;font-size:12px;line-height:1.4;margin-top:8px}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 14px 34px rgba(15,23,42,.05)}
+.faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em}.faq-item p{margin:0;color:#64748B;font-size:14px;line-height:1.55}
+.form-success{display:none;margin-top:12px;background:#ECFDF5;border:1px solid #BBF7D0;color:#166534;border-radius:16px;padding:13px;font-size:13px;font-weight:850}
+@media(max-width:950px){.ai-clinical-deep{grid-template-columns:1fr;padding:24px}.soap-grid,.faq-grid{grid-template-columns:1fr}}
+
+
+/* NeumoPractice Landing Video Hero */
+.hero-video-shell{
+  border-radius:28px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 58%,#2563EB 100%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:var(--shadow);
+  padding:14px;
+  transform:rotate(1deg);
+}
+.hero-video-frame{
+  border-radius:22px;
+  overflow:hidden;
+  background:#0F172A;
+  border:1px solid rgba(255,255,255,.18);
+  position:relative;
+}
+.hero-video-frame video{
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#0F172A;
+}
+.video-badge{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border-radius:999px;
+  padding:8px 11px;
+  background:rgba(15,23,42,.72);
+  color:#fff;
+  backdrop-filter:blur(14px);
+  font-size:12px;
+  font-weight:900;
+  border:1px solid rgba(255,255,255,.16);
+}
+.video-dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:#22C55E;
+  box-shadow:0 0 0 4px rgba(34,197,94,.18);
+}
+@media(max-width:950px){
+  .hero-video-shell{transform:none}
+}
+
 </style>
 </head>
 <body>
@@ -170,7 +245,8 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       <a href="#features">Módulos</a>
       <a href="#ai">IA Clínica</a>
       <a href="#pricing">Planes</a>
-      <a href="#beta" class="cta">Solicitar beta</a>
+      <a href="#faq">FAQs</a>
+      <a href="#beta" class="cta">Solicitar demo</a>
     </div>
   </div>
 </nav>
@@ -182,35 +258,19 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       <h1>Menos captura.<br><span class="blue">Más medicina.</span></h1>
       <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
       <div class="hero-actions">
-        <a class="cta" href="#beta">Solicitar acceso beta</a>
-        <a class="cta secondary" href="#features">Ver módulos</a>
+        <a class="cta" href="#beta">Solicitar demo privada</a>
+        <a class="cta secondary" href="#pricing">Ver planes</a>
+        <a class="cta whatsapp" href="https://wa.me/?text=Hola%2C%20quiero%20conocer%20NeumoPractice%20y%20solicitar%20una%20demo%20privada." target="_blank" rel="noopener">Pedir info por WhatsApp</a>
       </div>
-      <div class="micro">14 días gratis · 28 días con invitación de Dra. Melissa · Sin instalación compleja</div>
+      <div class="micro">Demo privada · 14 días gratis · 28 días con cupón MELISSA · Sin instalación compleja</div>
     </div>
-    <div class="hero-card">
-      <div class="app-preview">
-        <div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <div class="preview-body">
-          <div class="preview-sidebar">
-            <div class="preview-line w80"></div><div class="preview-line"></div><div class="preview-line w60"></div>
-            <div class="preview-line"></div><div class="preview-line w80"></div>
-          </div>
-          <div class="preview-main">
-            <div class="preview-kpis">
-              <div class="kpi"><b>12</b><span>Citas hoy</span></div>
-              <div class="kpi"><b>3</b><span>Checkout</span></div>
-              <div class="kpi"><b>8</b><span>Estudios</span></div>
-            </div>
-            <div class="calendar-mini">
-              <div class="calendar-grid">
-                <div class="day">1<div class="event yellow"></div></div><div class="day">2</div><div class="day">3<div class="event green"></div></div><div class="day">4<div class="event bluebg"></div></div><div class="day">5</div><div class="day">6<div class="event orange"></div></div><div class="day">7</div>
-                <div class="day">8</div><div class="day">9<div class="event yellow"></div></div><div class="day">10</div><div class="day">11<div class="event green"></div></div><div class="day">12</div><div class="day">13</div><div class="day">14<div class="event bluebg"></div></div>
-                <div class="day">15</div><div class="day">16</div><div class="day">17<div class="event orange"></div></div><div class="day">18</div><div class="day">19<div class="event green"></div></div><div class="day">20</div><div class="day">21</div>
-                <div class="day">22<div class="event yellow"></div></div><div class="day">23</div><div class="day">24</div><div class="day">25<div class="event bluebg"></div></div><div class="day">26</div><div class="day">27</div><div class="day">28<div class="event green"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-video-shell">
+      <div class="hero-video-frame">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="neumopractice-demo.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="video-badge"><span class="video-dot"></span> Demo visual NeumoPractice</div>
       </div>
     </div>
   </div>
@@ -252,6 +312,29 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   </div>
 </section>
 
+<section class="section" id="soap">
+  <div class="container">
+    <div class="section-head">
+      <h2>IA clínica que entiende el seguimiento, no solo la consulta.</h2>
+      <p>NeumoPractice convierte la captura clínica en una línea de tiempo útil: consulta, receta, estudios, pagos y evolución del paciente.</p>
+    </div>
+    <div class="ai-clinical-deep">
+      <div>
+        <div class="badge">SOAP + seguimiento longitudinal</div>
+        <h2 style="font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:18px 0 12px">De notas sueltas a expediente inteligente.</h2>
+        <p style="color:#64748B;line-height:1.6">La IA Clínica puede ayudar a estructurar la información en formato SOAP, resumir evolución, detectar datos relevantes y preparar una vista longitudinal supervisada por el médico.</p>
+        <div class="demo-strip"><span>Resumen clínico</span><span>SOAP</span><span>Datos de alarma</span><span>Historial longitudinal</span></div>
+      </div>
+      <div class="soap-grid">
+        <div class="soap-card"><strong>S</strong><span>Síntomas, motivo de consulta y antecedentes relevantes.</span></div>
+        <div class="soap-card"><strong>O</strong><span>Exploración, signos vitales, estudios e información objetiva.</span></div>
+        <div class="soap-card"><strong>A</strong><span>Análisis clínico, patrones recurrentes y evolución del paciente.</span></div>
+        <div class="soap-card"><strong>P</strong><span>Plan, receta, indicaciones, estudios y seguimiento sugerido.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="section-head">
@@ -269,26 +352,51 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 <section class="section" id="pricing">
   <div class="container">
     <div class="section-head">
-      <h2>Planes simples para iniciar.</h2>
-      <p>Precio beta sugerido para validar el producto con médicos reales.</p>
+      <h2>Planes claros para médicos y clínicas.</h2>
+      <p>Empieza con una consulta individual o escala a una clínica con recepción, varios doctores y finanzas por rol.</p>
     </div>
     <div class="pricing">
       <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price">$29 <small>USD/mes</small></div>
-        <ul><li>1 médico</li><li>Agenda</li><li>Patients</li><li>RX</li></ul>
+        <span class="plan-badge">Médico individual</span>
+        <h3>Pro</h3>
+        <div class="price">$49 <small>USD/mes</small></div>
+        <ul><li>1 médico</li><li>Agenda clínica</li><li>Patients Timeline</li><li>Recetas RX</li><li>Imaging básico</li><li>Checkout individual</li><li>IA Clínica beta</li></ul>
+        <small class="note">Ideal para un médico especialista que quiere controlar agenda, expediente y seguimiento.</small>
       </div>
       <div class="price-card featured">
-        <h3>Pro Beta</h3>
-        <div class="price">$49 <small>USD/mes</small></div>
-        <ul><li>Todo Starter</li><li>Imaging</li><li>Finance</li><li>IA Clínica beta</li></ul>
+        <span class="plan-badge">Más recomendado</span>
+        <h3>Clinic</h3>
+        <div class="price">$129 <small>USD/mes</small></div>
+        <ul><li>Hasta 5 usuarios</li><li>Multi-doctor</li><li>Recepción + doctores</li><li>Agenda por doctor</li><li>Finanza global para administrador</li><li>Finanza individual por doctor</li><li>Migración asistida inicial</li><li>IA Clínica + SOAP beta</li></ul>
         <div class="coupon">Cupón MELISSA: 14 días gratis. Invitados directos: 28 días gratis.</div>
       </div>
       <div class="price-card">
-        <h3>Clinic</h3>
-        <div class="price">$99 <small>USD/mes</small></div>
-        <ul><li>Hasta 5 usuarios</li><li>Recepción + doctor</li><li>Reportes</li><li>Migración asistida</li></ul>
+        <span class="plan-badge">A la medida</span>
+        <h3>Clinic Plus</h3>
+        <div class="price">Custom <small>cotización</small></div>
+        <ul><li>Más de 5 usuarios</li><li>Multi-sucursal</li><li>Reportes avanzados</li><li>Facturación / integraciones</li><li>Backups y auditoría avanzada</li><li>Onboarding asistido</li></ul>
+        <small class="note">Para clínicas con varios médicos, áreas administrativas o necesidades de integración.</small>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Preguntas frecuentes.</h2>
+      <p>Respuestas rápidas para médicos que evalúan cambiar de sistema o iniciar su expediente digital.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><h3>¿NeumoPractice reemplaza mi agenda actual?</h3><p>Sí. Puedes usarlo para agenda, estados de consulta, checkout y seguimiento.</p></div>
+      <div class="faq-item"><h3>¿Puedo migrar pacientes desde Excel, Doctoralia o PDFs?</h3><p>Sí. La migración puede iniciar con Excel/CSV y archivos clínicos en PDF o imagen.</p></div>
+      <div class="faq-item"><h3>¿La IA toma decisiones médicas?</h3><p>No. La IA apoya con resumen, estructura SOAP y seguimiento. La decisión clínica final siempre es del médico.</p></div>
+      <div class="faq-item"><h3>¿Incluye recetas?</h3><p>Sí. El módulo RX permite crear recetas y vincularlas al expediente del paciente.</p></div>
+      <div class="faq-item"><h3>¿Puedo subir radiografías o estudios?</h3><p>Sí. Imaging permite cargar JPG, PNG y PDF para consultarlos desde el historial.</p></div>
+      <div class="faq-item"><h3>¿Puedo tener recepcionista?</h3><p>Sí. En Clinic se contempla recepción para agenda y checkout.</p></div>
+      <div class="faq-item"><h3>¿Cada doctor puede ver solo sus finanzas?</h3><p>Sí. El administrador ve global y cada doctor ve su producción individual.</p></div>
+      <div class="faq-item"><h3>¿Funciona desde navegador?</h3><p>Sí. La visión SaaS es funcionar desde navegador sin instalación compleja.</p></div>
     </div>
   </div>
 </section>
@@ -298,17 +406,17 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     <div class="form-wrap">
       <div>
         <div class="badge">Acceso beta</div>
-        <h2 style="font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:18px 0 10px">Solicita tu prueba de NeumoPractice.</h2>
-        <p style="color:#64748B;line-height:1.6">Déjanos tus datos y te contactamos para activar una prueba beta. Si vienes por invitación de Dra. Melissa, usa el cupón <b>MELISSA</b>.</p>
+        <h2 style="font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:18px 0 10px">Solicita una demo privada de NeumoPractice.</h2>
+        <p style="color:#64748B;line-height:1.6">Déjanos tus datos para agendar una demo privada y activar tu prueba. Si vienes por invitación de Dra. Melissa, usa el cupón <b>MELISSA</b>.</p>
       </div>
-      <form onsubmit="event.preventDefault(); alert('Solicitud recibida. En producción este formulario se conectará a CRM/email.');">
-        <input placeholder="Nombre del médico">
-        <input placeholder="Especialidad">
-        <input placeholder="Correo electrónico">
-        <input placeholder="WhatsApp">
-        <select><option>Cupón MELISSA</option><option>Sin cupón</option><option>Otro referido</option></select>
-        <textarea placeholder="Cuéntanos cuántos pacientes atiendes y qué sistema usas actualmente"></textarea>
-        <button class="cta" type="submit">Solicitar acceso beta</button>
+      <form id="leadForm" onsubmit="submitLead(event)">
+        <input name="nombre" placeholder="Nombre del médico" required>
+        <input name="especialidad" placeholder="Especialidad" required>
+        <input name="correo" type="email" placeholder="Correo electrónico" required>
+        <input name="whatsapp" placeholder="WhatsApp" required>
+        <select name="cupon"><option>Cupón MELISSA</option><option>Sin cupón</option><option>Otro referido</option></select>
+        <textarea name="mensaje" placeholder="Cuéntanos cuántos pacientes atiendes y qué sistema usas actualmente"></textarea>
+        <button class="cta" type="submit">Solicitar demo privada</button><div id="formSuccess" class="form-success">Solicitud lista. Se abrirá tu correo para enviar la información.</div>
       </form>
     </div>
   </div>
@@ -320,5 +428,23 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
   </div>
 </footer>
+
+<script>
+function submitLead(event){
+  event.preventDefault();
+  const form = event.target;
+  const data = Object.fromEntries(new FormData(form).entries());
+  const leads = JSON.parse(localStorage.getItem("neumopractice_landing_leads") || "[]");
+  leads.push({...data, createdAt:new Date().toISOString()});
+  localStorage.setItem("neumopractice_landing_leads", JSON.stringify(leads));
+  const body = encodeURIComponent(
+    `Hola, quiero solicitar una demo privada de NeumoPractice.\n\nNombre: ${data.nombre||""}\nEspecialidad: ${data.especialidad||""}\nCorreo: ${data.correo||""}\nWhatsApp: ${data.whatsapp||""}\nCupón: ${data.cupon||""}\nMensaje: ${data.mensaje||""}`
+  );
+  const success = document.getElementById("formSuccess");
+  if(success) success.style.display = "block";
+  window.open(`mailto:contacto@neumopractice.com?subject=Solicitud demo NeumoPractice&body=${body}`, "_blank");
+}
+</script>
+
 </body>
 </html>
