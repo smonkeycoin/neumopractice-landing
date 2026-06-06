@@ -245,6 +245,11 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   .hero-video-shell{transform:none}
 }
 
+
+@media(max-width:950px){
+  .footer-trust{grid-template-columns:1fr!important;}
+}
+
 </style>
 </head>
 <body>
@@ -450,9 +455,36 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 </section>
 
 <footer>
-  <div class="container footer-inner">
-    <div><b>NeumoPractice</b><br>Menos captura. Más medicina.</div>
-    <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
+  <div class="container">
+    <div class="footer-trust" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;">
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🇲🇽</div>
+        <b style="color:#111827;">Desarrollado en México</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Pensado para la práctica médica mexicana.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🫁</div>
+        <b style="color:#111827;">Diseñado para neumología pediátrica</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">No para todas las especialidades. Para la tuya.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🔒</div>
+        <b style="color:#111827;">Privacidad y seguridad clínica</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Manejo responsable de información clínica.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">📋</div>
+        <b style="color:#111827;">Alineado con normativas mexicanas</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Considera lineamientos aplicables al expediente clínico electrónico.</p>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <div><b>NeumoPractice</b><br>Menos captura. Más medicina.</div>
+      <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
+    </div>
+    <p style="margin:22px 0 0;color:#94A3B8;font-size:12px;line-height:1.5;max-width:900px;">
+      NeumoPractice es una plataforma de apoyo clínico. Las decisiones diagnósticas y terapéuticas corresponden exclusivamente al profesional de la salud.
+    </p>
   </div>
 </footer>
 
