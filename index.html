@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeumoPractice | Menos captura. Más medicina.</title>
 <meta name="description" content="NeumoPractice es una plataforma clínica para neumología pediátrica con agenda, expediente, recetas, estudios, finanzas e IA clínica.">
+<link rel="icon" href="assets/favicon.ico">
 <style>
 :root{
   --blue:#2563EB;
@@ -35,11 +36,7 @@ a{text-decoration:none;color:inherit}
 }
 .nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:-.04em;font-size:22px}
-.logo{
-  width:44px;height:44px;border-radius:15px;background:#fff;border:1.5px solid #DBEAFE;
-  display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,99,235,.10)
-}
-.logo svg{width:30px;height:30px;stroke:var(--blue);stroke-width:2.25;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.brand-mark{width:44px;height:44px;border-radius:14px;display:block;box-shadow:0 12px 30px rgba(37,99,235,.10)}
 .brand span:last-child{color:var(--blue)}
 .nav-links{display:flex;align-items:center;gap:22px;color:#475569;font-size:14px;font-weight:750}
 .cta{
@@ -97,11 +94,31 @@ h1 .blue{color:var(--blue)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}
 .num{width:34px;height:34px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;display:grid;place-items:center;font-weight:950;margin-bottom:14px}
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.price-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 16px 45px rgba(15,23,42,.06)}
-.price-card.featured{border:2px solid var(--blue);transform:translateY(-6px)}
-.price{font-size:38px;font-weight:950;letter-spacing:-.05em;margin:10px 0}.price small{font-size:14px;color:var(--muted)}
-.price-card ul{padding-left:18px;color:#475569;line-height:1.8}
+.pricing-intro{max-width:790px;margin:48px auto 30px;text-align:center}
+.pricing-intro .value-badge{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;padding:9px 14px;font-size:13px;font-weight:950;margin-bottom:16px}
+.pricing-intro h2{font-size:46px;line-height:1.03;letter-spacing:-.055em;margin:0 0 12px}
+.pricing-intro p{font-size:17px;color:#64748B;line-height:1.55;margin:0}
+.pricing{display:grid;grid-template-columns:1.04fr .96fr;gap:18px;align-items:stretch}
+.price-card{position:relative;background:#fff;border:1px solid #DCE4F2;border-radius:28px;padding:30px;box-shadow:0 18px 48px rgba(15,23,42,.07);display:flex;flex-direction:column}
+.price-card.featured{border:2px solid var(--blue);box-shadow:0 28px 80px rgba(37,99,235,.18);transform:translateY(-8px)}
+.plan-badge{display:inline-flex;align-self:flex-start;border-radius:999px;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:950;padding:7px 10px;margin-bottom:14px;letter-spacing:.02em}.price-card.featured .plan-badge{background:#2563EB;color:#fff}
+.plan-name{font-size:25px;letter-spacing:-.035em;margin:0 0 16px}
+.annual-price{display:block;margin:4px 0 8px}
+.annual-price strong{display:block;font-size:68px;line-height:.88;letter-spacing:-.065em;color:#0F172A}
+.annual-price span{display:block;color:#475569;font-weight:900;line-height:1.15;margin-top:8px}
+.billing-note{color:#475569;font-size:14px;font-weight:850;margin:0}
+.savings{color:#1D4ED8;font-size:14px;font-weight:950;margin:8px 0 0}
+.monthly-alt{border-top:1px solid #E5E7EB;margin:18px 0 22px;padding-top:14px;color:#475569;font-size:14px;font-weight:850}
+.plan-benefits{display:grid;gap:10px;margin:0 0 24px;padding:0;list-style:none;color:#334155;line-height:1.35;font-weight:820}
+.plan-benefits li{display:flex;gap:9px;align-items:flex-start}
+.check{color:#16A34A;font-weight:950;line-height:1}
+.price-card .cta{width:100%;margin-top:auto}
+.cta.outline{background:#fff;color:var(--blue);border:1.5px solid #2563EB;box-shadow:none}
+.card-footer{border-top:1px solid #E5E7EB;margin-top:18px;padding-top:14px;color:#166534;font-size:13px;font-weight:950}
+.pricing-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.trust-block{background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.04)}
+.trust-block strong{display:block;color:#111827;font-size:15px;margin-bottom:6px}
+.trust-block p{margin:0;color:#64748B;font-size:13px;line-height:1.45}
 .coupon{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;border-radius:22px;padding:20px;margin-top:18px;font-weight:850}
 .form-wrap{background:#fff;border:1px solid var(--line);border-radius:32px;padding:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 form{display:grid;gap:12px}
@@ -111,8 +128,12 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:950px){
   .hero-grid,.ai-band,.form-wrap{grid-template-columns:1fr}
-  h1{font-size:46px}.features,.steps,.pricing{grid-template-columns:1fr}
+  h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
   .nav-links{display:none}.preview-body{grid-template-columns:1fr}.preview-sidebar{display:none}
+  .brand-mark{width:42px;height:42px}
+  .pricing-intro h2{font-size:36px}
+  .price-card.featured{transform:none}
+  .annual-price strong{font-size:58px}
 }
 
 /* AI module emphasis tweak */
@@ -171,7 +192,6 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 .soap-card{background:linear-gradient(135deg,#EFF6FF,#FFFFFF);border:1px solid #BFDBFE;border-radius:18px;padding:16px}
 .soap-card strong{display:block;color:#1D4ED8;font-size:22px;margin-bottom:4px}.soap-card span{color:#475569;font-size:13px;line-height:1.4}
 .demo-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.demo-strip span{display:inline-flex;border-radius:999px;background:#F8FAFC;border:1px solid #E5E7EB;color:#475569;padding:8px 11px;font-size:12px;font-weight:850}
-.plan-badge{display:inline-flex;border-radius:999px;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:950;padding:6px 10px;margin-bottom:10px}.price-card.featured .plan-badge{background:#2563EB;color:#fff}
 .price-card small.note{display:block;color:#64748B;font-size:12px;line-height:1.4;margin-top:8px}
 .faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 14px 34px rgba(15,23,42,.05)}
 .faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em}.faq-item p{margin:0;color:#64748B;font-size:14px;line-height:1.55}
@@ -260,9 +280,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="#">
-      <div class="logo">
-        <svg viewBox="0 0 48 48"><path d="M24 7v16"/><path d="M24 23c-5-7-9-12-14-10-5 2-6 10-5 19 1 7 5 10 11 8 4-1 6-4 8-9"/><path d="M24 23c5-7 9-12 14-10 5 2 6 10 5 19-1 7-5 10-11 8-4-1-6-4-8-9"/></svg>
-      </div>
+      <img class="brand-mark" src="assets/logo-icon.svg" alt="" width="44" height="44">
       <div><span>Neumo</span><span>Practice</span></div>
     </a>
     <div class="nav-links">
@@ -428,45 +446,59 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         Se acaba de unir al Programa Fundadores.
       </div>
     </div>
-    <div class="pricing" style="max-width:860px;margin:26px auto 0">
-      <div class="price-card">
-        <div class="plan-badge">NeumoPractice Pro</div>
-        <h3 style="font-size:24px;letter-spacing:-.03em;margin:0">NeumoPractice Pro</h3>
-        <div class="price">$799 MXN <small>/ mes</small></div>
-        <p style="color:#64748B;font-weight:850;margin:0 0 12px">USD $47</p>
-        <ul>
-          <li>✓ 1 médico</li>
-          <li>✓ 1 recepcionista</li>
-          <li>✓ Agenda inteligente</li>
-          <li>✓ IA Clínica</li>
-          <li>✓ Historial clínico longitudinal</li>
-          <li>✓ Estudios e imágenes</li>
-          <li>✓ Recetario inteligente</li>
-          <li>✓ Facturación diaria</li>
-          <li>✓ Calculadoras neumológicas</li>
-          <li>✓ Timeline clínico</li>
-          <li>✓ Exportación PDF</li>
+    <div class="pricing-intro">
+      <div class="value-badge">✓ Todo incluido. Sin pagos extra. Sin costos ocultos.</div>
+      <h2>Todo lo que tu consultorio necesita. En un solo lugar.</h2>
+      <p>Agenda, expediente clínico, IA Clínica, recetas, imágenes y finanzas en un solo plan.</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card featured" data-stripe-product-id="prod_UgGMTmZKxjPv1w" data-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-price-yearly="">
+        <div class="plan-badge">MEJOR VALOR</div>
+        <h3 class="plan-name">NeumoPractice PRO</h3>
+        <div class="annual-price"><strong>$499</strong><span>MXN / mes</span></div>
+        <p class="billing-note">Facturado anualmente</p>
+        <p class="savings">Ahorra $3,600 al año</p>
+        <div class="monthly-alt">O $799 MXN pagando mes a mes</div>
+        <ul class="plan-benefits">
+          <li><span class="check">✓</span>1 médico</li>
+          <li><span class="check">✓</span>1 recepcionista</li>
+          <li><span class="check">✓</span>Agenda clínica</li>
+          <li><span class="check">✓</span>Expediente clínico</li>
+          <li><span class="check">✓</span>IA Clínica</li>
+          <li><span class="check">✓</span>Recetas inteligentes</li>
+          <li><span class="check">✓</span>Estudios e imágenes</li>
+          <li><span class="check">✓</span>Finanzas básicas</li>
+          <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta" href="#beta">Solicitar demo</a>
+        <a class="cta" href="#beta">Elegir PRO</a>
+        <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
-      <div class="price-card featured">
-        <div class="plan-badge">Más popular</div>
-        <h3 style="font-size:24px;letter-spacing:-.03em;margin:0">NeumoPractice Clinic Pro</h3>
-        <div class="price">$1,999 MXN <small>/ mes</small></div>
-        <p style="color:#64748B;font-weight:850;margin:0 0 12px">USD $117</p>
-        <p style="font-weight:900;margin:0 0 8px">Incluye todo lo de Pro</p>
-        <ul>
-          <li>✓ Hasta 5 médicos</li>
-          <li>✓ Recepción compartida</li>
-          <li>✓ Base de datos centralizada</li>
-          <li>✓ KPIs por médico</li>
-          <li>✓ Facturación individual</li>
-          <li>✓ Dashboard administrativo</li>
-          <li>✓ Reportes consolidados</li>
-          <li>✓ Métricas por usuario</li>
+      <div class="price-card" data-stripe-product-id="prod_UgGSYQv6E5VRoU" data-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-price-yearly="">
+        <div class="plan-badge">CLÍNICAS Y EQUIPOS</div>
+        <h3 class="plan-name">NeumoPractice CLINIC PRO</h3>
+        <div class="annual-price"><strong>$1,499</strong><span>MXN / mes</span></div>
+        <p class="billing-note">Facturado anualmente</p>
+        <p class="savings">Ahorra $6,000 al año</p>
+        <div class="monthly-alt">O $1,999 MXN pagando mes a mes</div>
+        <ul class="plan-benefits">
+          <li><span class="check">✓</span>Hasta 5 médicos</li>
+          <li><span class="check">✓</span>Recepción incluida</li>
+          <li><span class="check">✓</span>Todo lo del plan PRO</li>
+          <li><span class="check">✓</span>KPIs por médico</li>
+          <li><span class="check">✓</span>Finanzas por médico</li>
+          <li><span class="check">✓</span>Multiusuario</li>
+          <li><span class="check">✓</span>Base de datos unificada</li>
+          <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta" href="#beta">Solicitar demo</a>
+        <a class="cta outline" href="#beta">Elegir CLINIC PRO</a>
+        <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
+    </div>
+    <div class="pricing-trust">
+      <div class="trust-block"><strong>Datos 100% seguros</strong><p>Cumplimos NOM 024 y Ley Federal de Protección de Datos.</p></div>
+      <div class="trust-block"><strong>Disponible en la nube</strong><p>Accede desde cualquier dispositivo.</p></div>
+      <div class="trust-block"><strong>Soporte humano</strong><p>Te acompañamos en todo momento.</p></div>
+      <div class="trust-block"><strong>Actualizaciones incluidas</strong><p>Siempre tendrás la versión más reciente.</p></div>
     </div>
   </div>
 </section>
@@ -581,7 +613,25 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   </div>
 </footer>
 
+<script type="application/json" id="neumopractice-stripe-config">
+{
+  "mode": "live",
+  "products": {
+    "pro": "prod_UgGMTmZKxjPv1w",
+    "clinicPro": "prod_UgGSYQv6E5VRoU"
+  },
+  "prices": {
+    "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
+    "STRIPE_PRICE_PRO_YEARLY": "",
+    "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
+    "STRIPE_PRICE_CLINIC_YEARLY": ""
+  }
+}
+</script>
+
 <script>
+window.NEUMOPRACTICE_STRIPE_CONFIG = JSON.parse(document.getElementById("neumopractice-stripe-config").textContent);
+
 async function submitLead(event){
   event.preventDefault();
   const form = event.target;
