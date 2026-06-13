@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeumoPractice | Menos captura. Más medicina.</title>
 <meta name="description" content="NeumoPractice es una plataforma clínica para neumología pediátrica con agenda, expediente, recetas, estudios, finanzas e IA clínica.">
+<link rel="icon" href="assets/favicon.ico">
 <style>
 :root{
   --blue:#2563EB;
@@ -35,11 +36,7 @@ a{text-decoration:none;color:inherit}
 }
 .nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:-.04em;font-size:22px}
-.logo{
-  width:44px;height:44px;border-radius:15px;background:#fff;border:1.5px solid #DBEAFE;
-  display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,99,235,.10)
-}
-.logo svg{width:30px;height:30px;stroke:var(--blue);stroke-width:2.25;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.brand-mark{width:44px;height:44px;border-radius:14px;display:block;box-shadow:0 12px 30px rgba(37,99,235,.10)}
 .brand span:last-child{color:var(--blue)}
 .nav-links{display:flex;align-items:center;gap:22px;color:#475569;font-size:14px;font-weight:750}
 .cta{
@@ -97,11 +94,31 @@ h1 .blue{color:var(--blue)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}
 .num{width:34px;height:34px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;display:grid;place-items:center;font-weight:950;margin-bottom:14px}
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.price-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 16px 45px rgba(15,23,42,.06)}
-.price-card.featured{border:2px solid var(--blue);transform:translateY(-6px)}
-.price{font-size:38px;font-weight:950;letter-spacing:-.05em;margin:10px 0}.price small{font-size:14px;color:var(--muted)}
-.price-card ul{padding-left:18px;color:#475569;line-height:1.8}
+.pricing-intro{max-width:790px;margin:48px auto 30px;text-align:center}
+.pricing-intro .value-badge{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;padding:9px 14px;font-size:13px;font-weight:950;margin-bottom:16px}
+.pricing-intro h2{font-size:46px;line-height:1.03;letter-spacing:-.055em;margin:0 0 12px}
+.pricing-intro p{font-size:17px;color:#64748B;line-height:1.55;margin:0}
+.pricing{display:grid;grid-template-columns:1.04fr .96fr;gap:18px;align-items:stretch}
+.price-card{position:relative;background:#fff;border:1px solid #DCE4F2;border-radius:28px;padding:30px;box-shadow:0 18px 48px rgba(15,23,42,.07);display:flex;flex-direction:column}
+.price-card.featured{border:2px solid var(--blue);box-shadow:0 28px 80px rgba(37,99,235,.18);transform:translateY(-8px)}
+.plan-badge{display:inline-flex;align-self:flex-start;border-radius:999px;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:950;padding:7px 10px;margin-bottom:14px;letter-spacing:.02em}.price-card.featured .plan-badge{background:#2563EB;color:#fff}
+.plan-name{font-size:25px;letter-spacing:-.035em;margin:0 0 16px}
+.annual-price{display:block;margin:4px 0 8px}
+.annual-price strong{display:block;font-size:68px;line-height:.88;letter-spacing:-.065em;color:#0F172A}
+.annual-price span{display:block;color:#475569;font-weight:900;line-height:1.15;margin-top:8px}
+.billing-note{color:#475569;font-size:14px;font-weight:850;margin:0}
+.savings{color:#1D4ED8;font-size:14px;font-weight:950;margin:8px 0 0}
+.monthly-alt{border-top:1px solid #E5E7EB;margin:18px 0 22px;padding-top:14px;color:#475569;font-size:14px;font-weight:850}
+.plan-benefits{display:grid;gap:10px;margin:0 0 24px;padding:0;list-style:none;color:#334155;line-height:1.35;font-weight:820}
+.plan-benefits li{display:flex;gap:9px;align-items:flex-start}
+.check{color:#16A34A;font-weight:950;line-height:1}
+.price-card .cta{width:100%;margin-top:auto}
+.cta.outline{background:#fff;color:var(--blue);border:1.5px solid #2563EB;box-shadow:none}
+.card-footer{border-top:1px solid #E5E7EB;margin-top:18px;padding-top:14px;color:#166534;font-size:13px;font-weight:950}
+.pricing-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.trust-block{background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.04)}
+.trust-block strong{display:block;color:#111827;font-size:15px;margin-bottom:6px}
+.trust-block p{margin:0;color:#64748B;font-size:13px;line-height:1.45}
 .coupon{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;border-radius:22px;padding:20px;margin-top:18px;font-weight:850}
 .form-wrap{background:#fff;border:1px solid var(--line);border-radius:32px;padding:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 form{display:grid;gap:12px}
@@ -111,25 +128,167 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:950px){
   .hero-grid,.ai-band,.form-wrap{grid-template-columns:1fr}
-  h1{font-size:46px}.features,.steps,.pricing{grid-template-columns:1fr}
+  h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
   .nav-links{display:none}.preview-body{grid-template-columns:1fr}.preview-sidebar{display:none}
+  .brand-mark{width:42px;height:42px}
+  .pricing-intro h2{font-size:36px}
+  .price-card.featured{transform:none}
+  .annual-price strong{font-size:58px}
 }
+
+/* AI module emphasis tweak */
+.feature.ai-feature{
+  grid-column:span 3;
+  background:linear-gradient(135deg,#EFF6FF 0%,#FFFFFF 58%,#F8FAFC 100%);
+  border:1.5px solid #BFDBFE;
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  gap:18px;
+  align-items:center;
+}
+.feature.ai-feature .icon{
+  margin-bottom:0;
+  background:#DBEAFE;
+}
+.feature.ai-feature h3{
+  font-size:24px;
+  margin-bottom:6px;
+}
+.feature.ai-feature p{
+  font-size:15px;
+  max-width:720px;
+}
+.ai-mini-badge{
+  display:inline-flex;
+  border-radius:999px;
+  padding:8px 12px;
+  background:#2563EB;
+  color:#fff;
+  font-size:12px;
+  font-weight:950;
+  white-space:nowrap;
+}
+@media(max-width:950px){
+  .feature.ai-feature{
+    grid-column:span 1;
+    grid-template-columns:1fr;
+  }
+  .feature.ai-feature .icon{margin-bottom:14px}
+}
+
+
+/* NeumoPractice Landing V2 Operativa */
+.cta.whatsapp{background:#22C55E;box-shadow:0 14px 30px rgba(34,197,94,.25)}
+.hero-card{background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 55%,#2563EB 100%)!important;border:1px solid rgba(255,255,255,.16)!important;color:#fff}
+.app-preview{background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important}
+.preview-top{background:rgba(255,255,255,.14)!important;border-bottom:1px solid rgba(255,255,255,.16)!important}
+.preview-sidebar{background:rgba(255,255,255,.10)!important;border-right:1px solid rgba(255,255,255,.14)!important}
+.preview-line{background:rgba(219,234,254,.42)!important}.preview-main{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+.kpi{background:rgba(255,255,255,.13)!important;border:1px solid rgba(255,255,255,.18)!important;color:#fff}.kpi span{color:#DBEAFE!important}
+.calendar-mini{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.18)!important}
+.day{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.12)!important;color:#E0F2FE!important}
+.ai-clinical-deep{background:#fff;border:1px solid #DBEAFE;border-radius:34px;padding:38px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1.05fr;gap:26px;align-items:center}
+.soap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.soap-card{background:linear-gradient(135deg,#EFF6FF,#FFFFFF);border:1px solid #BFDBFE;border-radius:18px;padding:16px}
+.soap-card strong{display:block;color:#1D4ED8;font-size:22px;margin-bottom:4px}.soap-card span{color:#475569;font-size:13px;line-height:1.4}
+.demo-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.demo-strip span{display:inline-flex;border-radius:999px;background:#F8FAFC;border:1px solid #E5E7EB;color:#475569;padding:8px 11px;font-size:12px;font-weight:850}
+.price-card small.note{display:block;color:#64748B;font-size:12px;line-height:1.4;margin-top:8px}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 14px 34px rgba(15,23,42,.05)}
+.faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em}.faq-item p{margin:0;color:#64748B;font-size:14px;line-height:1.55}
+
+.founders-card{background:linear-gradient(135deg,#FFFFFF 0%,#EFF6FF 55%,#DBEAFE 100%);border:2px solid var(--blue);border-radius:32px;padding:32px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.founder-kicker{display:inline-flex;border-radius:999px;background:#2563EB;color:#fff;font-size:12px;font-weight:950;padding:8px 12px;margin-bottom:14px}
+.founder-title{font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:0 0 12px}
+.founder-title span{color:var(--blue)}
+.founder-discount{font-size:48px;font-weight:950;letter-spacing:-.06em;color:#111827;margin:12px 0}.founder-discount small{font-size:15px;color:#475569;letter-spacing:0}
+.founder-includes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.founder-includes div{background:#fff;border:1px solid #DBEAFE;border-radius:16px;padding:10px 12px;color:#334155;font-weight:850;font-size:13px}
+.founder-progress{background:#fff;border:1px solid #DBEAFE;border-radius:26px;padding:24px;box-shadow:0 16px 45px rgba(37,99,235,.12)}
+.progress-label{font-size:22px;font-weight:950;letter-spacing:-.04em;margin-bottom:10px}.progress-label span{color:var(--blue)}
+.progress-bar{height:16px;background:#E5E7EB;border-radius:999px;overflow:hidden;margin:14px 0}.progress-fill{height:100%;width:76%;background:linear-gradient(90deg,#2563EB,#60A5FA);border-radius:999px}
+.remaining{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;border-radius:18px;padding:12px;font-size:13px;font-weight:950;line-height:1.35;margin:14px 0}
+.founder-note{font-size:12px;color:#64748B;line-height:1.5;margin-top:10px}
+.latest-founder-alert{width:min(460px,100%);margin:18px auto 0;background:#fff;border:1px solid #DBEAFE;border-radius:18px;padding:12px 14px;box-shadow:0 18px 42px rgba(37,99,235,.14);display:flex;align-items:center;gap:12px}
+.latest-founder-icon{width:38px;height:38px;border-radius:50%;background:#EFF6FF;color:#2563EB;display:grid;place-items:center;font-weight:950;flex:0 0 auto}
+.latest-founder-copy{font-size:13px;line-height:1.35;color:#475569;font-weight:800}
+.latest-founder-copy strong{display:block;color:#111827;font-size:14px;margin-bottom:2px}
+.thankyou-box{display:none;margin-top:14px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:18px;padding:16px;color:#1E3A8A;font-weight:850;line-height:1.5}
+@media(max-width:900px){.founders-card{grid-template-columns:1fr}.founder-title{font-size:34px}.founder-discount{font-size:38px}.founder-includes{grid-template-columns:1fr}}
+
+.form-success{display:none;margin-top:12px;background:#ECFDF5;border:1px solid #BBF7D0;color:#166534;border-radius:16px;padding:13px;font-size:13px;font-weight:850}
+@media(max-width:950px){.ai-clinical-deep{grid-template-columns:1fr;padding:24px}.soap-grid,.faq-grid{grid-template-columns:1fr}}
+
+
+/* NeumoPractice Landing Video Hero */
+.hero-video-shell{
+  border-radius:28px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 58%,#2563EB 100%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:var(--shadow);
+  padding:14px;
+  transform:rotate(1deg);
+}
+.hero-video-frame{
+  border-radius:22px;
+  overflow:hidden;
+  background:#0F172A;
+  border:1px solid rgba(255,255,255,.18);
+  position:relative;
+}
+.hero-video-frame video{
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#0F172A;
+}
+.video-badge{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border-radius:999px;
+  padding:8px 11px;
+  background:rgba(15,23,42,.72);
+  color:#fff;
+  backdrop-filter:blur(14px);
+  font-size:12px;
+  font-weight:900;
+  border:1px solid rgba(255,255,255,.16);
+}
+.video-dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:#22C55E;
+  box-shadow:0 0 0 4px rgba(34,197,94,.18);
+}
+@media(max-width:950px){
+  .hero-video-shell{transform:none}
+}
+
+
+@media(max-width:950px){
+  .footer-trust{grid-template-columns:1fr!important;}
+}
+
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="#">
-      <div class="logo">
-        <svg viewBox="0 0 48 48"><path d="M24 7v16"/><path d="M24 23c-5-7-9-12-14-10-5 2-6 10-5 19 1 7 5 10 11 8 4-1 6-4 8-9"/><path d="M24 23c5-7 9-12 14-10 5 2 6 10 5 19-1 7-5 10-11 8-4-1-6-4-8-9"/></svg>
-      </div>
+      <img class="brand-mark" src="assets/logo-icon.svg" alt="" width="44" height="44">
       <div><span>Neumo</span><span>Practice</span></div>
     </a>
     <div class="nav-links">
       <a href="#features">Módulos</a>
       <a href="#ai">IA Clínica</a>
-      <a href="#pricing">Planes</a>
-      <a href="#beta" class="cta">Solicitar beta</a>
+      <a href="#pricing">Fundadores</a>
+      <a href="#faq">FAQs</a>
+      <a href="#beta" class="cta">Solicitar demo</a>
     </div>
   </div>
 </nav>
@@ -137,49 +296,48 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="badge">Beta para neumología pediátrica · Cupón MELISSA</div>
+      <div class="badge">🫁 Programa Fundadores · 19 de 25 lugares ocupados</div>
       <h1>Menos captura.<br><span class="blue">Más medicina.</span></h1>
       <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
+      <p class="lead" style="font-weight:850;color:#1E40AF;margin-top:-12px">Ahorra hasta 15 minutos por consulta con IA Clínica integrada.</p>
       <div class="hero-actions">
-        <a class="cta" href="#beta">Solicitar acceso beta</a>
-        <a class="cta secondary" href="#features">Ver módulos</a>
+        <a class="cta" href="#beta">Solicitar demo privada</a>
+        <a class="cta secondary" href="#pricing">Programa Fundadores</a>
+        <a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20agendar%20una%20demo%20de%20NeumoPractice" target="_blank" rel="noopener">Pedir info por WhatsApp</a>
       </div>
-      <div class="micro">14 días gratis · 28 días con invitación de Dra. Melissa · Sin instalación compleja</div>
+      <div class="micro">Acceso gratuito durante fase Fundadores · Sin instalación compleja</div>
     </div>
-    <div class="hero-card">
-      <div class="app-preview">
-        <div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <div class="preview-body">
-          <div class="preview-sidebar">
-            <div class="preview-line w80"></div><div class="preview-line"></div><div class="preview-line w60"></div>
-            <div class="preview-line"></div><div class="preview-line w80"></div>
-          </div>
-          <div class="preview-main">
-            <div class="preview-kpis">
-              <div class="kpi"><b>12</b><span>Citas hoy</span></div>
-              <div class="kpi"><b>3</b><span>Checkout</span></div>
-              <div class="kpi"><b>8</b><span>Estudios</span></div>
-            </div>
-            <div class="calendar-mini">
-              <div class="calendar-grid">
-                <div class="day">1<div class="event yellow"></div></div><div class="day">2</div><div class="day">3<div class="event green"></div></div><div class="day">4<div class="event bluebg"></div></div><div class="day">5</div><div class="day">6<div class="event orange"></div></div><div class="day">7</div>
-                <div class="day">8</div><div class="day">9<div class="event yellow"></div></div><div class="day">10</div><div class="day">11<div class="event green"></div></div><div class="day">12</div><div class="day">13</div><div class="day">14<div class="event bluebg"></div></div>
-                <div class="day">15</div><div class="day">16</div><div class="day">17<div class="event orange"></div></div><div class="day">18</div><div class="day">19<div class="event green"></div></div><div class="day">20</div><div class="day">21</div>
-                <div class="day">22<div class="event yellow"></div></div><div class="day">23</div><div class="day">24</div><div class="day">25<div class="event bluebg"></div></div><div class="day">26</div><div class="day">27</div><div class="day">28<div class="event green"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-video-shell">
+      <div class="hero-video-frame">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="neumopractice-demo.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="video-badge"><span class="video-dot"></span> Demo visual NeumoPractice</div>
       </div>
     </div>
   </div>
 </header>
 
+<section class="section" id="tiempo-recuperado">
+  <div class="container">
+    <div class="section-head">
+      <h2>¿Cuánto tiempo recuperas al mes?</h2>
+      <p>Si ahorras 15 minutos por consulta y atiendes 20 pacientes por semana, recuperas aproximadamente 20 horas al mes.</p>
+    </div>
+    <div class="features">
+      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">15 min</h3><p style="font-weight:850">Ahorro por consulta</p></div>
+      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">20 h</h3><p style="font-weight:850">Recuperadas al mes</p></div>
+      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">1 plataforma</h3><p style="font-weight:850">Para agenda, expediente e IA clínica</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="features">
   <div class="container">
     <div class="section-head">
       <h2>Todo el consultorio en una sola plataforma.</h2>
-      <p>NeumoPractice concentra los módulos que la doctora y recepción necesitan para operar sin duplicar captura.</p>
+      <p>NeumoPractice concentra los módulos que la doctora y recepción necesitan para operar sin duplicar captura, incluyendo IA Clínica integrada al flujo de consulta.</p>
     </div>
     <div class="features">
       <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="30" rx="6"/><path d="M16 6v8M32 6v8M9 18h30"/></svg></div><h3>Agenda en vivo</h3><p>Estados por cita: confirmada, llegó, en consulta, checkout pendiente y finalizada.</p></div>
@@ -188,6 +346,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M17 31L31 17a8 8 0 0 1 11 11L28 42A8 8 0 0 1 17 31z"/></svg></div><h3>RX</h3><p>Recetario, medicamentos frecuentes y recetas archivadas en el paciente.</p></div>
       <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="5"/><path d="M15 15h18M15 21h18"/></svg></div><h3>Imaging</h3><p>Galería global de radiografías, laboratorios, fotos clínicas y PDFs vinculados al expediente.</p></div>
       <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M8 38h32"/><path d="M14 34V22M24 34V14M34 34V10"/></svg></div><h3>Finance</h3><p>Checkout, pagos por consulta, métodos de pago, corte diario y month to date.</p></div>
+      <div class="feature ai-feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M20 8c-6 0-10 4-10 10 0 3 1 5 3 7-3 2-4 5-3 8 1 5 5 7 10 7"/><path d="M28 8c6 0 10 4 10 10 0 3-1 5-3 7 3 2 4 5 3 8-1 5-5 7-10 7"/><path d="M24 8v32"/><circle cx="18" cy="18" r="2"/><circle cx="30" cy="18" r="2"/><circle cx="18" cy="30" r="2"/><circle cx="30" cy="30" r="2"/></svg></div><div><h3>AI Clínica</h3><p>Resumen de consulta, análisis inicial, datos de alarma, preguntas sugeridas y apoyo para convertir la captura clínica en información accionable.</p></div><span class="ai-mini-badge">Módulo estrella</span></div>
     </div>
   </div>
 </section>
@@ -196,15 +355,39 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   <div class="container">
     <div class="ai-band">
       <div>
-        <h2>IA clínica como segundo par de ojos.</h2>
+        <h2>Profundiza con IA clínica supervisada.</h2>
         <p>La IA de NeumoPractice está pensada para ayudar a resumir la consulta, organizar hallazgos, sugerir preguntas pendientes y preparar un análisis clínico supervisado por la doctora.</p>
         <p><b>La decisión final siempre es del médico.</b></p>
+        <p><b>La IA Clínica es el principal diferenciador de NeumoPractice.</b></p>
       </div>
       <div class="ai-list">
         <div class="ai-item">Resumen automático de consulta</div>
         <div class="ai-item">Detección de datos de alarma</div>
         <div class="ai-item">Preguntas sugeridas por síntoma</div>
         <div class="ai-item">Estudios relevantes para seguimiento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="soap">
+  <div class="container">
+    <div class="section-head">
+      <h2>IA clínica que entiende el seguimiento, no solo la consulta.</h2>
+      <p>NeumoPractice convierte la captura clínica en una línea de tiempo útil: consulta, receta, estudios, pagos y evolución del paciente.</p>
+    </div>
+    <div class="ai-clinical-deep">
+      <div>
+        <div class="badge">SOAP + seguimiento longitudinal</div>
+        <h2 style="font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:18px 0 12px">De notas sueltas a expediente inteligente.</h2>
+        <p style="color:#64748B;line-height:1.6">La IA Clínica puede ayudar a estructurar la información en formato SOAP, resumir evolución, detectar datos relevantes y preparar una vista longitudinal supervisada por el médico.</p>
+        <div class="demo-strip"><span>Resumen clínico</span><span>SOAP</span><span>Datos de alarma</span><span>Historial longitudinal</span></div>
+      </div>
+      <div class="soap-grid">
+        <div class="soap-card"><strong>S</strong><span>Síntomas, motivo de consulta y antecedentes relevantes.</span></div>
+        <div class="soap-card"><strong>O</strong><span>Exploración, signos vitales, estudios e información objetiva.</span></div>
+        <div class="soap-card"><strong>A</strong><span>Análisis clínico, patrones recurrentes y evolución del paciente.</span></div>
+        <div class="soap-card"><strong>P</strong><span>Plan, receta, indicaciones, estudios y seguimiento sugerido.</span></div>
       </div>
     </div>
   </div>
@@ -227,26 +410,141 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 <section class="section" id="pricing">
   <div class="container">
     <div class="section-head">
-      <h2>Planes simples para iniciar.</h2>
-      <p>Precio beta sugerido para validar el producto con médicos reales.</p>
+      <h2>Acceso gratuito durante la fase Fundadores.</h2>
+      <p>Participa en el desarrollo de NeumoPractice, recibe acceso anticipado a nuevas funciones y ayúdanos a construir la mejor plataforma para neumología pediátrica.</p>
+    </div>
+    <div class="founders-card">
+      <div>
+        <div class="founder-kicker">Programa Fundadores</div>
+        <h2 class="founder-title">Acceso anticipado para neumólogos pediatras.</h2>
+        <p style="color:#64748B;line-height:1.6">No hay compromiso de permanencia. Buscamos neumólogos pediatras que quieran participar en la etapa de validación y crecimiento del producto.</p>
+        <div class="founder-includes">
+          <div>✅ IA Clínica</div>
+          <div>✅ Agenda Inteligente</div>
+          <div>✅ SOAP Automático</div>
+          <div>✅ Recetas Digitales</div>
+          <div>✅ Imaging</div>
+          <div>✅ Timeline Clínico</div>
+          <div>✅ Soporte prioritario</div>
+          <div>✅ Migración inicial incluida</div>
+        </div>
+        <a class="cta" href="#beta">Quiero mi lugar</a>
+      </div>
+      <div class="founder-progress">
+        <div class="progress-label"><span>19 de 25</span> lugares ocupados</div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <p style="color:#64748B;line-height:1.5;margin:0">76% del Programa Fundadores ya está ocupado.</p>
+        <div class="remaining">Solo quedan 6 lugares disponibles.</div>
+        <a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20agendar%20una%20demo%20de%20NeumoPractice" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        <div class="founder-note">No hay compromiso de permanencia. Buscamos neumólogos pediatras que quieran participar en la etapa de validación y crecimiento del producto.</div>
+      </div>
+    </div>
+    <div class="latest-founder-alert" aria-label="Último fundador registrado">
+      <div class="latest-founder-icon">Dr.</div>
+      <div class="latest-founder-copy">
+        <strong>Último Fundador: Dr. Carlos V*****</strong>
+        Se acaba de unir al Programa Fundadores.
+      </div>
+    </div>
+    <div class="pricing-intro">
+      <div class="value-badge">✓ Todo incluido. Sin pagos extra. Sin costos ocultos.</div>
+      <h2>Todo lo que tu consultorio necesita. En un solo lugar.</h2>
+      <p>Agenda, expediente clínico, IA Clínica, recetas, imágenes y finanzas en un solo plan.</p>
     </div>
     <div class="pricing">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price">$29 <small>USD/mes</small></div>
-        <ul><li>1 médico</li><li>Agenda</li><li>Patients</li><li>RX</li></ul>
+      <div class="price-card featured" data-stripe-product-id="prod_UgeEHgBYLx4hEp" data-price-monthly="price_1ThGvgECXG2UiJodWpoIhLlO" data-price-yearly="price_1Thw2PECXG2UiJodnVcL5Aio" data-stripe-live-product-id="prod_UgGMTmZKxjPv1w" data-live-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2">
+        <div class="plan-badge">MEJOR VALOR</div>
+        <h3 class="plan-name">NeumoPractice PRO</h3>
+        <div class="annual-price"><strong>$499</strong><span>MXN / mes</span></div>
+        <p class="billing-note">Facturado anualmente</p>
+        <p class="savings">Ahorra $3,600 al año</p>
+        <div class="monthly-alt">O $799 MXN pagando mes a mes</div>
+        <ul class="plan-benefits">
+          <li><span class="check">✓</span>1 médico</li>
+          <li><span class="check">✓</span>1 recepcionista</li>
+          <li><span class="check">✓</span>Agenda clínica</li>
+          <li><span class="check">✓</span>Expediente clínico</li>
+          <li><span class="check">✓</span>IA Clínica</li>
+          <li><span class="check">✓</span>Recetas inteligentes</li>
+          <li><span class="check">✓</span>Estudios e imágenes</li>
+          <li><span class="check">✓</span>Finanzas básicas</li>
+          <li><span class="check">✓</span>Soporte incluido</li>
+        </ul>
+        <a class="cta" href="#beta">Elegir PRO</a>
+        <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
-      <div class="price-card featured">
-        <h3>Pro Beta</h3>
-        <div class="price">$49 <small>USD/mes</small></div>
-        <ul><li>Todo Starter</li><li>Imaging</li><li>Finance</li><li>IA Clínica beta</li></ul>
-        <div class="coupon">Cupón MELISSA: 14 días gratis. Invitados directos: 28 días gratis.</div>
+      <div class="price-card" data-stripe-product-id="prod_UgeE5dvqNxQbAM" data-price-monthly="price_1ThGvhECXG2UiJodhOdSgR4a" data-price-yearly="price_1Thw5IECXG2UiJodrfeoTBiW" data-stripe-live-product-id="prod_UgGSYQv6E5VRoU" data-live-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN">
+        <div class="plan-badge">CLÍNICAS Y EQUIPOS</div>
+        <h3 class="plan-name">NeumoPractice CLINIC PRO</h3>
+        <div class="annual-price"><strong>$1,499</strong><span>MXN / mes</span></div>
+        <p class="billing-note">Facturado anualmente</p>
+        <p class="savings">Ahorra $6,000 al año</p>
+        <div class="monthly-alt">O $1,999 MXN pagando mes a mes</div>
+        <ul class="plan-benefits">
+          <li><span class="check">✓</span>Hasta 5 médicos</li>
+          <li><span class="check">✓</span>Recepción incluida</li>
+          <li><span class="check">✓</span>Todo lo del plan PRO</li>
+          <li><span class="check">✓</span>KPIs por médico</li>
+          <li><span class="check">✓</span>Finanzas por médico</li>
+          <li><span class="check">✓</span>Multiusuario</li>
+          <li><span class="check">✓</span>Base de datos unificada</li>
+          <li><span class="check">✓</span>Soporte incluido</li>
+        </ul>
+        <a class="cta outline" href="#beta">Elegir CLINIC PRO</a>
+        <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
-      <div class="price-card">
-        <h3>Clinic</h3>
-        <div class="price">$99 <small>USD/mes</small></div>
-        <ul><li>Hasta 5 usuarios</li><li>Recepción + doctor</li><li>Reportes</li><li>Migración asistida</li></ul>
-      </div>
+    </div>
+    <div class="pricing-trust">
+      <div class="trust-block"><strong>Datos 100% seguros</strong><p>Cumplimos NOM 024 y Ley Federal de Protección de Datos.</p></div>
+      <div class="trust-block"><strong>Disponible en la nube</strong><p>Accede desde cualquier dispositivo.</p></div>
+      <div class="trust-block"><strong>Soporte humano</strong><p>Te acompañamos en todo momento.</p></div>
+      <div class="trust-block"><strong>Actualizaciones incluidas</strong><p>Siempre tendrás la versión más reciente.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comparativa">
+  <div class="container">
+    <div class="section-head">
+      <h2>NeumoPractice vs herramientas tradicionales</h2>
+    </div>
+    <div style="overflow:auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 16px 40px rgba(15,23,42,.05)">
+      <table style="width:100%;border-collapse:collapse;min-width:640px">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">Función</th>
+            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">Excel/Word</th>
+            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">NeumoPractice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Agenda</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
+          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Timeline clínico</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
+          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">IA Clínica</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
+          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Estudios e imágenes</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
+          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Recetas</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
+          <tr><td style="padding:16px;font-weight:850">Crecimiento CDC/WHO</td><td style="padding:16px">❌</td><td style="padding:16px">✅</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Preguntas frecuentes.</h2>
+      <p>Respuestas rápidas para médicos que evalúan cambiar de sistema o iniciar su expediente digital.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><h3>¿NeumoPractice reemplaza mi agenda actual?</h3><p>Sí. Puedes usarlo para agenda, estados de consulta, checkout y seguimiento.</p></div>
+      <div class="faq-item"><h3>¿Puedo migrar pacientes desde Excel, Doctoralia o PDFs?</h3><p>Sí. La migración puede iniciar con Excel/CSV y archivos clínicos en PDF o imagen.</p></div>
+      <div class="faq-item"><h3>¿La IA toma decisiones médicas?</h3><p>No. La IA apoya con resumen, estructura SOAP y seguimiento. La decisión clínica final siempre es del médico.</p></div>
+      <div class="faq-item"><h3>¿Incluye recetas?</h3><p>Sí. El módulo RX permite crear recetas y vincularlas al expediente del paciente.</p></div>
+      <div class="faq-item"><h3>¿Puedo subir radiografías o estudios?</h3><p>Sí. Imaging permite cargar JPG, PNG y PDF para consultarlos desde el historial.</p></div>
+      <div class="faq-item"><h3>¿Puedo tener recepcionista?</h3><p>Sí. En Clinic se contempla recepción para agenda y checkout.</p></div>
+      <div class="faq-item"><h3>¿Cada doctor puede ver solo sus finanzas?</h3><p>Sí. El administrador ve global y cada doctor ve su producción individual.</p></div>
+      <div class="faq-item"><h3>¿Funciona desde navegador?</h3><p>Sí. La visión SaaS es funcionar desde navegador sin instalación compleja.</p></div>
     </div>
   </div>
 </section>
@@ -255,28 +553,148 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   <div class="container">
     <div class="form-wrap">
       <div>
-        <div class="badge">Acceso beta</div>
-        <h2 style="font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:18px 0 10px">Solicita tu prueba de NeumoPractice.</h2>
-        <p style="color:#64748B;line-height:1.6">Déjanos tus datos y te contactamos para activar una prueba beta. Si vienes por invitación de Dra. Melissa, usa el cupón <b>MELISSA</b>.</p>
+        <div class="badge">Acceso Beta Fundadores · 19/25 ocupados</div>
+        <h2 style="font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:18px 0 10px">Agenda una demo privada de NeumoPractice.</h2>
+        <p style="color:#64748B;line-height:1.6">Déjanos tus datos para reservar tu lugar en el Programa Fundadores. Te contactaremos para mostrarte cómo funciona NeumoPractice y resolver tus dudas.</p>
       </div>
-      <form onsubmit="event.preventDefault(); alert('Solicitud recibida. En producción este formulario se conectará a CRM/email.');">
-        <input placeholder="Nombre del médico">
-        <input placeholder="Especialidad">
-        <input placeholder="Correo electrónico">
-        <input placeholder="WhatsApp">
-        <select><option>Cupón MELISSA</option><option>Sin cupón</option><option>Otro referido</option></select>
-        <textarea placeholder="Cuéntanos cuántos pacientes atiendes y qué sistema usas actualmente"></textarea>
-        <button class="cta" type="submit">Solicitar acceso beta</button>
+      <form id="leadForm" onsubmit="submitLead(event)">
+        <input name="nombre" placeholder="Nombre del médico" required>
+        <input name="especialidad" placeholder="Especialidad" required>
+        <input name="ciudad" placeholder="Ciudad" required>
+        <input name="correo" type="email" placeholder="Correo electrónico" required>
+        <input name="whatsapp" placeholder="WhatsApp" required>
+        <select name="pacientes"><option>Pacientes por semana</option><option>Menos de 30</option><option>30 a 60</option><option>60 a 100</option><option>Más de 100</option></select>
+        <input type="hidden" name="programa" value="Programa Fundadores 19/25">
+        <input type="hidden" name="fuente" value="Landing NeumoPractice">
+        <textarea name="mensaje" placeholder="Cuéntanos qué sistema usas actualmente o qué te gustaría mejorar"></textarea>
+        <button class="cta" type="submit">Quiero mi demo</button>
+        <div id="formSuccess" class="form-success">Solicitud recibida. Revisa tu correo o continúa por WhatsApp.</div>
+        <div id="thankYouBox" class="thankyou-box">
+          <strong>¡Gracias!</strong><br>
+          Tu solicitud fue enviada correctamente. 19 de 25 lugares ya han sido ocupados en el Programa Fundadores.
+          <div style="margin-top:12px"><a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20agendar%20una%20demo%20de%20NeumoPractice" target="_blank" rel="noopener">Continuar por WhatsApp</a></div>
+        </div>
       </form>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container footer-inner">
-    <div><b>NeumoPractice</b><br>Menos captura. Más medicina.</div>
-    <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
+  <div class="container">
+    <div class="footer-trust" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;">
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🇲🇽</div>
+        <b style="color:#111827;">Desarrollado en México</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Pensado para la práctica médica mexicana.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🫁</div>
+        <b style="color:#111827;">Diseñado para neumología pediátrica</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">No para todas las especialidades. Para la tuya.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">🔒</div>
+        <b style="color:#111827;">Privacidad y seguridad clínica</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Manejo responsable de información clínica.</p>
+      </div>
+      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
+        <div style="font-size:24px;margin-bottom:6px;">📋</div>
+        <b style="color:#111827;">Alineado con normativas mexicanas</b>
+        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Considera lineamientos aplicables al expediente clínico electrónico.</p>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <div><b>NeumoPractice</b><br>Menos captura. Más medicina.</div>
+      <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
+    </div>
+    <p style="margin:22px 0 0;color:#94A3B8;font-size:12px;line-height:1.5;max-width:900px;">
+      NeumoPractice es una plataforma de apoyo clínico. Las decisiones diagnósticas y terapéuticas corresponden exclusivamente al profesional de la salud.
+    </p>
   </div>
 </footer>
+
+<script type="application/json" id="neumopractice-stripe-config">
+{
+  "mode": "test",
+  "products": {
+    "pro": "prod_UgeEHgBYLx4hEp",
+    "clinicPro": "prod_UgeE5dvqNxQbAM"
+  },
+  "prices": {
+    "STRIPE_PRICE_PRO_MONTHLY": "price_1ThGvgECXG2UiJodWpoIhLlO",
+    "STRIPE_PRICE_PRO_YEARLY": "price_1Thw2PECXG2UiJodnVcL5Aio",
+    "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
+    "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
+  },
+  "live": {
+    "products": {
+      "pro": "prod_UgGMTmZKxjPv1w",
+      "clinicPro": "prod_UgGSYQv6E5VRoU"
+    },
+    "prices": {
+      "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
+      "STRIPE_PRICE_PRO_YEARLY": "",
+      "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
+      "STRIPE_PRICE_CLINIC_YEARLY": ""
+    }
+  },
+  "test": {
+    "products": {
+      "pro": "prod_UgeEHgBYLx4hEp",
+      "clinicPro": "prod_UgeE5dvqNxQbAM"
+    },
+    "prices": {
+      "STRIPE_PRICE_PRO_MONTHLY": "price_1ThGvgECXG2UiJodWpoIhLlO",
+      "STRIPE_PRICE_PRO_YEARLY": "price_1Thw2PECXG2UiJodnVcL5Aio",
+      "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
+      "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
+    }
+  }
+}
+</script>
+
+<script>
+window.NEUMOPRACTICE_STRIPE_CONFIG = JSON.parse(document.getElementById("neumopractice-stripe-config").textContent);
+
+async function submitLead(event){
+  event.preventDefault();
+  const form = event.target;
+  const button = form.querySelector('button[type="submit"]');
+  const success = document.getElementById("formSuccess");
+  const thankYou = document.getElementById("thankYouBox");
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  const leads = JSON.parse(localStorage.getItem("neumopractice_landing_leads") || "[]");
+  leads.push({...data, createdAt:new Date().toISOString()});
+  localStorage.setItem("neumopractice_landing_leads", JSON.stringify(leads));
+
+  if(button){ button.disabled = true; button.textContent = "Enviando..."; }
+  if(success){ success.style.display = "none"; }
+  if(thankYou){ thankYou.style.display = "none"; }
+
+  try{
+    const formData = new FormData(form);
+    formData.append("_subject", "Nuevo Lead NeumoPractice - Programa Fundadores");
+    const response = await fetch("https://formspree.io/f/mrevelzy", {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if(response.ok){
+      if(success){ success.style.display = "block"; }
+      if(thankYou){ thankYou.style.display = "block"; }
+      form.reset();
+    } else {
+      alert("No pudimos enviar la solicitud. Por favor intenta de nuevo o escríbenos por WhatsApp.");
+    }
+  } catch(error){
+    alert("No pudimos enviar la solicitud. Por favor intenta de nuevo o escríbenos por WhatsApp.");
+  } finally {
+    if(button){ button.disabled = false; button.textContent = "Quiero mi demo"; }
+  }
+}
+</script>
+
 </body>
 </html>
