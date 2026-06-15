@@ -109,11 +109,19 @@ h1 .blue{color:var(--blue)}
 .billing-note{color:#475569;font-size:14px;font-weight:850;margin:0}
 .savings{color:#1D4ED8;font-size:14px;font-weight:950;margin:8px 0 0}
 .monthly-alt{border-top:1px solid #E5E7EB;margin:18px 0 22px;padding-top:14px;color:#475569;font-size:14px;font-weight:850}
+.billing-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px}
+.billing-option{border:1px solid #D9E2F1;background:#fff;border-radius:16px;padding:12px;cursor:pointer;text-align:left;color:#334155;font:inherit;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.billing-option strong{display:block;font-size:13px;color:#0F172A;margin-bottom:4px}
+.billing-option span{display:block;font-size:12px;color:#64748B;font-weight:800;line-height:1.35}
+.billing-option.active{border-color:var(--blue);background:#EFF6FF;box-shadow:0 10px 24px rgba(37,99,235,.12)}
+.billing-option.active strong{color:#1D4ED8}
 .plan-benefits{display:grid;gap:10px;margin:0 0 24px;padding:0;list-style:none;color:#334155;line-height:1.35;font-weight:820}
 .plan-benefits li{display:flex;gap:9px;align-items:flex-start}
 .check{color:#16A34A;font-weight:950;line-height:1}
 .price-card .cta{width:100%;margin-top:auto}
 .cta.outline{background:#fff;color:var(--blue);border:1.5px solid #2563EB;box-shadow:none}
+.checkout-status{min-height:18px;margin:10px 0 0;color:#64748B;font-size:12px;font-weight:850;text-align:center}
+.checkout-status.warning{color:#92400E}
 .card-footer{border-top:1px solid #E5E7EB;margin-top:18px;padding-top:14px;color:#166534;font-size:13px;font-weight:950}
 .pricing-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
 .trust-block{background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.04)}
@@ -204,7 +212,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 .founder-includes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.founder-includes div{background:#fff;border:1px solid #DBEAFE;border-radius:16px;padding:10px 12px;color:#334155;font-weight:850;font-size:13px}
 .founder-progress{background:#fff;border:1px solid #DBEAFE;border-radius:26px;padding:24px;box-shadow:0 16px 45px rgba(37,99,235,.12)}
 .progress-label{font-size:22px;font-weight:950;letter-spacing:-.04em;margin-bottom:10px}.progress-label span{color:var(--blue)}
-.progress-bar{height:16px;background:#E5E7EB;border-radius:999px;overflow:hidden;margin:14px 0}.progress-fill{height:100%;width:76%;background:linear-gradient(90deg,#2563EB,#60A5FA);border-radius:999px}
+.progress-bar{height:16px;background:#E5E7EB;border-radius:999px;overflow:hidden;margin:14px 0}.progress-fill{height:100%;width:93%;background:linear-gradient(90deg,#2563EB,#60A5FA);border-radius:999px}
 .remaining{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;border-radius:18px;padding:12px;font-size:13px;font-weight:950;line-height:1.35;margin:14px 0}
 .founder-note{font-size:12px;color:#64748B;line-height:1.5;margin-top:10px}
 .latest-founder-alert{width:min(460px,100%);margin:18px auto 0;background:#fff;border:1px solid #DBEAFE;border-radius:18px;padding:12px 14px;box-shadow:0 18px 42px rgba(37,99,235,.14);display:flex;align-items:center;gap:12px}
@@ -296,7 +304,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="badge">🫁 Programa Fundadores · 19 de 25 lugares ocupados</div>
+      <div class="badge">🫁 Programa Fundadores · Últimos lugares disponibles</div>
       <h1>Menos captura.<br><span class="blue">Más medicina.</span></h1>
       <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
       <p class="lead" style="font-weight:850;color:#1E40AF;margin-top:-12px">Ahorra hasta 15 minutos por consulta con IA Clínica integrada.</p>
@@ -431,10 +439,10 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         <a class="cta" href="#beta">Quiero mi lugar</a>
       </div>
       <div class="founder-progress">
-        <div class="progress-label"><span>19 de 25</span> lugares ocupados</div>
+        <div class="progress-label"><span>Últimos lugares</span> disponibles</div>
         <div class="progress-bar"><div class="progress-fill"></div></div>
-        <p style="color:#64748B;line-height:1.5;margin:0">76% del Programa Fundadores ya está ocupado.</p>
-        <div class="remaining">Solo quedan 6 lugares disponibles.</div>
+        <p style="color:#64748B;line-height:1.5;margin:0">El Programa Fundadores está en etapa final de selección.</p>
+        <div class="remaining">Últimos lugares disponibles para especialistas fundadores.</div>
         <a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20agendar%20una%20demo%20de%20NeumoPractice" target="_blank" rel="noopener">Hablar por WhatsApp</a>
         <div class="founder-note">No hay compromiso de permanencia. Buscamos neumólogos pediatras que quieran participar en la etapa de validación y crecimiento del producto.</div>
       </div>
@@ -442,7 +450,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     <div class="latest-founder-alert" aria-label="Último fundador registrado">
       <div class="latest-founder-icon">Dr.</div>
       <div class="latest-founder-copy">
-        <strong>Último Fundador: Dr. Carlos V*****</strong>
+        <strong>Última Fundadora: Dra. Karen *****</strong>
         Se acaba de unir al Programa Fundadores.
       </div>
     </div>
@@ -459,6 +467,10 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         <p class="billing-note">Facturado anualmente</p>
         <p class="savings">Ahorra $3,600 al año</p>
         <div class="monthly-alt">O $799 MXN pagando mes a mes</div>
+        <div class="billing-options" role="group" aria-label="Elegir frecuencia de pago para PRO">
+          <button class="billing-option active" type="button" data-plan="pro" data-period="yearly"><strong>Anual</strong><span>$5,988 MXN / año</span></button>
+          <button class="billing-option" type="button" data-plan="pro" data-period="monthly"><strong>Mensual</strong><span>$799 MXN / mes</span></button>
+        </div>
         <ul class="plan-benefits">
           <li><span class="check">✓</span>1 médico</li>
           <li><span class="check">✓</span>1 recepcionista</li>
@@ -470,7 +482,8 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
           <li><span class="check">✓</span>Finanzas básicas</li>
           <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta" href="#beta">Elegir PRO</a>
+        <a class="cta checkout-cta" href="#" data-checkout-button data-plan="pro" data-period="yearly" rel="noopener">Elegir PRO</a>
+        <div class="checkout-status" data-checkout-status></div>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
       <div class="price-card" data-stripe-product-id="prod_UgeE5dvqNxQbAM" data-price-monthly="price_1ThGvhECXG2UiJodhOdSgR4a" data-price-yearly="price_1Thw5IECXG2UiJodrfeoTBiW" data-stripe-live-product-id="prod_UgGSYQv6E5VRoU" data-live-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN">
@@ -480,6 +493,10 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         <p class="billing-note">Facturado anualmente</p>
         <p class="savings">Ahorra $6,000 al año</p>
         <div class="monthly-alt">O $1,999 MXN pagando mes a mes</div>
+        <div class="billing-options" role="group" aria-label="Elegir frecuencia de pago para CLINIC PRO">
+          <button class="billing-option active" type="button" data-plan="clinicPro" data-period="yearly"><strong>Anual</strong><span>$17,988 MXN / año</span></button>
+          <button class="billing-option" type="button" data-plan="clinicPro" data-period="monthly"><strong>Mensual</strong><span>$1,999 MXN / mes</span></button>
+        </div>
         <ul class="plan-benefits">
           <li><span class="check">✓</span>Hasta 5 médicos</li>
           <li><span class="check">✓</span>Recepción incluida</li>
@@ -490,7 +507,8 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
           <li><span class="check">✓</span>Base de datos unificada</li>
           <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta outline" href="#beta">Elegir CLINIC PRO</a>
+        <a class="cta outline checkout-cta" href="#" data-checkout-button data-plan="clinicPro" data-period="yearly" rel="noopener">Elegir CLINIC PRO</a>
+        <div class="checkout-status" data-checkout-status></div>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
     </div>
@@ -553,7 +571,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   <div class="container">
     <div class="form-wrap">
       <div>
-        <div class="badge">Acceso Beta Fundadores · 19/25 ocupados</div>
+        <div class="badge">Acceso Beta Fundadores · Últimos lugares disponibles</div>
         <h2 style="font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:18px 0 10px">Agenda una demo privada de NeumoPractice.</h2>
         <p style="color:#64748B;line-height:1.6">Déjanos tus datos para reservar tu lugar en el Programa Fundadores. Te contactaremos para mostrarte cómo funciona NeumoPractice y resolver tus dudas.</p>
       </div>
@@ -564,14 +582,14 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         <input name="correo" type="email" placeholder="Correo electrónico" required>
         <input name="whatsapp" placeholder="WhatsApp" required>
         <select name="pacientes"><option>Pacientes por semana</option><option>Menos de 30</option><option>30 a 60</option><option>60 a 100</option><option>Más de 100</option></select>
-        <input type="hidden" name="programa" value="Programa Fundadores 19/25">
+        <input type="hidden" name="programa" value="Programa Fundadores - últimos lugares disponibles">
         <input type="hidden" name="fuente" value="Landing NeumoPractice">
         <textarea name="mensaje" placeholder="Cuéntanos qué sistema usas actualmente o qué te gustaría mejorar"></textarea>
         <button class="cta" type="submit">Quiero mi demo</button>
         <div id="formSuccess" class="form-success">Solicitud recibida. Revisa tu correo o continúa por WhatsApp.</div>
         <div id="thankYouBox" class="thankyou-box">
           <strong>¡Gracias!</strong><br>
-          Tu solicitud fue enviada correctamente. 19 de 25 lugares ya han sido ocupados en el Programa Fundadores.
+          Tu solicitud fue enviada correctamente. El Programa Fundadores está en etapa final de selección y quedan últimos lugares disponibles.
           <div style="margin-top:12px"><a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20agendar%20una%20demo%20de%20NeumoPractice" target="_blank" rel="noopener">Continuar por WhatsApp</a></div>
         </div>
       </form>
@@ -626,6 +644,16 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
     "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
   },
+  "checkoutLinks": {
+    "pro": {
+      "monthly": "",
+      "yearly": ""
+    },
+    "clinicPro": {
+      "monthly": "",
+      "yearly": "https://buy.stripe.com/test_aFacN54yL27n1gQ4BX4ko00"
+    }
+  },
   "live": {
     "products": {
       "pro": "prod_UgGMTmZKxjPv1w",
@@ -636,6 +664,16 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       "STRIPE_PRICE_PRO_YEARLY": "",
       "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
       "STRIPE_PRICE_CLINIC_YEARLY": ""
+    },
+    "checkoutLinks": {
+      "pro": {
+        "monthly": "",
+        "yearly": ""
+      },
+      "clinicPro": {
+        "monthly": "",
+        "yearly": ""
+      }
     }
   },
   "test": {
@@ -648,6 +686,16 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       "STRIPE_PRICE_PRO_YEARLY": "price_1Thw2PECXG2UiJodnVcL5Aio",
       "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
       "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
+    },
+    "checkoutLinks": {
+      "pro": {
+        "monthly": "",
+        "yearly": ""
+      },
+      "clinicPro": {
+        "monthly": "",
+        "yearly": "https://buy.stripe.com/test_aFacN54yL27n1gQ4BX4ko00"
+      }
     }
   }
 }
@@ -655,6 +703,80 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 
 <script>
 window.NEUMOPRACTICE_STRIPE_CONFIG = JSON.parse(document.getElementById("neumopractice-stripe-config").textContent);
+
+const STRIPE_PRICE_KEYS = {
+  pro: {
+    monthly: "STRIPE_PRICE_PRO_MONTHLY",
+    yearly: "STRIPE_PRICE_PRO_YEARLY"
+  },
+  clinicPro: {
+    monthly: "STRIPE_PRICE_CLINIC_MONTHLY",
+    yearly: "STRIPE_PRICE_CLINIC_YEARLY"
+  }
+};
+
+function getCheckoutPlanLabel(plan){
+  return plan === "clinicPro" ? "CLINIC PRO" : "PRO";
+}
+
+function getCheckoutUrl(plan, period){
+  const config = window.NEUMOPRACTICE_STRIPE_CONFIG || {};
+  return config.checkoutLinks?.[plan]?.[period] || "";
+}
+
+function getCheckoutPriceId(plan, period){
+  const key = STRIPE_PRICE_KEYS[plan]?.[period];
+  return key ? (window.NEUMOPRACTICE_STRIPE_CONFIG?.prices?.[key] || "") : "";
+}
+
+function updateCheckoutButton(card, plan, period){
+  const button = card.querySelector("[data-checkout-button]");
+  const status = card.querySelector("[data-checkout-status]");
+  const url = getCheckoutUrl(plan, period);
+  const priceId = getCheckoutPriceId(plan, period);
+
+  if(button){
+    button.dataset.plan = plan;
+    button.dataset.period = period;
+    button.dataset.priceId = priceId;
+    button.href = url || "#checkout-pendiente";
+    button.target = url ? "_blank" : "";
+  }
+
+  if(status){
+    status.classList.toggle("warning", !url);
+    status.textContent = url ? "Stripe Checkout seguro." : "";
+  }
+}
+
+document.querySelectorAll(".billing-option").forEach((option) => {
+  option.addEventListener("click", () => {
+    const card = option.closest(".price-card");
+    if(!card) return;
+    const plan = option.dataset.plan;
+    const period = option.dataset.period;
+    card.querySelectorAll(".billing-option").forEach((item) => {
+      item.classList.toggle("active", item === option);
+    });
+    updateCheckoutButton(card, plan, period);
+  });
+});
+
+document.querySelectorAll("[data-checkout-button]").forEach((button) => {
+  const card = button.closest(".price-card");
+  if(card){
+    updateCheckoutButton(card, button.dataset.plan, button.dataset.period);
+  }
+
+  button.addEventListener("click", (event) => {
+    const url = getCheckoutUrl(button.dataset.plan, button.dataset.period);
+    if(url) return;
+
+    event.preventDefault();
+    const priceId = button.dataset.priceId || getCheckoutPriceId(button.dataset.plan, button.dataset.period);
+    alert(`Falta conectar el Payment Link de Stripe para esta variante. Price ID: ${priceId}`);
+  });
+});
 
 async function submitLead(event){
   event.preventDefault();
