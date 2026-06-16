@@ -134,6 +134,12 @@ input,select,textarea{width:100%;border:1px solid #D9DEE7;border-radius:14px;pad
 textarea{min-height:110px;resize:vertical}
 footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:#fff}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.r3-credit{margin-top:24px;padding-top:18px;border-top:1px solid #E5E7EB;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.r3-credit a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#0F172A;font-weight:950}
+.r3-credit img{width:52px;height:52px;object-fit:cover;border-radius:14px;box-shadow:0 12px 28px rgba(15,23,42,.16)}
+.r3-credit span{display:block;color:#94A3B8;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:950}
+.r3-credit strong{display:block;margin-top:2px;font-size:14px}
+.r3-credit em{font-style:normal;color:#64748B;font-size:12px;font-weight:850}
 @media(max-width:950px){
   .hero-grid,.ai-band,.form-wrap{grid-template-columns:1fr}
   h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
@@ -460,7 +466,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       <p>Agenda, expediente clínico, IA Clínica, recetas, imágenes y finanzas en un solo plan.</p>
     </div>
     <div class="pricing">
-      <div class="price-card featured" data-stripe-product-id="prod_UgeEHgBYLx4hEp" data-price-monthly="price_1ThGvgECXG2UiJodWpoIhLlO" data-price-yearly="price_1Thw2PECXG2UiJodnVcL5Aio" data-stripe-live-product-id="prod_UgGMTmZKxjPv1w" data-live-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2">
+      <div class="price-card featured" data-stripe-product-id="prod_UgGMTmZKxjPv1w" data-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-price-yearly="price_1Tj3ohECXG2UiJoddpTdrla7" data-stripe-yearly-product-id="prod_UiUovLz8kDWpkX">
         <div class="plan-badge">MEJOR VALOR</div>
         <h3 class="plan-name">NeumoPractice PRO</h3>
         <div class="annual-price"><strong>$499</strong><span>MXN / mes</span></div>
@@ -486,7 +492,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
         <div class="checkout-status" data-checkout-status></div>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
-      <div class="price-card" data-stripe-product-id="prod_UgeE5dvqNxQbAM" data-price-monthly="price_1ThGvhECXG2UiJodhOdSgR4a" data-price-yearly="price_1Thw5IECXG2UiJodrfeoTBiW" data-stripe-live-product-id="prod_UgGSYQv6E5VRoU" data-live-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN">
+      <div class="price-card" data-stripe-product-id="prod_UgGSYQv6E5VRoU" data-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-price-yearly="price_1Tj47TECXG2UiJodCvwWwikO">
         <div class="plan-badge">CLÍNICAS Y EQUIPOS</div>
         <h3 class="plan-name">NeumoPractice CLINIC PRO</h3>
         <div class="annual-price"><strong>$1,499</strong><span>MXN / mes</span></div>
@@ -628,51 +634,85 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     <p style="margin:22px 0 0;color:#94A3B8;font-size:12px;line-height:1.5;max-width:900px;">
       NeumoPractice es una plataforma de apoyo clínico. Las decisiones diagnósticas y terapéuticas corresponden exclusivamente al profesional de la salud.
     </p>
+    <div class="r3-credit" aria-label="Developed by R3 LAB">
+      <a href="https://www.r3labstudio.com/" target="_blank" rel="noopener">
+        <img src="assets/r3-lab-logo.png" alt="R3 LAB logo">
+        <div>
+          <span>Developed by</span>
+          <strong>R3 LAB</strong>
+        </div>
+      </a>
+      <em>Clinical Intelligence Studio</em>
+    </div>
   </div>
 </footer>
 
 <script type="application/json" id="neumopractice-stripe-config">
 {
-  "mode": "test",
+  "mode": "live",
   "products": {
-    "pro": "prod_UgeEHgBYLx4hEp",
-    "clinicPro": "prod_UgeE5dvqNxQbAM"
+    "pro": "prod_UgGMTmZKxjPv1w",
+    "proYearly": "prod_UiUovLz8kDWpkX",
+    "clinicPro": "prod_UgGSYQv6E5VRoU"
   },
   "prices": {
-    "STRIPE_PRICE_PRO_MONTHLY": "price_1ThGvgECXG2UiJodWpoIhLlO",
-    "STRIPE_PRICE_PRO_YEARLY": "price_1Thw2PECXG2UiJodnVcL5Aio",
-    "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
-    "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
+    "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
+    "STRIPE_PRICE_PRO_YEARLY": "price_1Tj3ohECXG2UiJoddpTdrla7",
+    "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
+    "STRIPE_PRICE_CLINIC_YEARLY": "price_1Tj47TECXG2UiJodCvwWwikO"
   },
   "checkoutLinks": {
     "pro": {
-      "monthly": "",
-      "yearly": ""
+      "monthly": "https://buy.stripe.com/bJefZh7KX27n4t27O94ko02",
+      "yearly": "https://buy.stripe.com/aFacN54yL27n1gQ4BX4ko00"
     },
     "clinicPro": {
       "monthly": "",
-      "yearly": "https://buy.stripe.com/test_aFacN54yL27n1gQ4BX4ko00"
+      "yearly": "https://buy.stripe.com/7sYaEX2qDcM1cZy9Wh4ko01"
+    }
+  },
+  "checkoutEndpoint": "",
+  "paymentLinkIds": {
+    "pro": {
+      "monthly": "plink_1Tj4FeECXG2UiJodK8sNToss",
+      "yearly": "plink_1Tj41iECXG2UiJodzV67g3Gj"
+    },
+    "clinicPro": {
+      "monthly": "",
+      "yearly": "plink_1Tj48AECXG2UiJod1biPZdpJ"
     }
   },
   "live": {
     "products": {
       "pro": "prod_UgGMTmZKxjPv1w",
+      "proYearly": "prod_UiUovLz8kDWpkX",
       "clinicPro": "prod_UgGSYQv6E5VRoU"
     },
     "prices": {
       "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
-      "STRIPE_PRICE_PRO_YEARLY": "",
+      "STRIPE_PRICE_PRO_YEARLY": "price_1Tj3ohECXG2UiJoddpTdrla7",
       "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
-      "STRIPE_PRICE_CLINIC_YEARLY": ""
+      "STRIPE_PRICE_CLINIC_YEARLY": "price_1Tj47TECXG2UiJodCvwWwikO"
     },
     "checkoutLinks": {
       "pro": {
-        "monthly": "",
-        "yearly": ""
+        "monthly": "https://buy.stripe.com/bJefZh7KX27n4t27O94ko02",
+        "yearly": "https://buy.stripe.com/aFacN54yL27n1gQ4BX4ko00"
       },
       "clinicPro": {
         "monthly": "",
-        "yearly": ""
+        "yearly": "https://buy.stripe.com/7sYaEX2qDcM1cZy9Wh4ko01"
+      }
+    },
+    "checkoutEndpoint": "",
+    "paymentLinkIds": {
+      "pro": {
+        "monthly": "plink_1Tj4FeECXG2UiJodK8sNToss",
+        "yearly": "plink_1Tj41iECXG2UiJodzV67g3Gj"
+      },
+      "clinicPro": {
+        "monthly": "",
+        "yearly": "plink_1Tj48AECXG2UiJod1biPZdpJ"
       }
     }
   },
@@ -695,6 +735,17 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
       "clinicPro": {
         "monthly": "",
         "yearly": "https://buy.stripe.com/test_aFacN54yL27n1gQ4BX4ko00"
+      }
+    },
+    "checkoutEndpoint": "",
+    "paymentLinkIds": {
+      "pro": {
+        "monthly": "",
+        "yearly": "plink_1ThwJZECXG2UiJodLP242ZoY"
+      },
+      "clinicPro": {
+        "monthly": "",
+        "yearly": "plink_1ThwHZECXG2UiJod17ei6frK"
       }
     }
   }
@@ -724,6 +775,14 @@ function getCheckoutUrl(plan, period){
   return config.checkoutLinks?.[plan]?.[period] || "";
 }
 
+function getCheckoutEndpoint(){
+  return window.NEUMOPRACTICE_STRIPE_CONFIG?.checkoutEndpoint || "";
+}
+
+function getPaymentLinkId(plan, period){
+  return window.NEUMOPRACTICE_STRIPE_CONFIG?.paymentLinkIds?.[plan]?.[period] || "";
+}
+
 function getCheckoutPriceId(plan, period){
   const key = STRIPE_PRICE_KEYS[plan]?.[period];
   return key ? (window.NEUMOPRACTICE_STRIPE_CONFIG?.prices?.[key] || "") : "";
@@ -739,6 +798,7 @@ function updateCheckoutButton(card, plan, period){
     button.dataset.plan = plan;
     button.dataset.period = period;
     button.dataset.priceId = priceId;
+    button.dataset.paymentLinkId = getPaymentLinkId(plan, period);
     button.href = url || "#checkout-pendiente";
     button.target = url ? "_blank" : "";
   }
@@ -774,7 +834,43 @@ document.querySelectorAll("[data-checkout-button]").forEach((button) => {
 
     event.preventDefault();
     const priceId = button.dataset.priceId || getCheckoutPriceId(button.dataset.plan, button.dataset.period);
-    alert(`Falta conectar el Payment Link de Stripe para esta variante. Price ID: ${priceId}`);
+    const paymentLinkId = button.dataset.paymentLinkId || getPaymentLinkId(button.dataset.plan, button.dataset.period);
+    const endpoint = getCheckoutEndpoint();
+
+    if(endpoint && priceId){
+      button.setAttribute("aria-busy", "true");
+      const originalText = button.textContent;
+      button.textContent = "Abriendo checkout...";
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          mode: window.NEUMOPRACTICE_STRIPE_CONFIG?.mode || "test",
+          plan: button.dataset.plan,
+          period: button.dataset.period,
+          priceId
+        })
+      })
+      .then((response) => {
+        if(!response.ok) throw new Error("checkout_request_failed");
+        return response.json();
+      })
+      .then((payload) => {
+        if(!payload?.url) throw new Error("checkout_url_missing");
+        window.location.href = payload.url;
+      })
+      .catch(() => {
+        alert(`No pudimos abrir Stripe Checkout. Price ID: ${priceId}`);
+      })
+      .finally(() => {
+        button.removeAttribute("aria-busy");
+        button.textContent = originalText;
+      });
+      return;
+    }
+
+    alert(`Falta conectar el checkout de Stripe para ${getCheckoutPlanLabel(button.dataset.plan)} ${button.dataset.period === "yearly" ? "anual" : "mensual"}.\nPrice ID: ${priceId}${paymentLinkId ? `\nPayment Link ID: ${paymentLinkId}` : ""}`);
   });
 });
 
