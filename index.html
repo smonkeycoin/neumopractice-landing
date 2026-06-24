@@ -470,8 +470,14 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
     </div>
     <div class="hero-video-shell">
       <div class="hero-video-frame">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="./assets/r3-lab-logo.png">
-          <source src="./neumopractice-preview.mp4" type="video/mp4">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+          <source src="./assets/neumopractice-demo.mp4" type="video/mp4">
         </video>
         <div class="video-badge"><span class="video-dot"></span> Vista previa NeumoPractice</div>
       </div>
@@ -946,32 +952,35 @@ function initHeroVideo() {
   const video = document.querySelector(".hero-video");
   if (!video) return;
 
-  const source = video.querySelector("source");
-  const videoSrc = source ? source.getAttribute("src") : "";
   const frame = video.closest(".hero-video-frame");
-  console.log("Hero video src:", videoSrc);
 
   video.addEventListener("canplay", () => {
-    console.log("Hero video canplay");
     if(frame){
       frame.classList.remove("hero-video-error");
     }
   });
 
   video.addEventListener("error", () => {
-    console.log("Hero video error");
     if(frame){
       frame.classList.add("hero-video-error");
     }
   });
 
   video.load();
-  video.play().catch(() => {});
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   initFounderCountdown();
   initHeroVideo();
+
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    console.log('Hero video:', heroVideo.currentSrc);
+    heroVideo.play().catch(err => {
+      console.warn('Hero video autoplay blocked', err);
+    });
+  }
 });
 
 window.NEUMOPRACTICE_STRIPE_CONFIG = JSON.parse(document.getElementById("neumopractice-stripe-config").textContent);
