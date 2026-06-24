@@ -376,6 +376,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 .hero-video-frame{
   border-radius:22px;
   overflow:hidden;
+  aspect-ratio:16/9;
   background:
     radial-gradient(600px 260px at 30% 10%, rgba(40,199,255,.35), transparent 55%),
     radial-gradient(600px 260px at 85% 90%, rgba(255,255,255,.12), transparent 58%),
@@ -383,12 +384,17 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   border:1px solid rgba(255,255,255,.18);
   position:relative;
 }
-.hero-video-frame video{
-  width:100%;
-  display:block;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  background:transparent;
+.hero-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: transparent;
 }
 .hero-video-frame::before{
   content:none;
@@ -400,6 +406,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   display:inline-flex;
   align-items:center;
   gap:7px;
+  z-index:2;
   border-radius:999px;
   padding:8px 11px;
   background:rgba(15,23,42,.72);
@@ -960,7 +967,12 @@ function initHeroVideo() {
     }
   });
 
+  video.addEventListener("loadeddata", () => {
+    console.log("Hero video loadeddata", video.videoWidth, video.videoHeight);
+  });
+
   video.addEventListener("error", () => {
+    console.error("Hero video error", video.error);
     if(frame){
       frame.classList.add("hero-video-error");
     }
@@ -976,7 +988,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
     heroVideo.muted = true;
-    console.log('Hero video:', heroVideo.currentSrc);
+    console.log('Hero video src:', heroVideo.currentSrc);
+    console.log('Hero video readyState:', heroVideo.readyState);
+    console.log('Hero video videoWidth:', heroVideo.videoWidth);
+    console.log('Hero video videoHeight:', heroVideo.videoHeight);
     heroVideo.play().catch(err => {
       console.warn('Hero video autoplay blocked', err);
     });
