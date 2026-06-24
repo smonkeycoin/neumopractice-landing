@@ -238,13 +238,48 @@ select{color:#F0F6FF;background-color:rgba(255,255,255,.12)}
 select option{color:#0F172A}
 textarea{min-height:110px;resize:vertical}
 footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:#fff}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.r3-credit{margin-top:24px;padding-top:18px;border-top:1px solid #E5E7EB;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.r3-credit a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#0F172A;font-weight:950}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#E5F0FF}
+.r3-credit{margin-top:24px;padding-top:18px;border-top:1px solid rgba(96,165,250,.28);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#E5F0FF}
+.r3-credit a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#E5F0FF;font-weight:950}
 .r3-credit img{width:52px;height:52px;object-fit:cover;border-radius:14px;box-shadow:0 12px 28px rgba(15,23,42,.16)}
-.r3-credit span{display:block;color:#94A3B8;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:950}
+.r3-credit span{display:block;color:#9CC0FF;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:950}
 .r3-credit strong{display:block;margin-top:2px;font-size:14px}
-.r3-credit em{font-style:normal;color:#64748B;font-size:12px;font-weight:850}
+.r3-credit em{font-style:normal;color:#B8D4FF;font-size:12px;font-weight:850}
+
+footer{
+  padding:44px 0;
+  color:#dce8ff;
+  border-top:1px solid rgba(96,165,250,.22);
+  background:linear-gradient(150deg,#071A3D 0%,#0F2A5F 52%,#2563EB 100%);
+}
+.footer-trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:24px}
+.footer-trust-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(96,165,250,.28);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 16px 34px rgba(2,14,39,.32);
+  backdrop-filter:blur(12px);
+}
+.footer-trust-icon{
+  width:32px;
+  height:32px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  margin-bottom:10px;
+  color:#E0F2FE;
+  background:rgba(96,165,250,.24);
+  border:1px solid rgba(125,211,252,.48);
+  box-shadow:0 0 0 4px rgba(125,211,252,.10);
+  font-size:16px;
+}
+.footer-trust-title{display:block;color:#FFFFFF;font-size:15px;margin:0 0 6px;font-weight:950}
+.footer-trust-copy{margin:0;color:#BFD4F2;font-size:13px;line-height:1.45}
+.footer-closing{font-size:13px;line-height:1.5;color:#B8D4F7}
+.footer-brand h2{margin:0 0 4px;color:#FFFFFF;font-size:30px;letter-spacing:-.03em}
+.footer-brand{color:#DCEBFF}
+.footer-brand p{margin:0;color:#93C3FF}
 @media(max-width:950px){
   .hero-grid,.ai-band,.form-wrap{grid-template-columns:1fr}
   h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
@@ -253,6 +288,7 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
   .pricing-intro h2{font-size:36px}
   .price-card.featured{transform:none}
   .annual-price strong{font-size:58px}
+  .footer-trust{grid-template-columns:1fr}
 }
 
 /* AI module emphasis tweak */
@@ -764,33 +800,33 @@ footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:
 
 <footer>
   <div class="container">
-    <div class="footer-trust" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;">
-      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
-        <div style="font-size:24px;margin-bottom:6px;">🇲🇽</div>
-        <b style="color:#111827;">Desarrollado en México</b>
-        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Pensado para la práctica médica mexicana.</p>
-      </div>
-      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
-        <div style="font-size:24px;margin-bottom:6px;">🫁</div>
-        <b style="color:#111827;">Diseñado para neumología pediátrica</b>
-        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">No para todas las especialidades. Para la tuya.</p>
-      </div>
-      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
-        <div style="font-size:24px;margin-bottom:6px;">🔒</div>
-        <b style="color:#111827;">Privacidad y seguridad clínica</b>
-        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Manejo responsable de información clínica.</p>
-      </div>
-      <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:18px;padding:16px;">
-        <div style="font-size:24px;margin-bottom:6px;">📋</div>
-        <b style="color:#111827;">Alineado con normativas mexicanas</b>
-        <p style="margin:6px 0 0;color:#64748B;font-size:13px;line-height:1.45;">Considera lineamientos aplicables al expediente clínico electrónico.</p>
-      </div>
+    <div class="footer-trust">
+      <article class="footer-trust-card">
+        <span class="footer-trust-icon" aria-hidden="true">🇲🇽</span>
+        <strong class="footer-trust-title">Desarrollado en México</strong>
+        <p class="footer-trust-copy">Pensado para la práctica médica mexicana.</p>
+      </article>
+      <article class="footer-trust-card">
+        <span class="footer-trust-icon" aria-hidden="true">🫁</span>
+        <strong class="footer-trust-title">Diseñado para neumología pediátrica</strong>
+        <p class="footer-trust-copy">No para todas las especialidades. Para la tuya.</p>
+      </article>
+      <article class="footer-trust-card">
+        <span class="footer-trust-icon" aria-hidden="true">🔒</span>
+        <strong class="footer-trust-title">Privacidad y seguridad clínica</strong>
+        <p class="footer-trust-copy">Manejo responsable de información clínica.</p>
+      </article>
+      <article class="footer-trust-card">
+        <span class="footer-trust-icon" aria-hidden="true">📋</span>
+        <strong class="footer-trust-title">Alineado con normativas mexicanas</strong>
+        <p class="footer-trust-copy">Considera lineamientos aplicables al expediente clínico electrónico.</p>
+      </article>
     </div>
     <div class="footer-inner">
-      <div><b>NeumoPractice</b><br>Menos captura. Más medicina.</div>
+      <div class="footer-brand"><h2>NeumoPractice</h2><p>Menos captura. Más medicina.</p></div>
       <div>© 2026 NeumoPractice. Plataforma clínica en beta.</div>
     </div>
-    <p style="margin:22px 0 0;color:#94A3B8;font-size:12px;line-height:1.5;max-width:900px;">
+    <p class="footer-closing" style="margin:22px 0 0;max-width:900px;">
       NeumoPractice es una plataforma de apoyo clínico. Las decisiones diagnósticas y terapéuticas corresponden exclusivamente al profesional de la salud.
     </p>
     <div class="r3-credit" aria-label="Developed by R3 LAB">
