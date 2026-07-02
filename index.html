@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeumoPractice | Menos captura. Más medicina.</title>
-<meta name="description" content="NeumoPractice es una plataforma clínica para neumología pediátrica con agenda, expediente, recetas, estudios, finanzas e IA clínica.">
+<meta name="description" content="NeumoPractice es una plataforma clínica para neumología con agenda, expediente, recetas, estudios, seguimiento, finanzas e IA clínica.">
 <link rel="icon" href="assets/favicon.ico">
 <style>
 :root{
@@ -474,6 +474,1041 @@ footer{
   .footer-trust{grid-template-columns:1fr!important;}
 }
 
+/* NeumoPractice Storytelling V1 */
+:root{
+  --glass:rgba(255,255,255,.74);
+  --soft-shadow:0 22px 70px rgba(15,23,42,.09);
+  --radius:24px;
+}
+body{
+  background:
+    linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 42%,#FFFFFF 100%);
+  overflow-x:hidden;
+}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:3px solid rgba(96,165,250,.72);
+  outline-offset:3px;
+}
+.nav{background:rgba(248,250,252,.84)}
+.nav-links a:not(.cta){transition:color .18s ease}
+.nav-links a:not(.cta):hover{color:var(--blue)}
+.cta{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.cta:hover{transform:translateY(-1px)}
+.story-hero{
+  min-height:calc(100vh - 74px);
+  margin-top:0;
+  padding:72px 0 46px;
+  color:#EAF3FF;
+  background:
+    radial-gradient(900px 360px at 76% 18%, rgba(96,165,250,.36), transparent 62%),
+    radial-gradient(720px 300px at 8% 18%, rgba(34,197,94,.10), transparent 64%),
+    linear-gradient(145deg,#0B1F4D 0%,#123C8C 54%,#2563EB 100%);
+}
+.story-hero::after{display:none}
+.story-hero .hero-grid{grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);gap:54px}
+.story-hero .badge{background:rgba(255,255,255,.12);color:#EAF3FF;border:1px solid rgba(191,219,254,.32);box-shadow:0 16px 38px rgba(2,16,40,.24);backdrop-filter:blur(14px)}
+.story-hero h1{color:#FFFFFF;font-size:clamp(48px,7vw,86px);line-height:.92;margin:20px 0 18px;max-width:720px}
+.story-hero h1 .blue{color:#8EDCFF}
+.story-hero .lead{color:#DCEBFF;font-size:clamp(17px,2vw,21px);max-width:690px}
+.story-hero .hero-highlight{color:#9EDAFF;font-weight:850;margin-top:-10px}
+.story-hero .micro{color:#BFD7FF}
+.story-hero .cta.secondary{background:rgba(255,255,255,.94);color:#0F172A;border-color:rgba(255,255,255,.48)}
+.founder-meter{
+  width:min(520px,100%);
+  margin-top:22px;
+  padding:14px;
+  border:1px solid rgba(37,99,235,.18);
+  border-radius:20px;
+  background:rgba(255,255,255,.78);
+  box-shadow:0 18px 42px rgba(37,99,235,.09);
+  backdrop-filter:blur(14px);
+}
+.founder-meter-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px;font-weight:950;color:#1E293B}
+.founder-meter-top span:last-child{color:#1D4ED8}
+.founder-meter-bar{height:12px;border-radius:999px;background:#E0ECFF;overflow:hidden}
+.founder-meter-fill{height:100%;width:100%;border-radius:inherit;background:linear-gradient(90deg,#2563EB,#60A5FA,#22C55E)}
+.founder-meter small{display:block;margin-top:9px;color:#64748B;font-weight:800;line-height:1.35}
+.story-hero .countdown-shell{
+  width:min(560px,100%);
+  margin-top:24px;
+  border-radius:22px;
+  padding:14px;
+  background:linear-gradient(150deg,rgba(7,26,61,.88),rgba(15,42,95,.78),rgba(37,99,235,.50));
+  border:1px solid rgba(147,197,253,.34);
+  box-shadow:0 18px 46px rgba(2,16,40,.34);
+  backdrop-filter:blur(14px);
+}
+.story-hero .countdown-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.story-hero .countdown-slot{background:rgba(8,25,62,.62);border:1px solid rgba(147,197,253,.26);border-radius:16px;padding:12px 8px}
+.story-hero .countdown-value{font-size:32px;color:#FFFFFF}
+.story-hero .countdown-label{color:#B9DFFF}
+.story-hero .countdown-finished{color:#FFFFFF}
+.product-shell{
+  border-radius:30px;
+  padding:14px;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(239,246,255,.82));
+  border:1px solid rgba(191,219,254,.82);
+  box-shadow:0 32px 90px rgba(37,99,235,.16);
+}
+.product-window{
+  min-height:520px;
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid #D9E6F8;
+  background:#FFFFFF;
+}
+.product-topbar{height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 18px;border-bottom:1px solid #E5E7EB;background:#FFFFFF}
+.window-dots{display:flex;gap:7px}.window-dots span{width:10px;height:10px;border-radius:50%;background:#CBD5E1}.window-dots span:nth-child(1){background:#FCA5A5}.window-dots span:nth-child(2){background:#FDE68A}.window-dots span:nth-child(3){background:#86EFAC}
+.product-title{font-size:13px;color:#64748B;font-weight:950}
+.product-body{display:grid;grid-template-columns:174px 1fr;min-height:466px}
+.product-side{padding:16px;border-right:1px solid #D7E5FA;background:linear-gradient(180deg,#EFF6FF,#F8FAFC)}
+.side-pill{height:34px;border-radius:12px;display:flex;align-items:center;gap:8px;padding:0 10px;margin-bottom:8px;color:#64748B;font-size:12px;font-weight:900}
+.side-pill.active{background:#2563EB;color:#FFFFFF;box-shadow:0 12px 26px rgba(37,99,235,.22)}
+.side-dot{width:8px;height:8px;border-radius:99px;background:currentColor}
+.product-main{padding:18px;background:linear-gradient(180deg,#FFFFFF,#F8FAFC)}
+.dash-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+.dash-card,.clinical-panel,.timeline-card,.mini-module{
+  border:1px solid #E5E7EB;
+  background:rgba(255,255,255,.86);
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(15,23,42,.045);
+}
+.dash-card{padding:14px}.dash-card strong{display:block;font-size:22px;letter-spacing:-.04em}.dash-card span{font-size:11px;color:#64748B;font-weight:850}
+.clinical-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
+.clinical-panel{padding:16px}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px}.panel-head strong{font-size:15px}.tag{font-size:11px;font-weight:950;color:#166534;background:#DCFCE7;border-radius:999px;padding:6px 9px}
+.appointment{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:11px 0;border-top:1px solid #EEF2F7}.appointment:first-of-type{border-top:0}.appt-time{font-weight:950;color:#2563EB}.appt-meta strong{display:block;font-size:13px}.appt-meta span{font-size:12px;color:#64748B}.appt-state{font-size:10px;font-weight:950;border-radius:999px;background:#EFF6FF;color:#1D4ED8;padding:6px 8px}
+.rx-card{padding:14px;border-radius:16px;background:#EFF6FF;border:1px solid #BFDBFE;margin-bottom:10px}.rx-card strong{display:block;margin-bottom:6px}.rx-card span{display:block;color:#475569;font-size:12px;line-height:1.45}
+.study-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #EEF2F7;color:#334155;font-size:13px;font-weight:850}.study-row:first-child{border-top:0}.study-row span:last-child{color:#2563EB}
+.story-section{padding:96px 0;position:relative;scroll-margin-top:96px}
+.story-section.alt{background:#F8FAFC}
+.split{display:grid;grid-template-columns:.86fr 1.14fr;gap:46px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;padding:8px 12px;font-size:12px;font-weight:950;margin-bottom:14px}
+.story-title{font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.055em;margin:0 0 16px;color:#111827}
+.story-copy{font-size:18px;line-height:1.6;color:#475569;margin:0;max-width:760px}
+.friction-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:34px}
+.friction-card{padding:18px;border-radius:20px;background:rgba(255,255,255,.78);border:1px solid #E5E7EB;box-shadow:0 16px 36px rgba(15,23,42,.05);font-weight:950;color:#334155;min-height:112px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+.friction-card::before{content:"";position:absolute;top:16px;left:16px;width:34px;height:6px;border-radius:99px;background:#F59E0B;opacity:.75}
+.flow-card{padding:26px;border-radius:28px;background:#FFFFFF;border:1px solid #DBEAFE;box-shadow:var(--soft-shadow)}
+.pipeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:stretch}
+.pipe-step{position:relative;border-radius:18px;background:#F8FAFC;border:1px solid #E5E7EB;padding:16px 12px;min-height:132px}
+.pipe-step:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;width:12px;height:12px;border-top:2px solid #60A5FA;border-right:2px solid #60A5FA;transform:translateY(-50%) rotate(45deg);background:#FFFFFF}
+.pipe-step strong{display:block;color:#111827;margin-bottom:8px;font-size:14px}.pipe-step span{display:block;color:#64748B;font-size:12px;line-height:1.4;font-weight:750}
+.sticky-story{display:grid;grid-template-columns:minmax(0,.86fr) minmax(460px,1.14fr);gap:46px;align-items:start}
+.scroll-copy{display:grid;gap:22px}
+.scroll-step{padding:22px;border-radius:22px;border:1px solid #E5E7EB;background:#FFFFFF;box-shadow:0 12px 34px rgba(15,23,42,.045);opacity:.62;transition:opacity .25s ease,transform .25s ease,border-color .25s ease}
+.scroll-step.is-active{opacity:1;transform:translateX(6px);border-color:#93C5FD}
+.scroll-step strong{display:block;font-size:20px;letter-spacing:-.025em;margin-bottom:8px}.scroll-step p{margin:0;color:#64748B;line-height:1.5}
+.sticky-visual{position:sticky;top:98px}
+.state-label{display:inline-flex;border-radius:999px;background:#111827;color:#FFFFFF;padding:8px 12px;font-size:12px;font-weight:950;margin-bottom:12px}
+.story-state{display:none}.story-state.is-active{display:block}
+.timeline-card{padding:18px}.timeline-item{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EEF2F7}.timeline-item:first-child{border-top:0}.timeline-dot{width:12px;height:12px;border-radius:50%;background:#2563EB;margin-top:4px;box-shadow:0 0 0 5px #DBEAFE}.timeline-item strong{display:block;font-size:13px}.timeline-item span{display:block;color:#64748B;font-size:12px;margin-top:2px}
+.benefit-grid,.trust-grid,.roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.benefit-card,.trust-card,.roadmap-card{background:#FFFFFF;border:1px solid #E5E7EB;border-radius:20px;padding:20px;box-shadow:0 14px 34px rgba(15,23,42,.045)}
+.benefit-card strong,.trust-card strong,.roadmap-card strong{display:block;margin-bottom:8px;color:#111827}.benefit-card p,.trust-card p,.roadmap-card p{margin:0;color:#64748B;font-size:14px;line-height:1.5}
+.founders-story{background:linear-gradient(145deg,#071A3D 0%,#0F2A5F 54%,#2563EB 100%);color:#FFFFFF;border-radius:30px;padding:34px;box-shadow:0 28px 80px rgba(3,18,45,.38);display:grid;grid-template-columns:1fr .78fr;gap:30px;align-items:center}
+.founders-story .story-title,.founders-story .story-copy{color:#FFFFFF}.founders-story .story-copy{color:#D8E8FF}
+.founder-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}.founder-list span{border:1px solid rgba(191,219,254,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;font-weight:850;color:#EAF2FF}
+.founder-panel{background:rgba(7,26,61,.72);border:1px solid rgba(191,219,254,.24);border-radius:24px;padding:22px}
+.founder-big{font-size:42px;line-height:1;font-weight:950;letter-spacing:-.05em;margin-bottom:10px}
+.final-cta{text-align:center;padding:110px 0;background:linear-gradient(180deg,#FFFFFF,#EFF6FF)}
+.final-cta .story-title{max-width:820px;margin-left:auto;margin-right:auto}
+.final-cta .story-copy{margin-left:auto;margin-right:auto}
+.form-wrap{scroll-margin-top:96px}
+.form-wrap .info-form-badge{color:#DBEAFE}
+.story-hero .product-body{grid-template-columns:148px 1fr}
+.story-hero .clinical-grid{grid-template-columns:1fr}
+.story-hero .product-main{overflow:hidden}
+.story-hero .product-shell{background:linear-gradient(145deg,rgba(96,165,250,.28),rgba(255,255,255,.92));border-color:rgba(191,219,254,.45);box-shadow:0 34px 90px rgba(2,16,40,.32)}
+.story-hero .product-window{color:#111827}
+.story-hero .product-topbar{background:linear-gradient(90deg,#0B1F4D,#123C8C);border-bottom-color:rgba(96,165,250,.32);color:#EAF3FF}
+.story-hero .product-title{color:#DCEBFF}
+.story-hero .product-main{background:#F8FAFC}
+.story-hero .clinical-panel,.story-hero .dash-card{background:#FFFFFF}
+.story-hero .clinical-panel strong,.story-hero .dash-card strong{color:#111827}
+.story-hero .appt-meta span,.story-hero .study-row{color:#475569}
+.story-hero .dash-card strong{font-size:20px}
+.story-hero .appointment{grid-template-columns:52px minmax(0,1fr) auto}
+.story-hero .appt-meta{min-width:0}
+.story-hero .appt-meta strong,.story-hero .appt-meta span{overflow-wrap:anywhere}
+@media(prefers-reduced-motion:no-preference){
+  .friction-card,.benefit-card,.trust-card,.roadmap-card,.pipe-step{transition:transform .22s ease,box-shadow .22s ease}
+  .friction-card:hover,.benefit-card:hover,.trust-card:hover,.roadmap-card:hover,.pipe-step:hover{transform:translateY(-3px);box-shadow:0 22px 48px rgba(15,23,42,.08)}
+}
+@media(max-width:1050px){
+  .story-hero .hero-grid,.split,.sticky-story,.founders-story{grid-template-columns:1fr}
+  .story-hero{padding-top:46px}
+  .product-shell{justify-self:stretch}
+  .sticky-visual{position:relative;top:auto}
+  .friction-grid{grid-template-columns:repeat(2,1fr)}
+  .pipeline{grid-template-columns:repeat(2,1fr)}
+  .pipe-step:not(:last-child)::after{display:none}
+}
+@media(max-width:760px){
+  .container{width:min(100% - 28px,1180px)}
+  .story-section{padding:68px 0}
+  .story-hero{min-height:auto;padding-bottom:34px}
+  .story-hero .hero-grid{gap:30px}
+  .story-hero h1{font-size:48px}
+  .hero-actions{width:100%}
+  .hero-actions .cta{width:100%}
+  .product-window{min-height:auto}
+  .product-body{grid-template-columns:1fr}
+  .product-side{display:none}
+  .product-main{padding:12px}
+  .dash-row,.clinical-grid,.benefit-grid,.trust-grid,.roadmap-grid,.founder-list{grid-template-columns:1fr}
+  .story-hero .dash-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .story-hero .dash-card{padding:10px}
+  .story-hero .dash-card strong{font-size:17px}
+  .story-hero .clinical-grid .clinical-panel:nth-child(2){display:none}
+  .friction-grid,.pipeline{grid-template-columns:1fr}
+  .appointment{grid-template-columns:44px 1fr}
+  .appt-state{grid-column:2}
+  .founders-story{padding:24px}
+  .final-cta{padding:76px 0}
+}
+
+/* Premium product-in-action + pricing conversion pass */
+#producto{
+  overflow:hidden;
+  color:#EAF3FF;
+  background:
+    radial-gradient(780px 360px at 72% 22%, rgba(96,165,250,.34), transparent 62%),
+    radial-gradient(620px 280px at 18% 16%, rgba(37,99,235,.28), transparent 58%),
+    radial-gradient(900px 420px at 50% 112%, rgba(96,165,250,.20), transparent 62%),
+    linear-gradient(145deg,#081C4A 0%,#0F2F74 42%,#1E4ED8 72%,#2563EB 100%);
+}
+#producto::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(180deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(circle at 68% 32%,#000 0%,transparent 68%);
+  opacity:.38;
+}
+#producto .container{position:relative;z-index:1}
+#producto .eyebrow{
+  color:#EAF6FF;
+  background:linear-gradient(90deg,rgba(37,99,235,.88),rgba(96,165,250,.72));
+  border-color:rgba(186,226,255,.48);
+  box-shadow:0 16px 36px rgba(2,16,40,.26),0 0 0 5px rgba(96,165,250,.10);
+}
+#producto .story-title{
+  color:#FFFFFF;
+  font-size:clamp(40px,5vw,68px);
+  text-shadow:0 22px 60px rgba(2,16,40,.36);
+}
+#producto .story-copy{color:#CFE2FF;font-size:19px}
+#producto .scroll-step{
+  border-color:rgba(191,219,254,.20);
+  background:rgba(255,255,255,.92);
+  box-shadow:0 18px 44px rgba(2,16,40,.16);
+}
+#producto .scroll-step strong{color:#0F172A}
+#producto .scroll-step p{color:#52627A}
+#producto .scroll-step.is-active{
+  opacity:1;
+  color:#FFFFFF;
+  border-color:rgba(147,197,253,.70);
+  background:linear-gradient(135deg,#0D2C72 0%,#2563EB 68%,#60A5FA 100%);
+  box-shadow:0 24px 70px rgba(37,99,235,.34),0 0 0 1px rgba(255,255,255,.16) inset;
+}
+#producto .scroll-step.is-active strong,
+#producto .scroll-step.is-active p{color:#FFFFFF}
+#producto .sticky-visual{filter:drop-shadow(0 34px 90px rgba(2,16,40,.40))}
+#producto .state-label{
+  background:rgba(8,28,74,.82);
+  border:1px solid rgba(147,197,253,.32);
+  color:#EAF3FF;
+  box-shadow:0 14px 36px rgba(2,16,40,.28);
+}
+#producto .product-shell{
+  position:relative;
+  background:linear-gradient(145deg,rgba(96,165,250,.36),rgba(255,255,255,.92));
+  border-color:rgba(191,219,254,.58);
+  box-shadow:0 40px 110px rgba(2,16,40,.38),0 0 70px rgba(96,165,250,.18);
+}
+#producto .product-shell::before{
+  content:"";
+  position:absolute;
+  inset:-90px -60px auto 20%;
+  height:240px;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(96,165,250,.46),transparent 68%);
+  filter:blur(24px);
+  pointer-events:none;
+}
+#producto .product-window{
+  position:relative;
+  color:#111827;
+  min-height:560px;
+  border-color:rgba(191,219,254,.86);
+  background:#F8FAFC;
+}
+#producto .product-window::before{
+  content:"Agenda\A Paciente\A Consulta\A Receta\A Estudios\A Timeline";
+  white-space:pre-line;
+  position:absolute;
+  left:0;
+  top:54px;
+  bottom:0;
+  width:150px;
+  padding:24px 18px;
+  color:#BFD7FF;
+  font-size:12px;
+  line-height:3.35;
+  font-weight:950;
+  background:linear-gradient(180deg,#081C4A,#0F2F74 64%,#123C8C);
+  border-right:1px solid rgba(96,165,250,.32);
+}
+#producto .product-window::after{
+  content:"IA Clínica";
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  z-index:2;
+  color:#EAF3FF;
+  font-size:11px;
+  font-weight:950;
+  border-radius:999px;
+  padding:8px 10px;
+  background:rgba(96,165,250,.18);
+  border:1px solid rgba(147,197,253,.35);
+}
+#producto .product-topbar{
+  position:relative;
+  z-index:3;
+  background:linear-gradient(90deg,#081C4A,#0F2F74 55%,#2563EB);
+  border-bottom-color:rgba(96,165,250,.34);
+}
+#producto .product-title{color:#EAF3FF}
+#producto .product-main{
+  position:relative;
+  z-index:1;
+  margin-left:150px;
+  min-height:506px;
+  padding:26px;
+  background:
+    radial-gradient(420px 220px at 82% 0%,rgba(96,165,250,.14),transparent 58%),
+    #F8FAFC;
+}
+#producto .dash-card,
+#producto .clinical-panel,
+#producto .timeline-card{
+  background:#FFFFFF;
+  border-color:#DDE9FB;
+  box-shadow:0 18px 42px rgba(15,23,42,.08);
+}
+#producto .dash-card{padding:18px}
+#producto .dash-card strong{color:#0F172A}
+#producto .dash-card span{color:#64748B}
+#producto .panel-head strong{font-size:17px;color:#0F172A}
+#producto .tag{
+  color:#075985;
+  background:#E0F2FE;
+  border:1px solid #BAE6FD;
+}
+#producto .tag::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:6px;vertical-align:1px}
+#producto .appointment{border-top-color:#EAF0FA}
+#producto .appointment::before{
+  content:"";
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#2563EB,#60A5FA);
+  box-shadow:0 8px 18px rgba(37,99,235,.20);
+  grid-column:1;
+  grid-row:1;
+}
+#producto .appt-time{grid-column:1;grid-row:1;align-self:end;justify-self:center;color:#FFFFFF;font-size:0}
+#producto .appt-time::after{content:"";display:block;width:8px;height:8px;border-radius:50%;background:#FFFFFF}
+#producto .appt-meta{grid-column:2}
+#producto .appt-state{
+  background:#EFF6FF;
+  color:#1D4ED8;
+  border:1px solid #DBEAFE;
+}
+#producto .rx-card{
+  background:linear-gradient(135deg,#EFF6FF,#FFFFFF);
+  border-color:#BFDBFE;
+}
+#producto .rx-card strong{color:#0F172A}
+#producto .study-row span:last-child{color:#2563EB}
+#producto .timeline-dot{background:#2563EB;box-shadow:0 0 0 6px #DBEAFE}
+
+.pricing-section{
+  overflow:hidden;
+  color:#EAF3FF;
+  padding:110px 0;
+  background:
+    radial-gradient(760px 360px at 14% 12%,rgba(96,165,250,.28),transparent 62%),
+    radial-gradient(820px 420px at 86% 28%,rgba(37,99,235,.30),transparent 62%),
+    radial-gradient(920px 460px at 50% 100%,rgba(96,165,250,.18),transparent 64%),
+    linear-gradient(145deg,#071A45 0%,#0D2C72 48%,#2563EB 100%);
+}
+.pricing-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(circle at 50% 20%,#000 0%,transparent 70%);
+  opacity:.36;
+}
+.pricing-section .container{position:relative;z-index:1}
+.pricing-value{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:26px;
+  align-items:center;
+  padding:28px;
+  margin-bottom:52px;
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(191,219,254,.22);
+  box-shadow:0 28px 80px rgba(2,16,40,.30);
+  backdrop-filter:blur(16px);
+}
+.pricing-value h2,.pricing-header h2{color:#FFFFFF;margin:0;letter-spacing:-.055em;line-height:1.02}
+.pricing-value h2{font-size:clamp(32px,4vw,54px)}
+.pricing-value p{margin:0;color:#D6E7FF;font-size:18px;line-height:1.65}
+.pricing-header{text-align:center;max-width:880px;margin:0 auto 34px}
+.pricing-header h2{font-size:clamp(42px,6vw,76px)}
+.pricing-header p{color:#D6E7FF;font-size:20px;line-height:1.45;margin:16px auto 18px;max-width:680px}
+.pricing-header .value-badge,.pricing-save-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  padding:9px 14px;
+  color:#EAF3FF;
+  background:rgba(96,165,250,.20);
+  border:1px solid rgba(147,197,253,.42);
+  font-size:13px;
+  font-weight:950;
+  box-shadow:0 14px 34px rgba(2,16,40,.22);
+}
+.pricing-save-badge{margin-top:10px;background:rgba(34,197,94,.14);border-color:rgba(134,239,172,.34)}
+.pricing-section .pricing{gap:22px;align-items:stretch}
+.pricing-section .price-card{
+  min-height:720px;
+  padding:34px;
+  border-radius:32px;
+  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,250,252,.96));
+  border:1px solid rgba(219,234,254,.90);
+  box-shadow:0 30px 90px rgba(2,16,40,.26),0 0 0 1px rgba(255,255,255,.64) inset;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.pricing-section .price-card:hover{transform:translateY(-5px);box-shadow:0 42px 110px rgba(2,16,40,.34),0 0 54px rgba(96,165,250,.16)}
+.pricing-section .price-card.featured{
+  border:1.5px solid #60A5FA;
+  transform:translateY(-10px);
+  box-shadow:0 42px 120px rgba(37,99,235,.36),0 0 0 1px rgba(96,165,250,.40) inset;
+}
+.pricing-section .plan-badge{
+  background:#EFF6FF;
+  color:#1D4ED8;
+  border:1px solid #BFDBFE;
+  padding:8px 12px;
+}
+.pricing-section .price-card.featured .plan-badge{background:linear-gradient(90deg,#2563EB,#60A5FA);color:#FFFFFF}
+.pricing-section .plan-name{font-size:28px;color:#0F172A}
+.pricing-section .annual-price strong{font-size:74px;color:#071A45}
+.pricing-section .annual-price span,.pricing-section .billing-note,.pricing-section .monthly-alt{color:#475569}
+.pricing-section .savings{color:#1D4ED8}
+.pricing-section .billing-options{
+  padding:6px;
+  gap:6px;
+  border-radius:18px;
+  background:#EEF5FF;
+  border:1px solid #D9E8FF;
+}
+.pricing-section .billing-option{
+  border:0;
+  border-radius:14px;
+  background:transparent;
+  padding:12px 13px;
+}
+.pricing-section .billing-option.active{
+  background:#FFFFFF;
+  box-shadow:0 12px 28px rgba(37,99,235,.18);
+}
+.pricing-section .billing-option:hover{background:rgba(96,165,250,.16)}
+.pricing-section .plan-benefits{gap:12px;color:#334155}
+.pricing-section .check{
+  display:inline-grid;
+  place-items:center;
+  width:20px;
+  height:20px;
+  flex:0 0 auto;
+  border-radius:999px;
+  background:#DCFCE7;
+  color:#15803D;
+  font-size:12px;
+}
+.pricing-section .price-card .cta{
+  min-height:52px;
+  font-size:16px;
+  background:linear-gradient(90deg,#2563EB,#1E4ED8);
+  box-shadow:0 18px 42px rgba(37,99,235,.28);
+}
+.pricing-section .price-card .cta:hover{box-shadow:0 24px 56px rgba(37,99,235,.38)}
+.pricing-section .price-card .cta.outline{
+  background:#FFFFFF;
+  color:#2563EB;
+  border:1.5px solid #93C5FD;
+}
+.pricing-section .checkout-status{color:#64748B}
+.comparison-premium,.pricing-guarantees{
+  margin-top:28px;
+  border-radius:28px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(191,219,254,.24);
+  box-shadow:0 24px 70px rgba(2,16,40,.24);
+  backdrop-filter:blur(16px);
+}
+.comparison-premium{overflow:auto}
+.comparison-premium table{width:100%;border-collapse:collapse;min-width:760px}
+.comparison-premium th,.comparison-premium td{padding:18px 20px;border-bottom:1px solid rgba(191,219,254,.16);text-align:left}
+.comparison-premium th{color:#FFFFFF;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.comparison-premium td{color:#DCEBFF;font-weight:850}
+.comparison-premium tr:last-child td{border-bottom:0}
+.comparison-premium .yes{color:#86EFAC}
+.pricing-guarantees{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  overflow:hidden;
+}
+.pricing-guarantees div{
+  padding:18px 20px;
+  border-right:1px solid rgba(191,219,254,.16);
+  border-bottom:1px solid rgba(191,219,254,.16);
+  color:#EAF3FF;
+  font-weight:900;
+}
+.pricing-guarantees div:nth-child(3n){border-right:0}
+.pricing-final-note{text-align:center;margin-top:28px}
+.pricing-final-note .cta{min-height:56px;padding-inline:32px}
+@media(max-width:1050px){
+  .pricing-value{grid-template-columns:1fr}
+  .pricing-section .pricing{grid-template-columns:1fr}
+  .pricing-section .price-card.featured{transform:none}
+  .pricing-guarantees{grid-template-columns:1fr 1fr}
+  .pricing-guarantees div:nth-child(3n){border-right:1px solid rgba(191,219,254,.16)}
+  .pricing-guarantees div:nth-child(2n){border-right:0}
+}
+@media(max-width:760px){
+  #producto .product-window::before,#producto .product-window::after{display:none}
+  #producto .product-main{margin-left:0;min-height:auto;padding:14px}
+  #producto .dash-row{grid-template-columns:1fr}
+  #producto .appointment{grid-template-columns:38px 1fr}
+  #producto .appt-state{grid-column:2}
+  .pricing-section{padding:78px 0}
+  .pricing-value,.pricing-section .price-card{padding:22px}
+  .pricing-section .annual-price strong{font-size:58px}
+  .pricing-guarantees{grid-template-columns:1fr}
+  .pricing-guarantees div{border-right:0!important}
+}
+
+/* Product action sticky fix */
+@media(min-width:1051px){
+  #producto{
+    min-height:240vh;
+    padding:0;
+    overflow:visible;
+  }
+  #producto .container{
+    min-height:inherit;
+    display:flex;
+    align-items:flex-start;
+  }
+  #producto .sticky-story{
+    position:sticky;
+    top:90px;
+    width:100%;
+    min-height:calc(100vh - 100px);
+    max-height:calc(100vh - 100px);
+    padding:28px 0;
+    display:grid;
+    grid-template-columns:minmax(360px,.82fr) minmax(520px,1.18fr);
+    gap:40px;
+    align-items:center;
+  }
+  #producto .scroll-copy{
+    min-height:0;
+    max-height:calc(100vh - 156px);
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr);
+    gap:18px;
+    overflow:hidden;
+  }
+  #producto .scroll-copy > div:first-child{
+    min-height:0;
+  }
+  #producto .scroll-copy > div:first-child .story-title{
+    font-size:clamp(38px,4.6vw,62px);
+    margin-bottom:12px;
+  }
+  #producto .scroll-copy > div:first-child .story-copy{
+    font-size:17px;
+    line-height:1.5;
+  }
+  #producto .scroll-step{
+    padding:15px 18px;
+    border-radius:18px;
+    min-height:0;
+  }
+  #producto .scroll-step strong{
+    font-size:17px;
+    margin-bottom:5px;
+  }
+  #producto .scroll-step p{
+    font-size:14px;
+    line-height:1.38;
+  }
+  #producto .scroll-copy > .scroll-step:first-of-type{
+    margin-top:0;
+  }
+  #producto .scroll-copy{
+    grid-template-rows:auto;
+  }
+  #producto .scroll-copy::after{
+    content:"";
+    pointer-events:none;
+    position:absolute;
+  }
+  #producto .scroll-copy{
+    position:relative;
+  }
+  #producto .scroll-copy .scroll-step{
+    flex:0 0 auto;
+  }
+  #producto .scroll-copy{
+    display:flex;
+    flex-direction:column;
+  }
+  #producto .scroll-copy > article{
+    flex:0 0 auto;
+  }
+  #producto .scroll-copy{
+    overflow:visible;
+  }
+  #producto .scroll-copy > article:first-of-type{
+    margin-top:0;
+  }
+  #producto .scroll-copy > article:nth-of-type(n){
+    margin-bottom:0;
+  }
+  #producto .scroll-copy{
+    gap:12px;
+  }
+  #producto .scroll-copy > article:nth-of-type(1),
+  #producto .scroll-copy > article:nth-of-type(2),
+  #producto .scroll-copy > article:nth-of-type(3),
+  #producto .scroll-copy > article:nth-of-type(4),
+  #producto .scroll-copy > article:nth-of-type(5),
+  #producto .scroll-copy > article:nth-of-type(6),
+  #producto .scroll-copy > article:nth-of-type(7){
+    width:100%;
+  }
+  #producto .scroll-copy > div:first-child ~ article{
+    max-width:100%;
+  }
+  #producto .scroll-copy{
+    max-height:calc(100vh - 156px);
+  }
+  #producto .scroll-copy > div:first-child{
+    flex:0 0 auto;
+  }
+  #producto .scroll-copy > div:first-child + article{
+    margin-top:4px;
+  }
+  #producto .scroll-copy{
+    padding-right:4px;
+  }
+  #producto .scroll-copy{
+    scrollbar-width:thin;
+    scrollbar-color:rgba(147,197,253,.72) rgba(255,255,255,.10);
+  }
+  #producto .scroll-copy::-webkit-scrollbar{width:8px}
+  #producto .scroll-copy::-webkit-scrollbar-track{background:rgba(255,255,255,.10);border-radius:999px}
+  #producto .scroll-copy::-webkit-scrollbar-thumb{background:rgba(147,197,253,.72);border-radius:999px}
+  #producto .sticky-visual{
+    position:relative;
+    top:auto;
+    align-self:center;
+    max-height:calc(100vh - 156px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  #producto .sticky-visual .product-window{
+    min-height:0;
+    height:min(620px,calc(100vh - 218px));
+  }
+  #producto .sticky-visual .product-main{
+    min-height:0;
+    height:calc(100% - 54px);
+    overflow:hidden;
+  }
+  #producto .state-label{
+    align-self:flex-start;
+    flex:0 0 auto;
+    margin-bottom:10px;
+  }
+}
+
+@media(min-width:1051px) and (max-height:820px){
+  #producto .sticky-story{
+    top:82px;
+    min-height:calc(100vh - 88px);
+    max-height:calc(100vh - 88px);
+    padding:16px 0;
+    gap:30px;
+  }
+  #producto .scroll-copy{
+    max-height:calc(100vh - 120px);
+    gap:9px;
+  }
+  #producto .scroll-copy > div:first-child .story-title{
+    font-size:clamp(34px,4vw,52px);
+  }
+  #producto .scroll-copy > div:first-child .story-copy{
+    font-size:15px;
+  }
+  #producto .eyebrow{margin-bottom:10px}
+  #producto .scroll-step{
+    padding:11px 15px;
+    border-radius:16px;
+  }
+  #producto .scroll-step strong{font-size:15px}
+  #producto .scroll-step p{font-size:12.5px}
+  #producto .sticky-visual{
+    max-height:calc(100vh - 120px);
+  }
+  #producto .sticky-visual .product-window{
+    height:min(520px,calc(100vh - 178px));
+  }
+  #producto .dash-card{padding:12px}
+  #producto .clinical-panel{padding:13px}
+}
+
+@media(max-width:1050px){
+  #producto{
+    min-height:auto;
+    padding:68px 0;
+  }
+  #producto .container{
+    display:block;
+    min-height:0;
+  }
+  #producto .sticky-story{
+    position:relative;
+    top:auto;
+    min-height:0;
+    max-height:none;
+  }
+  #producto .scroll-copy{
+    max-height:none;
+    overflow:visible;
+  }
+  #producto .sticky-visual{
+    position:relative;
+    top:auto;
+    max-height:none;
+  }
+}
+
+@media(min-width:1051px){
+  #producto .scroll-copy{
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  #producto .scroll-copy > div:first-child{
+    position:sticky;
+    top:0;
+    z-index:2;
+    padding-bottom:8px;
+    background:linear-gradient(180deg,rgba(8,28,74,.96) 0%,rgba(8,28,74,.88) 76%,rgba(8,28,74,0) 100%);
+  }
+}
+
+@media(min-width:1051px){
+  #producto .scroll-copy{
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr);
+    gap:14px;
+    overflow:visible;
+  }
+  #producto .scroll-copy > div:first-child{
+    position:relative;
+    top:auto;
+    padding-bottom:0;
+    background:transparent;
+  }
+  #producto .scroll-steps{
+    min-height:0;
+    max-height:calc(100vh - 320px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    display:grid;
+    gap:10px;
+    padding:2px 8px 2px 0;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(147,197,253,.72) rgba(255,255,255,.10);
+  }
+  #producto .scroll-steps::-webkit-scrollbar{width:8px}
+  #producto .scroll-steps::-webkit-scrollbar-track{background:rgba(255,255,255,.10);border-radius:999px}
+  #producto .scroll-steps::-webkit-scrollbar-thumb{background:rgba(147,197,253,.72);border-radius:999px}
+}
+
+@media(min-width:1051px) and (max-height:820px){
+  #producto .scroll-steps{
+    max-height:calc(100vh - 284px);
+    gap:8px;
+  }
+}
+
+@media(max-width:1050px){
+  #producto .scroll-steps{
+    display:grid;
+    gap:22px;
+    overflow:visible;
+    max-height:none;
+  }
+}
+
+/* Product action card overlap fix */
+@media(min-width:1051px){
+  #producto .scroll-steps{
+    max-height:calc(100vh - 380px);
+    overflow-y:auto;
+    padding-right:8px;
+    gap:14px;
+    align-items:stretch;
+  }
+  #producto .scroll-steps .scroll-step{
+    min-height:92px;
+    height:auto;
+    padding:22px 24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:8px;
+    line-height:1.45;
+    overflow:visible;
+    flex-shrink:0;
+    transform:none;
+  }
+  #producto .scroll-steps .scroll-step.is-active{
+    transform:none;
+  }
+  #producto .scroll-steps .scroll-step strong{
+    line-height:1.15;
+    margin:0 0 6px;
+    font-size:18px;
+  }
+  #producto .scroll-steps .scroll-step p{
+    line-height:1.45;
+    margin:0;
+    font-size:14px;
+    position:static;
+    transform:none;
+  }
+}
+
+@media(min-width:1051px) and (max-height:820px){
+  #producto .scroll-copy > div:first-child .story-title{
+    font-size:clamp(32px,3.6vw,48px);
+  }
+  #producto .scroll-copy{
+    gap:10px;
+  }
+  #producto .scroll-steps{
+    max-height:calc(100vh - 350px);
+    gap:10px;
+  }
+  #producto .scroll-steps .scroll-step{
+    min-height:92px;
+    padding:20px 22px;
+  }
+}
+
+/* NeumoPractice typographic color system */
+:root{
+  --text:#0B2E73;
+  --muted:#667892;
+  --np-h1:#0B2E73;
+  --np-h2:#0F3F93;
+  --np-h3:#1E4ED8;
+  --np-body:#4E617C;
+  --np-body-2:#667892;
+  --np-link:#2563EB;
+}
+body{color:var(--np-body)}
+a:not(.cta):not(.brand):not(.r3-credit a){color:var(--np-link)}
+.nav-links{color:#4E617C}
+h1{color:var(--np-h1)}
+h2,
+.section-head h2,
+.story-title,
+.pricing-intro h2{color:var(--np-h2)}
+h3,
+.feature h3,
+.faq-item h3,
+.plan-name{color:var(--np-h3)}
+.lead,
+.section-head p,
+.story-copy,
+.feature p,
+.pricing-intro p,
+.trust-block p,
+.faq-item p,
+.benefit-card p,
+.trust-card p,
+.roadmap-card p,
+.pipe-step span,
+.scroll-step p,
+.timeline-item span,
+.rx-card span,
+.appt-meta span,
+.study-row,
+.monthly-alt,
+.billing-note,
+.annual-price span,
+.checkout-status,
+.micro{color:var(--np-body-2)}
+.badge,
+.eyebrow,
+.plan-badge,
+.billing-option.active strong,
+.appt-time,
+.appt-state,
+.study-row span:last-child,
+.savings,
+.num{color:var(--np-link)}
+.feature h3,
+.benefit-card strong,
+.trust-card strong,
+.roadmap-card strong,
+.trust-block strong,
+.pipe-step strong,
+.timeline-item strong,
+.rx-card strong,
+.panel-head strong,
+.appt-meta strong,
+.billing-option strong,
+.latest-founder-copy strong,
+.dash-card strong,
+.clinical-panel strong,
+.friction-card,
+.plan-benefits,
+.billing-option,
+.card-footer,
+.founder-discount,
+.countdown-value,
+.countdown-finished,
+select option{color:#0B2E73}
+.dash-card span,
+.kpi span,
+.billing-option span,
+.price-card small.note,
+.latest-founder-copy,
+.founder-discount small,
+.founder-meter small{color:var(--np-body-2)}
+.annual-price strong,
+.pricing-section .annual-price strong,
+.pricing-value strong,
+.dash-card strong,
+.kpi b{color:#1E4ED8}
+.story-hero h1,
+.story-hero h2,
+#producto .story-title,
+.pricing-section .pricing-header h2,
+.pricing-section .pricing-value h2,
+.founders-story .story-title,
+.footer-brand h2,
+.footer-trust-title,
+.info-form-title{color:#FFFFFF}
+.story-hero .lead,
+.story-hero .micro,
+#producto .story-copy,
+.pricing-section .pricing-header p,
+.pricing-section .pricing-value p,
+.founders-story .story-copy,
+.footer-brand p,
+.footer-closing,
+.footer-trust-copy,
+.info-form-copy{color:#D6E7FF}
+.story-hero h1 .blue{color:#9EDAFF}
+.story-hero .hero-highlight{color:#A7DFFF}
+.story-hero .cta.secondary{color:#0B2E73}
+#producto .scroll-step strong,
+#producto .dash-card strong,
+#producto .clinical-panel strong,
+#producto .rx-card strong,
+#producto .panel-head strong,
+.pricing-section .plan-name{color:#0B2E73}
+#producto .scroll-step p,
+#producto .dash-card span,
+#producto .appt-meta span,
+#producto .rx-card span,
+#producto .study-row,
+.pricing-section .annual-price span,
+.pricing-section .billing-note,
+.pricing-section .monthly-alt,
+.pricing-section .plan-benefits,
+.pricing-section .checkout-status{color:#4E617C}
+#producto .scroll-step.is-active strong,
+#producto .scroll-step.is-active p,
+#producto .state-label,
+.pricing-section .price-card.featured .plan-badge,
+.pricing-section .price-card .cta,
+.cta,
+.footer-inner,
+.r3-credit,
+.r3-credit a{color:#FFFFFF}
+.pricing-section .billing-option.active strong,
+.pricing-section .savings,
+.pricing-section .price-card .cta.outline,
+.comparison-premium .yes{color:#2563EB}
+.comparison-premium th{color:#DCEBFF}
+.comparison-premium td{color:#D6E7FF}
+.pricing-guarantees div{color:#EAF3FF}
+
+/* Pricing comparison contrast only */
+.comparison-premium th{
+  color:rgba(255,255,255,.95);
+}
+.comparison-premium th,
+.comparison-premium td{
+  border-bottom-color:rgba(255,255,255,.12);
+}
+.comparison-premium td:first-child{
+  color:#FFFFFF;
+  font-weight:700;
+}
+.comparison-premium td{
+  color:rgba(248,250,252,.92);
+}
+.comparison-premium .yes{
+  color:#F8FAFC;
+}
+.comparison-premium .yes::first-letter{
+  color:#22C55E;
+}
+.comparison-premium td:not(.yes):not(:first-child){
+  color:rgba(255,255,255,.65);
+}
+.comparison-premium tbody tr:hover{
+  background:rgba(255,255,255,.045);
+}
+
 </style>
 </head>
 <body>
@@ -484,188 +1519,258 @@ footer{
       <div><span>Neumo</span><span>Practice</span></div>
     </a>
     <div class="nav-links">
-      <a href="#features">Módulos</a>
-      <a href="#ai">IA Clínica</a>
-      <a href="#pricing">Fundadores</a>
-      <a href="#faq">FAQs</a>
+      <a href="#solucion">Módulos</a>
+      <a href="#producto">IA Clínica</a>
+      <a href="#fundadores">Fundadores</a>
+      <a href="#faqs">FAQs</a>
       <a href="https://app.neumopractice.com" class="cta secondary">Login</a>
       <a href="#beta" class="cta">Solicitar info</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero story-hero" id="inicio">
   <div class="container hero-grid">
     <div>
       <div class="badge">🫁 Programa Fundadores completo · Gracias por su confianza</div>
       <h1>Menos captura.<br><span class="blue">Más medicina.</span></h1>
       <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
-      <p class="lead hero-highlight" style="font-weight:850;margin-top:-12px">Ahorra hasta 15 minutos por consulta con IA Clínica integrada.</p>
+      <p class="lead hero-highlight">Ahorra hasta 15 minutos por consulta con IA clínica integrada.</p>
       <div class="hero-actions">
         <a class="cta" href="#beta">Solicitar info</a>
-        <a class="cta secondary" href="#founderCountdown">Lanzamiento V1</a>
+        <a class="cta secondary" href="#founderCountdown">Conocer lanzamiento V1</a>
       </div>
-      <div class="micro">Acceso fundador · Programa Fundadores · Cupos fundadores al 100% · Lanzamiento V1 en camino</div>
-      <div class="countdown-shell" id="founderCountdown" data-launch-date="2026-08-05T00:00:00-05:00">
-        <div class="countdown-title" id="founderCountdownLabel">Lanzamiento V1 en:</div>
+      <div class="micro">Programa Fundadores completo · Lanzamiento V1 en camino · Hecho en México</div>
+      <div class="countdown-shell" id="founderCountdown" data-launch-date="2026-08-05T00:00:00-05:00" aria-label="Countdown de lanzamiento V1">
+        <div class="countdown-title" id="founderCountdownLabel">LANZAMIENTO V1 EN:</div>
         <div class="countdown-grid" id="founderCountdownGrid">
           <div class="countdown-slot"><span class="countdown-value" id="countdownDays">00</span><span class="countdown-label">Días</span></div>
           <div class="countdown-slot"><span class="countdown-value" id="countdownHours">00</span><span class="countdown-label">Horas</span></div>
           <div class="countdown-slot"><span class="countdown-value" id="countdownMinutes">00</span><span class="countdown-label">Minutos</span></div>
           <div class="countdown-slot"><span class="countdown-value" id="countdownSeconds">00</span><span class="countdown-label">Segundos</span></div>
         </div>
-        <div class="countdown-finished" id="countdownFinished">V1 en lanzamiento</div>
+        <div class="countdown-finished" id="countdownFinished">Lanzamiento V1 disponible</div>
       </div>
     </div>
-    <div class="hero-video-shell">
-      <div class="hero-video-frame">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto">
-          <source src="./assets/neumopractice-preview.mp4" type="video/mp4">
-        </video>
-        <div class="video-badge"><span class="video-dot"></span> Vista previa NeumoPractice</div>
+    <div class="product-shell" aria-label="Vista de producto NeumoPractice">
+      <div class="product-window">
+        <div class="product-topbar">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <div class="product-title">NeumoPractice · Consulta de hoy</div>
+        </div>
+        <div class="product-body">
+          <aside class="product-side">
+            <div class="side-pill active"><span class="side-dot"></span> Agenda</div>
+            <div class="side-pill"><span class="side-dot"></span> Pacientes</div>
+            <div class="side-pill"><span class="side-dot"></span> Consulta</div>
+            <div class="side-pill"><span class="side-dot"></span> Recetas</div>
+            <div class="side-pill"><span class="side-dot"></span> Estudios</div>
+            <div class="side-pill"><span class="side-dot"></span> Finanzas</div>
+          </aside>
+          <main class="product-main">
+            <div class="dash-row">
+              <div class="dash-card"><strong>12</strong><span>citas hoy</span></div>
+              <div class="dash-card"><strong>4</strong><span>en seguimiento</span></div>
+              <div class="dash-card"><strong>15 min</strong><span>menos captura</span></div>
+            </div>
+            <div class="clinical-grid">
+              <section class="clinical-panel">
+                <div class="panel-head"><strong>Agenda clínica</strong><span class="tag">En consulta</span></div>
+                <div class="appointment"><div class="appt-time">09:30</div><div class="appt-meta"><strong>Mateo G.</strong><span>Tos persistente · control</span></div><span class="appt-state">Checkout</span></div>
+                <div class="appointment"><div class="appt-time">10:15</div><div class="appt-meta"><strong>Sofía R.</strong><span>Asma · espirometría</span></div><span class="appt-state">Llegó</span></div>
+                <div class="appointment"><div class="appt-time">11:00</div><div class="appt-meta"><strong>Daniel P.</strong><span>Revisión estudios</span></div><span class="appt-state">Confirmada</span></div>
+              </section>
+              <section class="clinical-panel">
+                <div class="panel-head"><strong>Paciente activo</strong><span class="tag">Timeline</span></div>
+                <div class="rx-card"><strong>Receta lista</strong><span>Budesonida, salbutamol e indicaciones archivadas al expediente.</span></div>
+                <div class="study-row"><span>Rx tórax</span><span>Vinculada</span></div>
+                <div class="study-row"><span>Espirometría</span><span>Pendiente</span></div>
+                <div class="study-row"><span>Pago consulta</span><span>$900 MXN</span></div>
+              </section>
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<section class="section" id="tiempo-recuperado">
+<section class="story-section" id="problema">
   <div class="container">
     <div class="section-head">
-      <h2>¿Cuánto tiempo recuperas al mes?</h2>
-      <p>Si ahorras 15 minutos por consulta y atiendes 20 pacientes por semana, recuperas aproximadamente 20 horas al mes.</p>
+      <span class="eyebrow">El problema real</span>
+      <h2>La consulta no se pierde por falta de medicina.</h2>
+      <p>Se pierde entre capturas, recetas, estudios, WhatsApps y expedientes dispersos.</p>
     </div>
-    <div class="features">
-      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">15 min</h3><p style="font-weight:850">Ahorro por consulta</p></div>
-      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">20 h</h3><p style="font-weight:850">Recuperadas al mes</p></div>
-      <div class="feature" style="text-align:center"><h3 style="font-size:36px;color:#2563EB;margin:0 0 6px">1 plataforma</h3><p style="font-weight:850">Para agenda, expediente e IA clínica</p></div>
+    <div class="friction-grid">
+      <div class="friction-card">Captura repetida</div>
+      <div class="friction-card">Recetas manuales</div>
+      <div class="friction-card">Estudios fuera del expediente</div>
+      <div class="friction-card">Seguimiento por WhatsApp sin contexto</div>
+      <div class="friction-card">Agenda desconectada</div>
     </div>
   </div>
 </section>
 
-<section class="section" id="features">
+<section class="story-section alt" id="solucion">
   <div class="container">
-    <div class="section-head">
-      <h2>Todo el consultorio en una sola plataforma.</h2>
-      <p>NeumoPractice concentra los módulos que la doctora y recepción necesitan para operar sin duplicar captura, incluyendo IA Clínica integrada al flujo de consulta.</p>
-    </div>
-    <div class="features">
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="30" rx="6"/><path d="M16 6v8M32 6v8M9 18h30"/></svg></div><h3>Agenda en vivo</h3><p>Estados por cita: confirmada, llegó, en consulta, checkout pendiente y finalizada.</p></div>
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="15" r="7"/><path d="M12 40c2-9 8-14 12-14s10 5 12 14"/></svg></div><h3>Patients</h3><p>Expediente, línea de tiempo, recetas, estudios y seguimiento por paciente.</p></div>
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M14 8h16l6 6v26H14z"/><path d="M30 8v8h8"/></svg></div><h3>Clinical</h3><p>Historia clínica respiratoria, antecedentes, dirigido neumológico y análisis médico.</p></div>
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M17 31L31 17a8 8 0 0 1 11 11L28 42A8 8 0 0 1 17 31z"/></svg></div><h3>RX</h3><p>Recetario, medicamentos frecuentes y recetas archivadas en el paciente.</p></div>
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="5"/><path d="M15 15h18M15 21h18"/></svg></div><h3>Imaging</h3><p>Galería global de radiografías, laboratorios, fotos clínicas y PDFs vinculados al expediente.</p></div>
-      <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M8 38h32"/><path d="M14 34V22M24 34V14M34 34V10"/></svg></div><h3>Finance</h3><p>Checkout, pagos por consulta, métodos de pago, corte diario y month to date.</p></div>
-      <div class="feature ai-feature"><div class="icon"><svg viewBox="0 0 48 48"><path d="M20 8c-6 0-10 4-10 10 0 3 1 5 3 7-3 2-4 5-3 8 1 5 5 7 10 7"/><path d="M28 8c6 0 10 4 10 10 0 3-1 5-3 7 3 2 4 5 3 8-1 5-5 7-10 7"/><path d="M24 8v32"/><circle cx="18" cy="18" r="2"/><circle cx="30" cy="18" r="2"/><circle cx="18" cy="30" r="2"/><circle cx="30" cy="30" r="2"/></svg></div><div><h3>AI Clínica</h3><p>Resumen de consulta, análisis inicial, datos de alarma, preguntas sugeridas y apoyo para convertir la captura clínica en información accionable.</p></div><span class="ai-mini-badge">Módulo estrella</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="ai">
-  <div class="container">
-    <div class="ai-band">
+    <div class="split">
       <div>
-        <h2>Profundiza con IA clínica supervisada.</h2>
-        <p>La IA de NeumoPractice está pensada para ayudar a resumir la consulta, organizar hallazgos, sugerir preguntas pendientes y preparar un análisis clínico supervisado por la doctora.</p>
-        <p><b>La decisión final siempre es del médico.</b></p>
-        <p><b>La IA Clínica es el principal diferenciador de NeumoPractice.</b></p>
+        <span class="eyebrow">La solución</span>
+        <h2 class="story-title">Un sistema operativo clínico para tu consulta neumológica.</h2>
+        <p class="story-copy">Cada punto del flujo se conecta al siguiente para que el expediente deje de ser una carga administrativa y se convierta en una línea de trabajo clara.</p>
       </div>
-      <div class="ai-list">
-        <div class="ai-item">Resumen automático de consulta</div>
-        <div class="ai-item">Detección de datos de alarma</div>
-        <div class="ai-item">Preguntas sugeridas por síntoma</div>
-        <div class="ai-item">Estudios relevantes para seguimiento</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="soap">
-  <div class="container">
-    <div class="section-head">
-      <h2>IA clínica que entiende el seguimiento, no solo la consulta.</h2>
-      <p>NeumoPractice convierte la captura clínica en una línea de tiempo útil: consulta, receta, estudios, pagos y evolución del paciente.</p>
-    </div>
-    <div class="ai-clinical-deep">
-      <div>
-        <div class="badge">SOAP + seguimiento longitudinal</div>
-        <h2 style="font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:18px 0 12px">De notas sueltas a expediente inteligente.</h2>
-        <p style="color:#64748B;line-height:1.6">La IA Clínica puede ayudar a estructurar la información en formato SOAP, resumir evolución, detectar datos relevantes y preparar una vista longitudinal supervisada por el médico.</p>
-        <div class="preview-strip"><span>Resumen clínico</span><span>SOAP</span><span>Datos de alarma</span><span>Historial longitudinal</span></div>
-      </div>
-      <div class="soap-grid">
-        <div class="soap-card"><strong>S</strong><span>Síntomas, motivo de consulta y antecedentes relevantes.</span></div>
-        <div class="soap-card"><strong>O</strong><span>Exploración, signos vitales, estudios e información objetiva.</span></div>
-        <div class="soap-card"><strong>A</strong><span>Análisis clínico, patrones recurrentes y evolución del paciente.</span></div>
-        <div class="soap-card"><strong>P</strong><span>Plan, receta, indicaciones, estudios y seguimiento sugerido.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Migración sencilla desde otros sistemas.</h2>
-      <p>El objetivo es que el doctor no pierda pacientes, citas, PDFs, recetas ni historial al cambiarse a NeumoPractice.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Importar pacientes</h3><p>Desde Excel/CSV o captura asistida.</p></div>
-      <div class="step"><div class="num">2</div><h3>Subir expedientes</h3><p>PDFs, imágenes, radiografías y laboratorios.</p></div>
-      <div class="step"><div class="num">3</div><h3>Activar agenda</h3><p>Recepción y doctora operan desde el mismo flujo.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="pricing">
-  <div class="container">
-    <div class="section-head">
-      <h2>Acceso gratuito durante la fase Fundadores.</h2>
-      <p>Participa en el desarrollo de NeumoPractice, recibe acceso anticipado a nuevas funciones y ayúdanos a construir la mejor plataforma para neumología pediátrica.</p>
-    </div>
-    <div class="founders-card">
-      <div>
-        <div class="founder-kicker">Programa Fundadores</div>
-        <h2 class="founder-title">Programa Fundadores completado</h2>
-        <p class="founder-copy">Gracias por su confianza. Los cupos fundadores llegaron al 100% y avanzamos hacia el lanzamiento V1.</p>
-        <div class="founder-includes">
-          <div><span class="founder-check">✓</span> IA Clínica</div>
-          <div><span class="founder-check">✓</span> Agenda Inteligente</div>
-          <div><span class="founder-check">✓</span> SOAP Automático</div>
-          <div><span class="founder-check">✓</span> Recetas Digitales</div>
-          <div><span class="founder-check">✓</span> Imaging</div>
-          <div><span class="founder-check">✓</span> Timeline Clínico</div>
-          <div><span class="founder-check">✓</span> Soporte prioritario</div>
-          <div><span class="founder-check">✓</span> Migración inicial incluida</div>
+      <div class="flow-card">
+        <div class="pipeline">
+          <div class="pipe-step"><strong>Agenda</strong><span>Estados claros para recepción y médico.</span></div>
+          <div class="pipe-step"><strong>Paciente</strong><span>Historial respiratorio y datos relevantes.</span></div>
+          <div class="pipe-step"><strong>Consulta</strong><span>Captura clínica guiada y ordenada.</span></div>
+          <div class="pipe-step"><strong>Receta</strong><span>Medicamentos e indicaciones en segundos.</span></div>
+          <div class="pipe-step"><strong>Estudios</strong><span>PDFs, imágenes y laboratorios vinculados.</span></div>
+          <div class="pipe-step"><strong>Seguimiento</strong><span>Timeline con contexto clínico.</span></div>
         </div>
-        <a class="cta" href="#beta">Solicitar info para V1</a>
-      </div>
-      <div class="founder-progress">
-          <div class="progress-label">Cupos fundadores al 100%</div>
-          <div class="progress-bar"><div class="progress-fill"></div></div>
-          <p style="color:#B9D3F6;line-height:1.5;margin:0">25 de 25 lugares fundadores asignados.</p>
-          <div class="remaining">Cupos fundadores completos.</div>
-          <a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20recibir%20informaci%C3%B3n%20de%20NeumoPractice" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-          <div class="founder-note">El programa fundador está cerrado. Puedes solicitar información para el lanzamiento público V1.</div>
       </div>
     </div>
-    <div class="founder-last" aria-label="Último fundador registrado">
-      <div class="founder-last-icon">Dr.</div>
-      <div class="founder-last-copy">
-        <strong>Último fundador:</strong>
-        Dr. Beltrán
+  </div>
+</section>
+
+<section class="story-section" id="producto">
+  <div class="container">
+    <div class="sticky-story">
+      <div class="scroll-copy">
+        <div>
+          <span class="eyebrow">Producto en acción</span>
+          <h2 class="story-title">De la cita al seguimiento, sin volver a capturar lo mismo.</h2>
+          <p class="story-copy">El mockup cambia con el scroll para mostrar cómo se siente operar una consulta conectada.</p>
+        </div>
+        <div class="scroll-steps">
+          <article class="scroll-step is-active" data-story-step="agenda"><strong>Hoy / agenda</strong><p>Recepción y médico ven el mismo estado operativo.</p></article>
+          <article class="scroll-step" data-story-step="paciente"><strong>Paciente</strong><p>El expediente abre con resumen, antecedentes y timeline.</p></article>
+          <article class="scroll-step" data-story-step="consulta"><strong>Nueva consulta</strong><p>La captura se estructura en campos clínicos útiles.</p></article>
+          <article class="scroll-step" data-story-step="receta"><strong>Receta</strong><p>Medicamentos frecuentes e indicaciones quedan archivados.</p></article>
+          <article class="scroll-step" data-story-step="estudios"><strong>Estudios</strong><p>Radiografías, laboratorios y PDFs viven con el paciente.</p></article>
+          <article class="scroll-step" data-story-step="timeline"><strong>Timeline</strong><p>Seguimiento longitudinal con contexto, no mensajes sueltos.</p></article>
+          <article class="scroll-step" data-story-step="finanzas"><strong>Finanzas / checkout</strong><p>El cierre administrativo ocurre sin romper el flujo clínico.</p></article>
+        </div>
+      </div>
+      <div class="sticky-visual">
+        <div class="state-label" id="storyStateLabel">Hoy / agenda</div>
+        <div class="product-shell">
+          <div class="product-window">
+            <div class="product-topbar"><div class="window-dots"><span></span><span></span><span></span></div><div class="product-title">NeumoPractice</div></div>
+            <div class="product-main">
+              <div class="story-state is-active" data-story-state="agenda">
+                <div class="dash-row"><div class="dash-card"><strong>12</strong><span>citas</span></div><div class="dash-card"><strong>3</strong><span>en sala</span></div><div class="dash-card"><strong>2</strong><span>checkout</span></div></div>
+                <section class="clinical-panel"><div class="panel-head"><strong>Agenda de hoy</strong><span class="tag">En vivo</span></div><div class="appointment"><div class="appt-time">10:15</div><div class="appt-meta"><strong>Sofía R.</strong><span>Control asma</span></div><span class="appt-state">Llegó</span></div><div class="appointment"><div class="appt-time">11:00</div><div class="appt-meta"><strong>Daniel P.</strong><span>Revisión estudios</span></div><span class="appt-state">Confirmada</span></div></section>
+              </div>
+              <div class="story-state" data-story-state="paciente"><section class="clinical-panel"><div class="panel-head"><strong>Sofía Ramírez · 9 años</strong><span class="tag">Paciente</span></div><div class="rx-card"><strong>Resumen clínico</strong><span>Asma persistente leve, control con inhalador, última exacerbación hace 4 meses.</span></div><div class="study-row"><span>Alergias</span><span>Ácaros</span></div><div class="study-row"><span>Última consulta</span><span>12 Jun</span></div><div class="study-row"><span>Próximo control</span><span>30 días</span></div></section></div>
+              <div class="story-state" data-story-state="consulta"><section class="clinical-panel"><div class="panel-head"><strong>Nueva consulta</strong><span class="tag">SOAP</span></div><div class="rx-card"><strong>S</strong><span>Tos nocturna 3 veces por semana, sin fiebre, uso ocasional de rescate.</span></div><div class="rx-card"><strong>O</strong><span>SatO2 98%, FR 22, sibilancias leves, buen estado general.</span></div><div class="rx-card"><strong>A/P</strong><span>Ajuste de controlador, educación inhalatoria y control en 4 semanas.</span></div></section></div>
+              <div class="story-state" data-story-state="receta"><section class="clinical-panel"><div class="panel-head"><strong>Receta</strong><span class="tag">Lista</span></div><div class="rx-card"><strong>Budesonida/Formoterol</strong><span>1 inhalación cada 12 horas por 30 días.</span></div><div class="rx-card"><strong>Salbutamol</strong><span>Rescate según indicación médica.</span></div><div class="study-row"><span>Enviar por correo</span><span>Preparado</span></div></section></div>
+              <div class="story-state" data-story-state="estudios"><section class="clinical-panel"><div class="panel-head"><strong>Estudios</strong><span class="tag">Vinculados</span></div><div class="study-row"><span>Rx tórax PA</span><span>Imagen</span></div><div class="study-row"><span>Espirometría basal</span><span>PDF</span></div><div class="study-row"><span>Laboratorio IgE</span><span>PDF</span></div><div class="rx-card"><strong>Nota</strong><span>Todo queda en el expediente, listo para la siguiente visita.</span></div></section></div>
+              <div class="story-state" data-story-state="timeline"><div class="timeline-card"><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Consulta hoy</strong><span>Plan actualizado y receta generada.</span></div></div><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Espirometría</strong><span>Cargada por recepción.</span></div></div><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Mensaje de seguimiento</strong><span>Contexto listo para WhatsApp/correo.</span></div></div></div></div>
+              <div class="story-state" data-story-state="finanzas"><section class="clinical-panel"><div class="panel-head"><strong>Checkout</strong><span class="tag">Finanzas</span></div><div class="dash-row"><div class="dash-card"><strong>$900</strong><span>consulta</span></div><div class="dash-card"><strong>Tarjeta</strong><span>método</span></div><div class="dash-card"><strong>CFDI</strong><span>próximo</span></div></div><div class="rx-card"><strong>Cierre listo</strong><span>Pago registrado y paciente marcado como finalizado.</span></div></section></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="pricing-intro">
-      <div class="value-badge">✓ Todo incluido. Sin pagos extra. Sin costos ocultos.</div>
-      <h2>Todo lo que tu consultorio necesita. En un solo lugar.</h2>
-      <p>Agenda, expediente clínico, IA Clínica, recetas, imágenes y finanzas en un solo plan.</p>
+  </div>
+</section>
+
+<section class="story-section alt" id="beneficios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Beneficio principal</span>
+      <h2>15 minutos menos por consulta no es solo tiempo.</h2>
+      <p>Es menos administración, menos errores de captura y más espacio para escuchar al paciente.</p>
     </div>
+    <div class="benefit-grid">
+      <div class="benefit-card"><strong>Consulta más fluida</strong><p>Menos saltos entre herramientas durante la atención.</p></div>
+      <div class="benefit-card"><strong>Expediente más ordenado</strong><p>Todo vive en una historia clínica consultable.</p></div>
+      <div class="benefit-card"><strong>Recetas listas en segundos</strong><p>Medicamentos frecuentes e indicaciones reutilizables.</p></div>
+      <div class="benefit-card"><strong>Estudios conectados</strong><p>Imágenes, PDFs y laboratorios en el paciente correcto.</p></div>
+      <div class="benefit-card"><strong>Seguimiento con contexto</strong><p>Menos mensajes aislados, más continuidad clínica.</p></div>
+      <div class="benefit-card"><strong>Menos trabajo después de consulta</strong><p>El cierre administrativo ocurre durante el flujo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section" id="fundadores">
+  <div class="container">
+    <div class="founders-story">
+      <div>
+        <span class="eyebrow">Programa Fundadores</span>
+        <h2 class="story-title">Gracias por construir NeumoPractice con médicos reales.</h2>
+        <p class="story-copy">El Programa Fundadores está completo. Ahora avanzamos hacia el lanzamiento V1 con aprendizaje clínico, implementación y feedback de médicos reales.</p>
+        <div class="founder-list">
+          <span>Implementación guiada</span>
+          <span>Migración inicial</span>
+          <span>Soporte prioritario</span>
+          <span>Ruta V1</span>
+        </div>
+        <a class="cta" href="#beta">Lista de espera V1</a>
+      </div>
+      <div class="founder-panel">
+        <div class="founder-big">Fundadores completo</div>
+        <p style="color:#C9DCFA;line-height:1.55;margin:0">Gracias por su confianza. La lista de espera V1 queda abierta para neumólogos interesados en el lanzamiento público.</p>
+        <a class="cta secondary" href="#beta" style="margin-top:18px">Conocer lanzamiento V1</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section alt" id="confianza">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Confianza y operación</span>
+      <h2>Construido para una clínica real, no para una demo perfecta.</h2>
+      <p>Lenguaje cuidadoso, expediente organizado y módulos preparados para el día a día de consulta privada.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card"><strong>Desarrollo mexicano</strong><p>Producto pensado para la operación médica en México.</p></div>
+      <div class="trust-card"><strong>Consulta privada</strong><p>Flujos para recepción, médico, paciente y cierre de consulta.</p></div>
+      <div class="trust-card"><strong>Expediente organizado</strong><p>Información clínica vinculada por paciente y por evento.</p></div>
+      <div class="trust-card"><strong>Operación real de clínica</strong><p>Agenda, consulta, estudios, pagos y seguimiento conectados.</p></div>
+      <div class="trust-card"><strong>Preparado para CFDI</strong><p>Módulos financieros listos para evolucionar hacia facturación.</p></div>
+      <div class="trust-card"><strong>WhatsApp y correo</strong><p>Seguimiento planeado con contexto clínico y comunicación práctica.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section" id="faqs">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lo que viene</span>
+      <h2>La V1 se construye alrededor del trabajo de fundadores.</h2>
+      <p>Roadmap breve para convertir NeumoPractice en una plataforma cada vez más útil y menos pesada de operar.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card"><strong>Migración de pacientes</strong><p>Entrada ordenada desde fuentes clínicas existentes.</p></div>
+      <div class="roadmap-card"><strong>Motores desde Excel / Eleonor / históricos</strong><p>Importación más automática de información previa.</p></div>
+      <div class="roadmap-card"><strong>Mejoras en recetarios</strong><p>Plantillas, frecuentes y ajustes por flujo médico.</p></div>
+      <div class="roadmap-card"><strong>Workflow de consulta</strong><p>Más precisión en cada etapa de atención.</p></div>
+      <div class="roadmap-card"><strong>Herramientas de fundadores</strong><p>Funciones priorizadas por médicos reales.</p></div>
+      <div class="roadmap-card"><strong>Lectura de estudios con IA</strong><p>Apoyo supervisado para organizar hallazgos.</p></div>
+      <div class="roadmap-card"><strong>Dictado de voz + SOAP con IA</strong><p>Menos teclado, mejor estructura clínica.</p></div>
+      <div class="roadmap-card"><strong>Lanzamiento V1 público</strong><p>Apertura gradual después del programa fundador.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section pricing-section" id="pricing">
+  <div class="container">
+    <div class="pricing-value">
+      <h2>¿Cuánto vale recuperar 15 minutos por consulta?</h2>
+      <p>Si atiendes 25 pacientes por semana, NeumoPractice puede devolverte más de 6 horas al mes. El costo del plan PRO equivale aproximadamente a una sola consulta privada al mes. El resto del tiempo recuperado es productividad para ti.</p>
+    </div>
+
+    <div class="pricing-header">
+      <span class="value-badge">Miles de consultas ya optimizadas.</span>
+      <h2>Elige cómo quieres crecer tu consulta.</h2>
+      <p>Empieza solo.<br>Escala a una clínica completa cuando lo necesites.</p>
+      <span class="pricing-save-badge">Ahorra hasta $6,000 al año</span>
+    </div>
+
     <div class="pricing">
       <div class="price-card featured" data-stripe-product-id="prod_UgGMTmZKxjPv1w" data-stripe-yearly-product-id="prod_UiUovLz8kDWpkX" data-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-price-yearly="price_1Tj3ohECXG2UiJoddpTdrla7" data-live-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-live-price-yearly="price_1Tj3ohECXG2UiJoddpTdrla7">
         <div class="plan-badge">MEJOR VALOR</div>
@@ -693,6 +1798,7 @@ footer{
         <div class="checkout-status" data-checkout-status></div>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
+
       <div class="price-card" data-stripe-product-id="prod_UgGSYQv6E5VRoU" data-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-price-yearly="price_1Tj47TECXG2UiJodCvwWwikO" data-live-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-live-price-yearly="price_1Tj47TECXG2UiJodCvwWwikO">
         <div class="plan-badge">CLÍNICAS Y EQUIPOS</div>
         <h3 class="plan-name">NeumoPractice CLINIC PRO</h3>
@@ -719,57 +1825,55 @@ footer{
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
     </div>
-    <div class="pricing-trust">
-      <div class="trust-block"><strong>Datos 100% seguros</strong><p>Cumplimos NOM 024 y Ley Federal de Protección de Datos.</p></div>
-      <div class="trust-block"><strong>Disponible en la nube</strong><p>Accede desde cualquier dispositivo.</p></div>
-      <div class="trust-block"><strong>Soporte humano</strong><p>Te acompañamos en todo momento.</p></div>
-      <div class="trust-block"><strong>Actualizaciones incluidas</strong><p>Siempre tendrás la versión más reciente.</p></div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="comparativa">
-  <div class="container">
-    <div class="section-head">
-      <h2>NeumoPractice vs herramientas tradicionales</h2>
-    </div>
-    <div style="overflow:auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 16px 40px rgba(15,23,42,.05)">
-      <table style="width:100%;border-collapse:collapse;min-width:640px">
+    <div class="comparison-premium" aria-label="Comparativa de funciones por plan">
+      <table>
         <thead>
           <tr>
-            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">Función</th>
-            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">Excel/Word</th>
-            <th style="text-align:left;padding:16px;border-bottom:1px solid var(--line)">NeumoPractice</th>
+            <th>Funciones</th>
+            <th>PRO</th>
+            <th>CLINIC PRO</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Agenda</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Timeline clínico</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">IA Clínica</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Estudios e imágenes</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Recetas</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;font-weight:850">Crecimiento CDC/WHO</td><td style="padding:16px">❌</td><td style="padding:16px">✅</td></tr>
+          <tr><td>Agenda</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Expediente</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Recetas</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Estudios</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>IA Clínica</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Timeline</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Finanzas</td><td class="yes">✓ Básicas</td><td class="yes">✓ Por médico</td></tr>
+          <tr><td>Recepción</td><td class="yes">✓ 1 recepcionista</td><td class="yes">✓ Incluida</td></tr>
+          <tr><td>KPIs</td><td>—</td><td class="yes">✓ Por médico</td></tr>
+          <tr><td>Multiusuario</td><td>—</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Base de datos unificada</td><td>—</td><td class="yes">✓ Incluido</td></tr>
+          <tr><td>Soporte</td><td class="yes">✓ Incluido</td><td class="yes">✓ Incluido</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="pricing-guarantees" aria-label="Garantías NeumoPractice">
+      <div>Stripe Checkout seguro</div>
+      <div>Cancela cuando quieras</div>
+      <div>Tus datos siguen siendo tuyos</div>
+      <div>Soporte incluido</div>
+      <div>Actualizaciones constantes</div>
+      <div>Sin costos ocultos</div>
+    </div>
+
+    <div class="pricing-final-note">
+      <a class="cta" href="#beta">Solicitar info</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section class="final-cta">
   <div class="container">
-    <div class="section-head">
-      <h2>Preguntas frecuentes.</h2>
-      <p>Respuestas rápidas para médicos que evalúan cambiar de sistema o iniciar su expediente digital.</p>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item"><h3>¿NeumoPractice reemplaza mi agenda actual?</h3><p>Sí. Puedes usarlo para agenda, estados de consulta, checkout y seguimiento.</p></div>
-      <div class="faq-item"><h3>¿Puedo migrar pacientes desde Excel, Doctoralia o PDFs?</h3><p>Sí. La migración puede iniciar con Excel/CSV y archivos clínicos en PDF o imagen.</p></div>
-      <div class="faq-item"><h3>¿La IA toma decisiones médicas?</h3><p>No. La IA apoya con resumen, estructura SOAP y seguimiento. La decisión clínica final siempre es del médico.</p></div>
-      <div class="faq-item"><h3>¿Incluye recetas?</h3><p>Sí. El módulo RX permite crear recetas y vincularlas al expediente del paciente.</p></div>
-      <div class="faq-item"><h3>¿Puedo subir radiografías o estudios?</h3><p>Sí. Imaging permite cargar JPG, PNG y PDF para consultarlos desde el historial.</p></div>
-      <div class="faq-item"><h3>¿Puedo tener recepcionista?</h3><p>Sí. En Clinic se contempla recepción para agenda y checkout.</p></div>
-      <div class="faq-item"><h3>¿Cada doctor puede ver solo sus finanzas?</h3><p>Sí. El administrador ve global y cada doctor ve su producción individual.</p></div>
-      <div class="faq-item"><h3>¿Funciona desde navegador?</h3><p>Sí. La visión SaaS es funcionar desde navegador sin instalación compleja.</p></div>
+    <h2 class="story-title">Tu consulta ya es compleja. Tu software no debería serlo.</h2>
+    <p class="story-copy">Lista de espera para neumólogos interesados en el lanzamiento V1.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="cta" href="#beta">Solicitar info</a>
+      <a class="cta secondary" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20y%20quiero%20informaci%C3%B3n%20del%20lanzamiento%20V1%20de%20NeumoPractice" target="_blank" rel="noopener">Hablar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -778,9 +1882,9 @@ footer{
   <div class="container">
     <div class="form-wrap">
       <div class="form-copy">
-        <div class="info-form-badge">Cupos fundadores al 100% · Lanzamiento V1 en camino</div>
-        <h2 class="info-form-title">Solicita información para V1</h2>
-        <p class="info-form-copy">El programa fundador ya está completo. Déjanos tus datos y te compartiremos la ruta de acceso al lanzamiento público de NeumoPractice V1.</p>
+        <div class="info-form-badge">Programa Fundadores completo · Lanzamiento V1 en camino</div>
+        <h2 class="info-form-title">Solicita info para V1</h2>
+        <p class="info-form-copy">Déjanos tus datos y te compartiremos la ruta de acceso al lanzamiento público de NeumoPractice V1.</p>
       </div>
       <form id="leadForm" onsubmit="submitLead(event)">
         <input name="nombre" placeholder="Nombre del médico" required>
@@ -789,15 +1893,15 @@ footer{
         <input name="correo" type="email" placeholder="Correo electrónico" required>
         <input name="whatsapp" placeholder="WhatsApp" required>
         <select name="pacientes"><option>Pacientes por semana</option><option>Menos de 30</option><option>30 a 60</option><option>60 a 100</option><option>Más de 100</option></select>
-        <input type="hidden" name="programa" value="Programa Fundadores 100% cubierto">
+        <input type="hidden" name="programa" value="Lista de espera V1 NeumoPractice">
         <input type="hidden" name="fuente" value="Landing NeumoPractice">
         <textarea name="mensaje" placeholder="Cuéntanos qué sistema usas actualmente o qué te gustaría mejorar"></textarea>
         <button class="cta" type="submit">Solicitar info</button>
-        <div id="formSuccess" class="form-success">Solicitud recibida. Te compartiremos el acceso y la información del lanzamiento.</div>
+        <div id="formSuccess" class="form-success">Solicitud recibida. Te compartiremos la información del lanzamiento V1.</div>
         <div id="thankYouBox" class="thankyou-box">
           <strong>¡Gracias!</strong><br>
           Tu solicitud fue enviada correctamente. Gracias por tu confianza en NeumoPractice.
-          <div style="margin-top:12px"><a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20pedi%C3%A1trica%20y%20quiero%20recibir%20informaci%C3%B3n%20de%20NeumoPractice" target="_blank" rel="noopener">Continuar por WhatsApp</a></div>
+          <div style="margin-top:12px"><a class="cta whatsapp" href="https://wa.me/529983905446?text=Hola,%20soy%20especialista%20en%20neumolog%C3%ADa%20y%20quiero%20recibir%20informaci%C3%B3n%20de%20NeumoPractice" target="_blank" rel="noopener">Continuar por WhatsApp</a></div>
         </div>
       </form>
     </div>
@@ -808,22 +1912,22 @@ footer{
   <div class="container">
     <div class="footer-trust">
       <article class="footer-trust-card">
-        <span class="footer-trust-icon" aria-hidden="true">🇲🇽</span>
+        <span class="footer-trust-icon" aria-hidden="true">MX</span>
         <strong class="footer-trust-title">Desarrollado en México</strong>
         <p class="footer-trust-copy">Pensado para la práctica médica mexicana.</p>
       </article>
       <article class="footer-trust-card">
-        <span class="footer-trust-icon" aria-hidden="true">🫁</span>
-        <strong class="footer-trust-title">Diseñado para neumología pediátrica</strong>
+        <span class="footer-trust-icon" aria-hidden="true">NP</span>
+        <strong class="footer-trust-title">Diseñado para neumología</strong>
         <p class="footer-trust-copy">No para todas las especialidades. Para la tuya.</p>
       </article>
       <article class="footer-trust-card">
-        <span class="footer-trust-icon" aria-hidden="true">🔒</span>
+        <span class="footer-trust-icon" aria-hidden="true">OK</span>
         <strong class="footer-trust-title">Privacidad y seguridad clínica</strong>
         <p class="footer-trust-copy">Manejo responsable de información clínica.</p>
       </article>
       <article class="footer-trust-card">
-        <span class="footer-trust-icon" aria-hidden="true">📋</span>
+        <span class="footer-trust-icon" aria-hidden="true">CL</span>
         <strong class="footer-trust-title">Alineado con normativas mexicanas</strong>
         <p class="footer-trust-copy">Considera lineamientos aplicables al expediente clínico electrónico.</p>
       </article>
@@ -836,11 +1940,11 @@ footer{
       NeumoPractice es una plataforma de apoyo clínico. Las decisiones diagnósticas y terapéuticas corresponden exclusivamente al profesional de la salud.
     </p>
     <div class="r3-credit" aria-label="Developed by R3 LAB">
-      <a href="https://www.r3labstudio.com/" target="_blank" rel="noopener">
+      <a href="https://r3labstudio.com" target="_blank" rel="noopener">
         <img src="assets/r3-lab-logo.png" alt="R3 LAB logo">
         <div>
           <span>Developed by</span>
-          <strong>R3 LAB</strong>
+          <strong>R3 LAB / R³ LAB Studio</strong>
         </div>
       </a>
       <em>Clinical Intelligence Studio</em>
@@ -1023,9 +2127,79 @@ function initHeroVideo() {
   video.load();
 }
 
+function initStoryStates() {
+  const steps = Array.from(document.querySelectorAll("[data-story-step]"));
+  const states = Array.from(document.querySelectorAll("[data-story-state]"));
+  const label = document.getElementById("storyStateLabel");
+  const productSection = document.getElementById("producto");
+  const scrollCopy = document.querySelector("#producto .scroll-steps") || document.querySelector("#producto .scroll-copy");
+
+  if (!steps.length || !states.length) return;
+
+  const activate = (key, text) => {
+    steps.forEach((step) => step.classList.toggle("is-active", step.dataset.storyStep === key));
+    states.forEach((state) => state.classList.toggle("is-active", state.dataset.storyState === key));
+    if (label) label.textContent = text;
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    steps.forEach((step) => {
+      step.addEventListener("mouseenter", () => activate(step.dataset.storyStep, step.querySelector("strong")?.textContent || "NeumoPractice"));
+      step.addEventListener("focusin", () => activate(step.dataset.storyStep, step.querySelector("strong")?.textContent || "NeumoPractice"));
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+      .slice(0, 1)
+      .forEach((entry) => {
+        const step = entry.target;
+        activate(step.dataset.storyStep, step.querySelector("strong")?.textContent || "NeumoPractice");
+      });
+  }, { threshold: [0.35, 0.55, 0.75], rootMargin: "-18% 0px -42% 0px" });
+
+  steps.forEach((step) => observer.observe(step));
+
+  if (productSection && scrollCopy) {
+    let ticking = false;
+    const syncStoryScroll = () => {
+      ticking = false;
+      if (window.matchMedia("(max-width: 1050px)").matches) return;
+
+      const sectionRect = productSection.getBoundingClientRect();
+      const viewport = window.innerHeight;
+      const travel = Math.max(1, sectionRect.height - viewport);
+      const progress = Math.min(1, Math.max(0, -sectionRect.top / travel));
+      const maxScroll = Math.max(0, scrollCopy.scrollHeight - scrollCopy.clientHeight);
+
+      scrollCopy.scrollTop = maxScroll * progress;
+
+      const activeIndex = Math.min(steps.length - 1, Math.max(0, Math.round(progress * (steps.length - 1))));
+      const activeStep = steps[activeIndex];
+      if (activeStep) {
+        activate(activeStep.dataset.storyStep, activeStep.querySelector("strong")?.textContent || "NeumoPractice");
+      }
+    };
+
+    const requestSync = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(syncStoryScroll);
+    };
+
+    window.addEventListener("scroll", requestSync, { passive: true });
+    window.addEventListener("resize", requestSync);
+    syncStoryScroll();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initFounderCountdown();
   initHeroVideo();
+  initStoryStates();
 
   const heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
