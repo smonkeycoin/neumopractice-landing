@@ -1515,6 +1515,9 @@ select option{color:#0B2E73}
   body{
     overflow-x:hidden;
   }
+  body{
+    overflow-x:clip;
+  }
   .container{
     width:100%;
     padding-left:20px;
@@ -1546,6 +1549,11 @@ select option{color:#0B2E73}
   .nav-links a:not(.cta){
     display:none;
   }
+  .nav-links a.nav-pricing{
+    display:inline-flex;
+    align-items:center;
+    margin-right:10px;
+  }
   .nav-links .cta.secondary{
     display:none;
   }
@@ -1558,6 +1566,9 @@ select option{color:#0B2E73}
   .story-section,
   .pricing-section{
     padding:72px 0;
+  }
+  #pricing{
+    scroll-margin-top:132px;
   }
   .story-hero{
     min-height:auto;
@@ -1831,6 +1842,7 @@ select option{color:#0B2E73}
       <a href="#producto">IA Clínica</a>
       <a href="#fundadores">Fundadores</a>
       <a href="#faqs">FAQs</a>
+      <a class="nav-pricing" href="#pricing">Precios</a>
       <a href="https://app.neumopractice.com" class="cta secondary">Login</a>
       <a href="#beta" class="cta">Solicitar info</a>
     </div>
