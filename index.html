@@ -719,6 +719,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 #producto .scroll-step.is-active strong,
 #producto .scroll-step.is-active p{color:#FFFFFF}
 #producto .sticky-visual{filter:drop-shadow(0 34px 90px rgba(2,16,40,.40))}
+.product-mockup-desktop{display:block}
+.product-mockup-mobile{display:none}
 #producto .state-label{
   background:rgba(8,28,74,.82);
   border:1px solid rgba(147,197,253,.32);
@@ -1690,21 +1692,250 @@ select option{color:#0B2E73}
     gap:22px;
   }
   #producto .scroll-steps{
-    display:grid;
-    gap:16px;
+    display:flex;
+    gap:12px;
     max-height:none;
-    overflow:visible;
-    padding-right:0;
+    overflow-x:auto;
+    overflow-y:visible;
+    padding:0 2px 10px;
+    margin-inline:-2px;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
   }
   #producto .scroll-step{
-    min-height:auto;
+    flex:0 0 82%;
+    min-height:126px;
     height:auto;
-    padding:22px;
+    padding:20px;
     overflow:visible;
     transform:none;
+    scroll-snap-align:start;
   }
   #producto .scroll-step.is-active{
     transform:none;
+  }
+  #producto .product-mockup-desktop{
+    display:none;
+  }
+  #producto .product-mockup-mobile{
+    display:block;
+    width:100%;
+    max-width:390px;
+    margin:0 auto;
+  }
+  #producto .mobile-app{
+    width:100%;
+    overflow:hidden;
+    border-radius:32px;
+    background:#FFFFFF;
+    border:1px solid rgba(191,219,254,.88);
+    box-shadow:0 28px 80px rgba(2,16,40,.34),0 0 0 8px rgba(255,255,255,.08);
+    color:#0B2E73;
+  }
+  #producto .mobile-app-header{
+    padding:20px 20px 18px;
+    background:
+      radial-gradient(240px 120px at 85% 0%,rgba(96,165,250,.42),transparent 62%),
+      linear-gradient(135deg,#0B2E73 0%,#0F3F93 48%,#2563EB 100%);
+    color:#FFFFFF;
+  }
+  #producto .mobile-app-kicker{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    font-size:12px;
+    font-weight:900;
+    color:#BFE1FF;
+  }
+  #producto .mobile-live{
+    display:inline-flex;
+    align-items:center;
+    border-radius:999px;
+    padding:6px 9px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(191,219,254,.28);
+    color:#FFFFFF;
+    font-size:11px;
+    white-space:nowrap;
+  }
+  #producto .mobile-app-header h3{
+    margin:14px 0 4px;
+    color:#FFFFFF;
+    font-size:28px;
+    line-height:1;
+    letter-spacing:-.045em;
+  }
+  #producto .mobile-app-header p{
+    margin:0;
+    color:#DCEBFF;
+    font-size:14px;
+    line-height:1.45;
+    font-weight:750;
+  }
+  #producto .mobile-app-body{
+    display:grid;
+    gap:14px;
+    padding:16px;
+    background:#F8FAFC;
+  }
+  #producto .mobile-metric-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+  }
+  #producto .mobile-metric{
+    border-radius:18px;
+    padding:12px 10px;
+    background:#FFFFFF;
+    border:1px solid #DBEAFE;
+    box-shadow:0 10px 26px rgba(15,63,147,.08);
+  }
+  #producto .mobile-metric strong{
+    display:block;
+    color:#2563EB;
+    font-size:22px;
+    line-height:1;
+    letter-spacing:-.04em;
+  }
+  #producto .mobile-metric span{
+    display:block;
+    margin-top:6px;
+    color:#667892;
+    font-size:10px;
+    line-height:1.2;
+    font-weight:900;
+  }
+  #producto .mobile-card{
+    border-radius:22px;
+    padding:16px;
+    background:#FFFFFF;
+    border:1px solid #E0ECFF;
+    box-shadow:0 12px 30px rgba(15,63,147,.09);
+  }
+  #producto .mobile-card-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:12px;
+  }
+  #producto .mobile-card-head strong,
+  #producto .mobile-row strong,
+  #producto .mobile-note strong{
+    color:#0B2E73;
+    font-size:15px;
+    line-height:1.2;
+  }
+  #producto .mobile-chip{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    padding:6px 9px;
+    background:#EFF6FF;
+    color:#2563EB;
+    border:1px solid #BFDBFE;
+    font-size:10px;
+    font-weight:950;
+    white-space:nowrap;
+  }
+  #producto .mobile-list{
+    display:grid;
+    gap:10px;
+  }
+  #producto .mobile-row{
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    gap:10px;
+    align-items:center;
+    padding:12px;
+    border-radius:16px;
+    background:#F8FAFC;
+    border:1px solid rgba(191,219,254,.7);
+  }
+  #producto .mobile-time{
+    color:#2563EB;
+    font-size:13px;
+    font-weight:950;
+  }
+  #producto .mobile-row span,
+  #producto .mobile-note span{
+    color:#667892;
+    font-size:12px;
+    line-height:1.35;
+    font-weight:750;
+  }
+  #producto .mobile-row div span{
+    display:block;
+    margin-top:3px;
+  }
+  #producto .mobile-status{
+    border-radius:999px;
+    padding:6px 8px;
+    background:#DBEAFE;
+    color:#0F3F93;
+    font-size:10px;
+    font-weight:950;
+    white-space:nowrap;
+  }
+  #producto .mobile-note-grid{
+    display:grid;
+    gap:10px;
+  }
+  #producto .mobile-note{
+    padding:13px;
+    border-radius:16px;
+    background:#FFFFFF;
+    border:1px solid #E0ECFF;
+  }
+  #producto .mobile-note strong,
+  #producto .mobile-note span{
+    display:block;
+  }
+  #producto .mobile-note span{
+    margin-top:4px;
+  }
+  #producto .mobile-total{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:15px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#0B2E73,#2563EB);
+    color:#FFFFFF;
+  }
+  #producto .mobile-total span{
+    color:#BFDBFE;
+    font-size:12px;
+    font-weight:850;
+  }
+  #producto .mobile-total strong{
+    color:#FFFFFF;
+    font-size:25px;
+    letter-spacing:-.04em;
+  }
+  #producto .mobile-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  #producto .mobile-button{
+    min-height:44px;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#2563EB;
+    color:#FFFFFF;
+    font-size:13px;
+    font-weight:950;
+  }
+  #producto .mobile-button.secondary{
+    background:#FFFFFF;
+    color:#2563EB;
+    border:1px solid #BFDBFE;
   }
   #producto .product-window::before,
   #producto .product-window::after{
@@ -1975,6 +2206,7 @@ select option{color:#0B2E73}
       </div>
       <div class="sticky-visual">
         <div class="state-label" id="storyStateLabel">Hoy / agenda</div>
+        <div class="product-mockup-desktop">
         <div class="product-shell">
           <div class="product-window">
             <div class="product-topbar"><div class="window-dots"><span></span><span></span><span></span></div><div class="product-title">NeumoPractice</div></div>
@@ -1989,6 +2221,97 @@ select option{color:#0B2E73}
               <div class="story-state" data-story-state="estudios"><section class="clinical-panel"><div class="panel-head"><strong>Estudios</strong><span class="tag">Vinculados</span></div><div class="study-row"><span>Rx tórax PA</span><span>Imagen</span></div><div class="study-row"><span>Espirometría basal</span><span>PDF</span></div><div class="study-row"><span>Laboratorio IgE</span><span>PDF</span></div><div class="rx-card"><strong>Nota</strong><span>Todo queda en el expediente, listo para la siguiente visita.</span></div></section></div>
               <div class="story-state" data-story-state="timeline"><div class="timeline-card"><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Consulta hoy</strong><span>Plan actualizado y receta generada.</span></div></div><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Espirometría</strong><span>Cargada por recepción.</span></div></div><div class="timeline-item"><span class="timeline-dot"></span><div><strong>Mensaje de seguimiento</strong><span>Contexto listo para WhatsApp/correo.</span></div></div></div></div>
               <div class="story-state" data-story-state="finanzas"><section class="clinical-panel"><div class="panel-head"><strong>Checkout</strong><span class="tag">Finanzas</span></div><div class="dash-row"><div class="dash-card"><strong>$900</strong><span>consulta</span></div><div class="dash-card"><strong>Tarjeta</strong><span>método</span></div><div class="dash-card"><strong>CFDI</strong><span>próximo</span></div></div><div class="rx-card"><strong>Cierre listo</strong><span>Pago registrado y paciente marcado como finalizado.</span></div></section></div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="product-mockup-mobile" aria-label="Vista móvil de producto NeumoPractice">
+          <div class="mobile-app">
+            <div class="mobile-app-header">
+              <div class="mobile-app-kicker"><span>NeumoPractice</span><span class="mobile-live">En vivo</span></div>
+              <h3>Consulta de hoy</h3>
+              <p>Agenda, expediente e IA clínica en una app clara para consulta.</p>
+            </div>
+            <div class="mobile-app-body">
+              <div class="story-state is-active" data-story-state="agenda">
+                <div class="mobile-metric-grid">
+                  <div class="mobile-metric"><strong>12</strong><span>citas hoy</span></div>
+                  <div class="mobile-metric"><strong>4</strong><span>seguimientos</span></div>
+                  <div class="mobile-metric"><strong>15</strong><span>min menos captura</span></div>
+                </div>
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Agenda</strong><span class="mobile-chip">Hoy</span></div>
+                  <div class="mobile-list">
+                    <div class="mobile-row"><span class="mobile-time">09:30</span><div><strong>Mateo G.</strong><span>Control tos</span></div><span class="mobile-status">En consulta</span></div>
+                    <div class="mobile-row"><span class="mobile-time">10:15</span><div><strong>Sofía R.</strong><span>Asma / seguimiento</span></div><span class="mobile-status">Llegó</span></div>
+                    <div class="mobile-row"><span class="mobile-time">11:00</span><div><strong>Daniel P.</strong><span>Revisión estudios</span></div><span class="mobile-status">Confirmado</span></div>
+                  </div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="paciente">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Sofía R.</strong><span class="mobile-chip">8 años</span></div>
+                  <div class="mobile-note-grid">
+                    <div class="mobile-note"><strong>Asma / seguimiento</strong><span>Control con inhalador, última exacerbación hace 4 meses.</span></div>
+                    <div class="mobile-note"><strong>Antecedentes</strong><span>Rinitis alérgica, alergia a ácaros, sin hospitalizaciones recientes.</span></div>
+                    <div class="mobile-note"><strong>Timeline reciente</strong><span>Consulta, receta enviada y espirometría cargada.</span></div>
+                  </div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="consulta">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Nueva consulta</strong><span class="mobile-chip">SOAP</span></div>
+                  <div class="mobile-note-grid">
+                    <div class="mobile-note"><strong>Motivo</strong><span>Tos nocturna y uso ocasional de rescate.</span></div>
+                    <div class="mobile-note"><strong>Signos vitales</strong><span>SatO2 98%, FR 22, buen estado general.</span></div>
+                    <div class="mobile-note"><strong>Diagnóstico</strong><span>Asma persistente leve con ajuste de controlador.</span></div>
+                    <div class="mobile-note"><strong>Plan</strong><span>Educación inhalatoria y control en 4 semanas.</span></div>
+                  </div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="receta">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Receta</strong><span class="mobile-chip">Frecuente</span></div>
+                  <div class="mobile-note-grid">
+                    <div class="mobile-note"><strong>Budesonida/Formoterol</strong><span>1 inhalación cada 12 horas por 30 días.</span></div>
+                    <div class="mobile-note"><strong>Indicaciones</strong><span>Revisar técnica inhalatoria y signos de alarma.</span></div>
+                  </div>
+                  <div class="mobile-actions"><span class="mobile-button secondary">Enviar / imprimir</span><span class="mobile-button">Guardar</span></div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="estudios">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Estudios</strong><span class="mobile-chip">Adjuntos</span></div>
+                  <div class="mobile-list">
+                    <div class="mobile-row"><span class="mobile-time">PDF</span><div><strong>Espirometría</strong><span>Basal y post broncodilatador</span></div><span class="mobile-status">Pendiente</span></div>
+                    <div class="mobile-row"><span class="mobile-time">IMG</span><div><strong>Radiografía</strong><span>Tórax PA</span></div><span class="mobile-status">Adjunta</span></div>
+                    <div class="mobile-row"><span class="mobile-time">IA</span><div><strong>Revisión pendiente</strong><span>Hallazgos listos para validar</span></div><span class="mobile-status">Nueva</span></div>
+                  </div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="timeline">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Timeline</strong><span class="mobile-chip">Paciente</span></div>
+                  <div class="mobile-note-grid">
+                    <div class="mobile-note"><strong>Consulta generada</strong><span>Nota clínica estructurada en expediente.</span></div>
+                    <div class="mobile-note"><strong>Receta enviada</strong><span>Indicaciones compartidas con familia.</span></div>
+                    <div class="mobile-note"><strong>Estudio solicitado</strong><span>Espirometría agregada al seguimiento.</span></div>
+                    <div class="mobile-note"><strong>Seguimiento WhatsApp</strong><span>Contexto listo para comunicación.</span></div>
+                  </div>
+                </section>
+              </div>
+              <div class="story-state" data-story-state="finanzas">
+                <section class="mobile-card">
+                  <div class="mobile-card-head"><strong>Finanzas / checkout</strong><span class="mobile-chip">Cobro</span></div>
+                  <div class="mobile-list">
+                    <div class="mobile-row"><span class="mobile-time">$</span><div><strong>Consulta</strong><span>Neumología pediátrica</span></div><span class="mobile-status">$900</span></div>
+                    <div class="mobile-row"><span class="mobile-time">Rx</span><div><strong>Receta</strong><span>Incluida en expediente</span></div><span class="mobile-status">$0</span></div>
+                    <div class="mobile-row"><span class="mobile-time">PDF</span><div><strong>Estudio</strong><span>Adjunto y revisión</span></div><span class="mobile-status">$0</span></div>
+                  </div>
+                  <div class="mobile-total"><span>Total</span><strong>$900</strong></div>
+                  <div class="mobile-actions"><span class="mobile-button">Cobrar</span><span class="mobile-button secondary">Facturar</span></div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
