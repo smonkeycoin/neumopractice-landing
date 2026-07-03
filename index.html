@@ -1520,6 +1520,173 @@ select option{color:#0B2E73}
   body{
     overflow-x:clip;
   }
+  .product-mockup-desktop,
+  .hero-dashboard,
+  .desktop-dashboard,
+  .dashboard-frame{
+    display:none!important;
+  }
+  .product-mockup-mobile,
+  .mobile-app-mockup{
+    display:block!important;
+    width:100%!important;
+    max-width:390px!important;
+    margin:28px auto 0!important;
+  }
+  .mobile-app-mockup .mobile-app{
+    width:100%;
+    overflow:hidden;
+    border-radius:32px;
+    background:#FFFFFF;
+    border:1px solid rgba(191,219,254,.88);
+    box-shadow:0 28px 80px rgba(2,16,40,.34),0 0 0 8px rgba(255,255,255,.08);
+    color:#0B2E73;
+  }
+  .mobile-app-mockup .mobile-app-header{
+    padding:20px 20px 18px;
+    background:
+      radial-gradient(240px 120px at 85% 0%,rgba(96,165,250,.42),transparent 62%),
+      linear-gradient(135deg,#0B2E73 0%,#0F3F93 48%,#2563EB 100%);
+    color:#FFFFFF;
+  }
+  .mobile-app-mockup .mobile-app-kicker{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    font-size:12px;
+    font-weight:900;
+    color:#BFE1FF;
+  }
+  .mobile-app-mockup .mobile-live{
+    display:inline-flex;
+    align-items:center;
+    border-radius:999px;
+    padding:6px 9px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(191,219,254,.28);
+    color:#FFFFFF;
+    font-size:11px;
+    white-space:nowrap;
+  }
+  .mobile-app-mockup .mobile-app-header h3{
+    margin:14px 0 4px;
+    color:#FFFFFF;
+    font-size:28px;
+    line-height:1;
+    letter-spacing:-.045em;
+  }
+  .mobile-app-mockup .mobile-app-header p{
+    margin:0;
+    color:#DCEBFF;
+    font-size:14px;
+    line-height:1.45;
+    font-weight:750;
+  }
+  .mobile-app-mockup .mobile-app-body{
+    display:grid;
+    gap:14px;
+    padding:16px;
+    background:#F8FAFC;
+  }
+  .mobile-app-mockup .mobile-metric-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+  }
+  .mobile-app-mockup .mobile-metric{
+    border-radius:18px;
+    padding:12px 10px;
+    background:#FFFFFF;
+    border:1px solid #DBEAFE;
+    box-shadow:0 10px 26px rgba(15,63,147,.08);
+  }
+  .mobile-app-mockup .mobile-metric strong{
+    display:block;
+    color:#2563EB;
+    font-size:22px;
+    line-height:1;
+    letter-spacing:-.04em;
+  }
+  .mobile-app-mockup .mobile-metric span{
+    display:block;
+    margin-top:6px;
+    color:#667892;
+    font-size:10px;
+    line-height:1.2;
+    font-weight:900;
+  }
+  .mobile-app-mockup .mobile-card{
+    border-radius:22px;
+    padding:16px;
+    background:#FFFFFF;
+    border:1px solid #E0ECFF;
+    box-shadow:0 12px 30px rgba(15,63,147,.09);
+  }
+  .mobile-app-mockup .mobile-card-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:12px;
+  }
+  .mobile-app-mockup .mobile-card-head strong,
+  .mobile-app-mockup .mobile-row strong{
+    color:#0B2E73;
+    font-size:15px;
+    line-height:1.2;
+  }
+  .mobile-app-mockup .mobile-chip{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    padding:6px 9px;
+    background:#EFF6FF;
+    color:#2563EB;
+    border:1px solid #BFDBFE;
+    font-size:10px;
+    font-weight:950;
+    white-space:nowrap;
+  }
+  .mobile-app-mockup .mobile-list{
+    display:grid;
+    gap:10px;
+  }
+  .mobile-app-mockup .mobile-row{
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    gap:10px;
+    align-items:center;
+    padding:12px;
+    border-radius:16px;
+    background:#F8FAFC;
+    border:1px solid rgba(191,219,254,.7);
+  }
+  .mobile-app-mockup .mobile-time{
+    color:#2563EB;
+    font-size:13px;
+    font-weight:950;
+  }
+  .mobile-app-mockup .mobile-row span{
+    color:#667892;
+    font-size:12px;
+    line-height:1.35;
+    font-weight:750;
+  }
+  .mobile-app-mockup .mobile-row div span{
+    display:block;
+    margin-top:3px;
+  }
+  .mobile-app-mockup .mobile-status{
+    border-radius:999px;
+    padding:6px 8px;
+    background:#DBEAFE;
+    color:#0F3F93;
+    font-size:10px;
+    font-weight:950;
+    white-space:nowrap;
+  }
   .container{
     width:100%;
     padding-left:20px;
@@ -2102,8 +2269,33 @@ select option{color:#0B2E73}
         </div>
         <div class="countdown-finished" id="countdownFinished">Lanzamiento V1 disponible</div>
       </div>
+      <div class="product-mockup-mobile mobile-app-mockup" aria-label="Vista móvil de NeumoPractice">
+        <div class="mobile-app">
+          <div class="mobile-app-header">
+            <div class="mobile-app-kicker"><span>NeumoPractice</span><span class="mobile-live">En vivo</span></div>
+            <h3>Consulta de hoy</h3>
+            <p>Agenda vertical clara para operar la consulta desde el celular.</p>
+          </div>
+          <div class="mobile-app-body">
+            <div class="mobile-metric-grid">
+              <div class="mobile-metric"><strong>12</strong><span>citas hoy</span></div>
+              <div class="mobile-metric"><strong>4</strong><span>seguimientos</span></div>
+              <div class="mobile-metric"><strong>15</strong><span>min menos captura</span></div>
+            </div>
+            <section class="mobile-card">
+              <div class="mobile-card-head"><strong>Agenda</strong><span class="mobile-chip">Hoy</span></div>
+              <div class="mobile-list">
+                <div class="mobile-row"><span class="mobile-time">09:30</span><div><strong>Mateo G.</strong><span>Control respiratorio</span></div><span class="mobile-status">En consulta</span></div>
+                <div class="mobile-row"><span class="mobile-time">10:15</span><div><strong>Sofía R.</strong><span>Asma / seguimiento</span></div><span class="mobile-status">Llegó</span></div>
+                <div class="mobile-row"><span class="mobile-time">11:00</span><div><strong>Daniel P.</strong><span>Revisión estudios</span></div><span class="mobile-status">Confirmado</span></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="product-shell" aria-label="Vista de producto NeumoPractice">
+    <div class="product-mockup-desktop hero-dashboard">
+    <div class="product-shell dashboard-frame" aria-label="Vista de producto NeumoPractice">
       <div class="product-window">
         <div class="product-topbar">
           <div class="window-dots"><span></span><span></span><span></span></div>
@@ -2142,6 +2334,7 @@ select option{color:#0B2E73}
           </main>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </header>
