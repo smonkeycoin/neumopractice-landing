@@ -424,6 +424,26 @@ footer{
 .migration-support{padding:28px 0 72px}.migration-support .form-wrap{min-height:240px;background:linear-gradient(135deg,#071A3D 0%,#123A80 62%,#2563EB 100%);border:1px solid rgba(191,219,254,.28);border-radius:30px;padding:28px 32px;box-shadow:0 22px 55px rgba(2,16,40,.28);grid-template-columns:1fr auto;align-items:center}.migration-support .badge{background:rgba(255,255,255,.12);border-color:rgba(191,219,254,.28);color:#DCEEFF;letter-spacing:.08em;text-transform:uppercase}.migration-support h2{font-size:32px;line-height:1.12;letter-spacing:-.03em;color:#FFFFFF;margin:14px 0 8px}.migration-support p{color:rgba(255,255,255,.86)!important;line-height:1.58;margin:0;max-width:640px}.migration-support .cta.whatsapp{background:#FFFFFF;color:#1D4ED8;box-shadow:0 16px 34px rgba(2,16,40,.22);white-space:nowrap}.migration-support .cta.whatsapp:hover{background:#EAF3FF}
 @media(max-width:950px){.clinical-origin{padding:52px 0 34px}.clinical-origin-card{padding:24px;border-radius:26px}.clinical-origin-grid{grid-template-columns:1fr;gap:22px}.clinical-origin-copyblock{display:flex;flex-direction:column}.clinical-origin-media{order:2}.clinical-origin .clinical-founder-signature{order:3}.clinical-origin .clinical-founder-trust{order:4}.clinical-origin .cta{order:5;width:100%}.clinical-origin-title{font-size:36px;letter-spacing:-.03em}.clinical-origin-copy{font-size:16px}.clinical-origin-photo img{max-height:520px}.pricing-intro{margin-top:0}.pricing-intro h2{font-size:34px!important;letter-spacing:-.03em!important}.price-card .cta{width:100%}.migration-support{padding:18px 0 54px}.migration-support .form-wrap{grid-template-columns:1fr;min-height:0;padding:24px;gap:18px}.migration-support h2{font-size:27px}.migration-support .cta.whatsapp{width:100%}}
 
+
+
+/* Header navigation restore */
+.nav{z-index:40}
+.nav-inner{position:relative}
+.brand{flex:0 0 auto}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:22px;margin-left:auto;white-space:nowrap;min-width:0}
+.nav-links a:not(.cta){color:#475569;font-size:14px;font-weight:850;transition:color .18s ease}
+.nav-links a:not(.cta):hover{color:#1D4ED8}
+.nav-links .cta.secondary{background:rgba(255,255,255,.92);color:#0F2A5F;border:1px solid #D9E2F1;box-shadow:0 8px 20px rgba(15,23,42,.05);padding:10px 15px}
+.nav-links .cta:not(.secondary){background:var(--blue);color:#fff;border-radius:999px;padding:11px 17px;box-shadow:0 14px 30px rgba(37,99,235,.24)}
+.nav-toggle{display:none;appearance:none;border:1px solid #D9E2F1;background:#fff;color:#0F2A5F;border-radius:999px;width:44px;height:44px;align-items:center;justify-content:center;gap:4px;box-shadow:0 10px 24px rgba(15,23,42,.06);cursor:pointer}
+.nav-toggle span{display:block;width:18px;height:2px;border-radius:99px;background:currentColor;transition:transform .18s ease,opacity .18s ease}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.launch-offer-bar{position:relative;z-index:10}
+@media(max-width:1100px){.nav-inner{gap:12px}.nav-links{gap:13px}.nav-links a:not(.cta){font-size:13px}.nav-links .cta.secondary{padding:9px 12px}.nav-links .cta:not(.secondary){padding:10px 13px}}
+@media(max-width:767px){body.nav-open{overflow:hidden}.nav-inner{height:68px}.brand{font-size:20px}.nav-toggle{display:inline-flex;flex-direction:column;flex:0 0 auto}.nav-links{display:none;position:absolute;left:20px;right:20px;top:calc(100% + 10px);z-index:41;margin:0;padding:16px;background:rgba(255,255,255,.98);border:1px solid #D9E2F1;border-radius:24px;box-shadow:0 24px 60px rgba(15,23,42,.18);backdrop-filter:blur(16px);flex-direction:column;align-items:stretch;gap:8px;white-space:normal}.nav-links.is-open{display:flex}.nav-links a{width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:16px}.nav-links a:not(.cta){background:#F8FAFC;color:#0F2A5F}.nav-links .cta.secondary{background:#fff;color:#0F2A5F}.nav-links .cta:not(.secondary){background:var(--blue);color:#fff}}
+
 </style>
 </head>
 <body>
@@ -433,7 +453,10 @@ footer{
       <img class="brand-mark" src="assets/logo-icon.svg" alt="" width="44" height="44">
       <div><span>Neumo</span><span>Practice</span></div>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="primary-navigation" data-header-menu>
       <a href="#features">Módulos</a>
       <a href="#ai">IA Clínica</a>
       <a href="#pricing">Precios</a>
@@ -1075,5 +1098,33 @@ document.querySelectorAll("[data-checkout-button]").forEach((button) => {
 
 </script>
 
+
+<script>
+(function(){
+  const nav = document.querySelector('[data-header-menu]');
+  const toggle = document.querySelector('.nav-toggle');
+  if(!nav || !toggle) return;
+  const closeMenu = () => {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Abrir navegación');
+    document.body.classList.remove('nav-open');
+  };
+  const openMenu = () => {
+    nav.classList.add('is-open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Cerrar navegación');
+    document.body.classList.add('nav-open');
+  };
+  toggle.addEventListener('click', () => nav.classList.contains('is-open') ? closeMenu() : openMenu());
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 767) closeMenu();
+  });
+})();
+</script>
 </body>
 </html>
