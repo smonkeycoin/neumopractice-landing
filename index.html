@@ -10,12 +10,14 @@
 :root{
   --blue:#2563EB;
   --blue2:#60A5FA;
-  --r3-navy:#061A40;
+  --r3-navy:#0B1F46;
+  --r3-navy-soft:#29436B;
+  --r3-text-muted:#64748B;
   --r3-deep:#0B2B65;
   --r3-cyan:#28C7FF;
   --bg:#F8FAFC;
-  --text:#111827;
-  --muted:#64748B;
+  --text:var(--r3-navy);
+  --muted:var(--r3-text-muted);
   --line:#E5E7EB;
   --green:#22C55E;
   --gold:#F59E0B;
@@ -148,14 +150,14 @@ h1 .blue{color:var(--r3-cyan)}
 .plan-badge{display:inline-flex;align-self:flex-start;border-radius:999px;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:950;padding:7px 10px;margin-bottom:14px;letter-spacing:.02em}.price-card.featured .plan-badge{background:#2563EB;color:#fff}
 .plan-name{font-size:25px;letter-spacing:-.035em;margin:0 0 16px}
 .annual-price{display:block;margin:4px 0 8px}
-.annual-price strong{display:block;font-size:68px;line-height:.88;letter-spacing:-.065em;color:#0F172A}
+.annual-price strong{display:block;font-size:68px;line-height:.88;letter-spacing:-.065em;color:var(--r3-navy)}
 .annual-price span{display:block;color:#475569;font-weight:900;line-height:1.15;margin-top:8px}
 .billing-note{color:#475569;font-size:14px;font-weight:850;margin:0}
 .savings{color:#1D4ED8;font-size:14px;font-weight:950;margin:8px 0 0}
 .monthly-alt{border-top:1px solid #E5E7EB;margin:18px 0 22px;padding-top:14px;color:#475569;font-size:14px;font-weight:850}
 .billing-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px}
 .billing-option{border:1px solid #D9E2F1;background:#fff;border-radius:16px;padding:12px;cursor:pointer;text-align:left;color:#334155;font:inherit;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
-.billing-option strong{display:block;font-size:13px;color:#0F172A;margin-bottom:4px}
+.billing-option strong{display:block;font-size:13px;color:var(--r3-navy);margin-bottom:4px}
 .billing-option span{display:block;font-size:12px;color:#64748B;font-weight:800;line-height:1.35}
 .billing-option.active{border-color:var(--blue);background:#EFF6FF;box-shadow:0 10px 24px rgba(37,99,235,.12)}
 .billing-option.active strong{color:#1D4ED8}
@@ -169,7 +171,7 @@ h1 .blue{color:var(--r3-cyan)}
 .card-footer{border-top:1px solid #E5E7EB;margin-top:18px;padding-top:14px;color:#166534;font-size:13px;font-weight:950}
 .pricing-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
 .trust-block{background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.04)}
-.trust-block strong{display:block;color:#111827;font-size:15px;margin-bottom:6px}
+.trust-block strong{display:block;color:var(--r3-navy);font-size:15px;margin-bottom:6px}
 .trust-block p{margin:0;color:#64748B;font-size:13px;line-height:1.45}
 .coupon{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;border-radius:22px;padding:20px;margin-top:18px;font-weight:850}
 .form-wrap{
@@ -213,7 +215,7 @@ input:focus,select:focus,textarea:focus{
   box-shadow:0 0 0 4px rgba(125,211,252,.22);
 }
 select{color:#F0F6FF;background-color:rgba(255,255,255,.12)}
-select option{color:#0F172A}
+select option{color:var(--r3-navy)}
 textarea{min-height:110px;resize:vertical}
 footer{padding:38px 0;color:#64748B;border-top:1px solid var(--line);background:#fff}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#E5F0FF}
@@ -332,7 +334,7 @@ footer{
 .founder-kicker{display:inline-flex;border-radius:999px;background:rgba(96,165,250,.18);color:#B9DFFF;font-size:12px;font-weight:950;padding:8px 12px;margin-bottom:14px;border:1px solid rgba(96,165,250,.32)}
 .founder-title{font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:0 0 12px;color:#FFFFFF}
 .founder-copy{color:#C9DCFA;line-height:1.6}
-.founder-discount{font-size:48px;font-weight:950;letter-spacing:-.06em;color:#111827;margin:12px 0}.founder-discount small{font-size:15px;color:#475569;letter-spacing:0}
+.founder-discount{font-size:48px;font-weight:950;letter-spacing:-.06em;color:var(--r3-navy);margin:12px 0}.founder-discount small{font-size:15px;color:#475569;letter-spacing:0}
 .founder-includes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
 .founder-includes div{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(149,196,255,.32);border-radius:16px;padding:10px 12px;color:#EAF2FF;font-weight:950;font-size:13px}
 .founder-check{color:#6EE7B7}
@@ -369,7 +371,7 @@ footer{
 .latest-founder-alert{display:none}
 .latest-founder-icon{width:38px;height:38px;border-radius:50%;background:#EFF6FF;color:#2563EB;display:grid;place-items:center;font-weight:950;flex:0 0 auto}
 .latest-founder-copy{font-size:13px;line-height:1.35;color:#475569;font-weight:800}
-.latest-founder-copy strong{display:block;color:#111827;font-size:14px;margin-bottom:2px}
+.latest-founder-copy strong{display:block;color:var(--r3-navy);font-size:14px;margin-bottom:2px}
 .thankyou-box{display:none;margin-top:14px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:18px;padding:16px;color:#1E3A8A;font-weight:850;line-height:1.5}
 @media(max-width:900px){.founders-card{grid-template-columns:1fr}.founder-title{font-size:34px}.founder-discount{font-size:38px}.founder-includes{grid-template-columns:1fr}}
 
@@ -386,7 +388,7 @@ footer{
 .mockup-window{height:100%;display:grid;grid-template-rows:44px 1fr;border-radius:20px;overflow:hidden;background:#F8FAFC;border:1px solid rgba(255,255,255,.72);box-shadow:0 18px 50px rgba(9,28,68,.22)}
 .mockup-topbar{display:flex;align-items:center;gap:10px;background:#071A3D;color:#DCEBFF;padding:0 14px;font-size:12px;font-weight:900}.mockup-window-dots{display:flex;gap:6px}.mockup-window-dots span{width:9px;height:9px;border-radius:50%;display:block}.mockup-window-dots span:nth-child(1){background:#F87171}.mockup-window-dots span:nth-child(2){background:#FBBF24}.mockup-window-dots span:nth-child(3){background:#34D399}
 .mockup-body{min-height:0;display:grid;grid-template-columns:116px 1fr;background:#F3F7FC}.mockup-sidebar{padding:14px 10px;background:#EAF2FB;border-right:1px solid #D9E7F7;display:grid;align-content:start;gap:7px}.mockup-nav-item{display:flex;align-items:center;gap:7px;padding:8px;border-radius:11px;color:#64748B;font-size:11px;font-weight:850}.mockup-nav-icon{width:8px;height:8px;border-radius:50%;background:#9DB7D7}.mockup-nav-item.active{background:#FFFFFF;color:#1D4ED8;box-shadow:0 8px 20px rgba(37,99,235,.12)}.mockup-nav-item.active .mockup-nav-icon{background:#2563EB}
-.mockup-main{min-width:0;padding:12px;display:grid;gap:8px;align-content:start}.mockup-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:10px;box-shadow:0 12px 28px rgba(15,23,42,.055)}.mockup-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.mockup-card-title{color:#0F172A;font-size:13px;font-weight:950}.mockup-pill{border-radius:999px;background:#DBEAFE;color:#1D4ED8;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.patient-summary-card{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}.patient-avatar{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#DBEAFE,#FFFFFF);border:1px solid #BFDBFE;color:#1D4ED8;font-size:14px;font-weight:950}.patient-name{display:block;color:#0F172A;font-size:18px;line-height:1;font-weight:950}.patient-meta{display:block;margin-top:4px;color:#475569;font-size:11px;font-weight:850}.patient-exp{display:block;margin-top:3px;color:#94A3B8;font-size:10px;font-weight:800}.patient-update{text-align:right;color:#64748B;font-size:10px;font-weight:850}.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.metric-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:9px;box-shadow:0 8px 18px rgba(15,23,42,.045)}.metric-card strong{display:block;color:#0F172A;font-size:20px;line-height:1;font-weight:950}.metric-card span{display:block;margin-top:5px;color:#64748B;font-size:10px;font-weight:850}.metric-unit{display:inline-block;margin-top:2px;color:#94A3B8;font-size:9px;font-weight:850}.percentile-card{padding:11px 12px}.percentile-list{display:grid;gap:8px}.percentile-row{display:grid;grid-template-columns:88px 1fr 48px;gap:9px;align-items:center}.percentile-label{color:#64748B;font-size:9px;font-weight:950;letter-spacing:.03em;text-transform:uppercase}.percentile-value{display:block;margin-top:2px;color:#0F172A;font-size:11px;font-weight:950}.percentile-track{position:relative;height:9px;border-radius:999px;background:linear-gradient(90deg,#FEF3C7 0%,#DFF7E7 24%,#D1FAE5 50%,#DFF7E7 76%,#FEF3C7 100%);box-shadow:inset 0 0 0 1px rgba(15,23,42,.06)}.percentile-marker{position:absolute;top:50%;left:var(--pct);width:13px;height:13px;border-radius:50%;background:#2563EB;border:2px solid #FFFFFF;box-shadow:0 4px 10px rgba(37,99,235,.3);transform:translate(-50%,-50%)}.percentile-scale{display:flex;justify-content:space-between;margin-top:4px;color:#94A3B8;font-size:8px;font-weight:850}.percentile-stat{text-align:right}.percentile-p{display:block;color:#1D4ED8;font-size:14px;font-weight:950}.percentile-z{display:block;margin-top:2px;color:#64748B;font-size:10px;font-weight:850}.clinical-mini{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.clinical-mini p{margin:0;color:#475569;font-size:11px;line-height:1.35;font-weight:760}.clinical-status{display:inline-flex;border-radius:999px;background:#DCFCE7;color:#166534;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.mockup-note{margin-top:6px;color:#94A3B8;font-size:9px;font-weight:800}.agenda-list{display:grid;gap:6px}.agenda-row{display:grid;grid-template-columns:38px 1fr auto;gap:7px;align-items:center;border-top:1px solid #EEF2F7;padding-top:6px}.agenda-row:first-child{border-top:0;padding-top:0}.agenda-time{color:#2563EB;font-size:11px;font-weight:950}.agenda-name{display:block;color:#0F172A;font-size:11px;font-weight:950}.agenda-detail{display:block;color:#64748B;font-size:9px;font-weight:760;margin-top:1px}.agenda-status{border-radius:999px;background:#F1F5F9;color:#475569;padding:4px 6px;font-size:8px;font-weight:950}.agenda-status.live{background:#DCFCE7;color:#166534}.agenda-status.arrived{background:#FEF3C7;color:#92400E}
+.mockup-main{min-width:0;padding:12px;display:grid;gap:8px;align-content:start}.mockup-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:10px;box-shadow:0 12px 28px rgba(15,23,42,.055)}.mockup-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.mockup-card-title{color:var(--r3-navy);font-size:13px;font-weight:950}.mockup-pill{border-radius:999px;background:#DBEAFE;color:#1D4ED8;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.patient-summary-card{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}.patient-avatar{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#DBEAFE,#FFFFFF);border:1px solid #BFDBFE;color:#1D4ED8;font-size:14px;font-weight:950}.patient-name{display:block;color:var(--r3-navy);font-size:18px;line-height:1;font-weight:950}.patient-meta{display:block;margin-top:4px;color:#475569;font-size:11px;font-weight:850}.patient-exp{display:block;margin-top:3px;color:#94A3B8;font-size:10px;font-weight:800}.patient-update{text-align:right;color:#64748B;font-size:10px;font-weight:850}.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.metric-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:9px;box-shadow:0 8px 18px rgba(15,23,42,.045)}.metric-card strong{display:block;color:var(--r3-navy);font-size:20px;line-height:1;font-weight:950}.metric-card span{display:block;margin-top:5px;color:#64748B;font-size:10px;font-weight:850}.metric-unit{display:inline-block;margin-top:2px;color:#94A3B8;font-size:9px;font-weight:850}.percentile-card{padding:11px 12px}.percentile-list{display:grid;gap:8px}.percentile-row{display:grid;grid-template-columns:88px 1fr 48px;gap:9px;align-items:center}.percentile-label{color:#64748B;font-size:9px;font-weight:950;letter-spacing:.03em;text-transform:uppercase}.percentile-value{display:block;margin-top:2px;color:var(--r3-navy);font-size:11px;font-weight:950}.percentile-track{position:relative;height:9px;border-radius:999px;background:linear-gradient(90deg,#FEF3C7 0%,#DFF7E7 24%,#D1FAE5 50%,#DFF7E7 76%,#FEF3C7 100%);box-shadow:inset 0 0 0 1px rgba(15,23,42,.06)}.percentile-marker{position:absolute;top:50%;left:var(--pct);width:13px;height:13px;border-radius:50%;background:#2563EB;border:2px solid #FFFFFF;box-shadow:0 4px 10px rgba(37,99,235,.3);transform:translate(-50%,-50%)}.percentile-scale{display:flex;justify-content:space-between;margin-top:4px;color:#94A3B8;font-size:8px;font-weight:850}.percentile-stat{text-align:right}.percentile-p{display:block;color:#1D4ED8;font-size:14px;font-weight:950}.percentile-z{display:block;margin-top:2px;color:#64748B;font-size:10px;font-weight:850}.clinical-mini{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.clinical-mini p{margin:0;color:#475569;font-size:11px;line-height:1.35;font-weight:760}.clinical-status{display:inline-flex;border-radius:999px;background:#DCFCE7;color:#166534;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.mockup-note{margin-top:6px;color:#94A3B8;font-size:9px;font-weight:800}.agenda-list{display:grid;gap:6px}.agenda-row{display:grid;grid-template-columns:38px 1fr auto;gap:7px;align-items:center;border-top:1px solid #EEF2F7;padding-top:6px}.agenda-row:first-child{border-top:0;padding-top:0}.agenda-time{color:#2563EB;font-size:11px;font-weight:950}.agenda-name{display:block;color:var(--r3-navy);font-size:11px;font-weight:950}.agenda-detail{display:block;color:#64748B;font-size:9px;font-weight:760;margin-top:1px}.agenda-status{border-radius:999px;background:#F1F5F9;color:#475569;padding:4px 6px;font-size:8px;font-weight:950}.agenda-status.live{background:#DCFCE7;color:#166534}.agenda-status.arrived{background:#FEF3C7;color:#92400E}
 @keyframes mockupIn{from{opacity:0;transform:translateY(14px) rotate(1deg)}to{opacity:1;transform:translateY(0) rotate(1deg)}}@media(prefers-reduced-motion:reduce){.app-product-mockup{animation:none}}
 @media(max-width:950px){.hero-grid{grid-template-columns:1fr}.app-product-mockup{justify-self:center;width:min(92%,520px);transform:none}.mockup-body{grid-template-columns:92px 1fr}.mockup-sidebar{padding:12px 8px}.mockup-nav-item{font-size:10px;padding:7px}.mockup-main{padding:10px;gap:7px}.patient-summary-card{grid-template-columns:auto 1fr}.patient-update{grid-column:1/-1;text-align:left}.metrics-row{gap:6px}.metric-card{padding:8px}.metric-card strong{font-size:18px}.percentile-row{grid-template-columns:78px 1fr 42px;gap:7px}.agenda-row{grid-template-columns:38px 1fr}.agenda-status{display:none}}@media(max-width:420px){.mockup-body{grid-template-columns:1fr}.mockup-sidebar{display:none}.mockup-topbar{font-size:10px}.app-product-mockup{width:min(92vw,360px);aspect-ratio:3/4;padding:10px}.mockup-shell{padding:8px}.mockup-window{grid-template-rows:38px 1fr}.mockup-main{padding:8px;gap:6px}.patient-summary-card{grid-template-columns:auto 1fr;padding:8px}.patient-avatar{width:32px;height:32px;border-radius:11px;font-size:12px}.patient-name{font-size:15px}.patient-meta{font-size:9px}.patient-exp,.patient-update,.mockup-note,.clinical-mini,.agenda-row:nth-child(3){display:none}.metrics-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.metric-card{min-width:0;padding:7px}.metric-card strong{font-size:13px;white-space:nowrap}.metric-card span,.metric-unit{font-size:8px}.mockup-card{padding:8px;border-radius:14px;min-width:0}.mockup-card-head{margin-bottom:6px}.mockup-card-title{font-size:11px}.mockup-pill{font-size:8px;padding:4px 6px}.percentile-row{grid-template-columns:54px minmax(0,1fr) 32px;gap:5px}.percentile-label{font-size:7px}.percentile-value{font-size:8px}.percentile-p{font-size:11px}.percentile-z{font-size:7px}.percentile-scale{font-size:7px}.agenda-row{grid-template-columns:32px 1fr}.agenda-name{font-size:10px}.agenda-detail{font-size:8px}}
 
@@ -413,11 +415,11 @@ footer{
 .clinical-origin-photo{margin:0;width:100%;border-radius:28px;overflow:hidden;border:1px solid #D7E7FF;background:#EEF6FF;box-shadow:0 20px 52px rgba(37,99,235,.14)}
 .clinical-origin-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
 .clinical-eyebrow{display:inline-flex;border-radius:999px;background:#EAF3FF;color:#1D4ED8;border:1px solid #CFE2FF;padding:8px 12px;font-size:12px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
-.clinical-origin-title{font-size:48px;line-height:1.03;letter-spacing:-.04em;margin:0 0 16px;color:#0F172A}
+.clinical-origin-title{font-size:48px;line-height:1.03;letter-spacing:-.04em;margin:0 0 16px;color:var(--r3-navy)}
 .clinical-origin-copy{font-size:17px;line-height:1.65;color:#475569;margin:0 0 22px;max-width:650px}
 .clinical-credentials{display:grid;gap:10px;margin:16px 0 18px;padding:14px 16px;border-radius:18px;background:#FFFFFF;border:1px solid #E2E8F0;color:#334155;font-size:13px;line-height:1.45;box-shadow:0 10px 28px rgba(15,23,42,.04)}
-.clinical-credentials p{margin:0}.clinical-credentials strong{color:#0F172A}.clinical-credentials span{color:#64748B;font-weight:850}
-.clinical-origin .clinical-founder-signature{margin:0 0 10px;color:#0F172A}.clinical-origin .clinical-founder-signature span{color:#475569}
+.clinical-credentials p{margin:0}.clinical-credentials strong{color:var(--r3-navy)}.clinical-credentials span{color:#64748B;font-weight:850}
+.clinical-origin .clinical-founder-signature{margin:0 0 10px;color:var(--r3-navy)}.clinical-origin .clinical-founder-signature span{color:#475569}
 .clinical-origin .clinical-founder-trust{color:#1E40AF;font-weight:850;margin:0 0 24px}
 .pricing-intro{margin:0 auto 30px}.pricing-intro .value-badge{text-transform:uppercase;letter-spacing:.1em}.pricing-intro p{max-width:560px;margin:auto}
 .trial-payment-note{color:#1D4ED8}.trial-card-note{color:#475569}
@@ -443,6 +445,21 @@ footer{
 .launch-offer-bar{position:relative;z-index:10}
 @media(max-width:1100px){.nav-inner{gap:12px}.nav-links{gap:13px}.nav-links a:not(.cta){font-size:13px}.nav-links .cta.secondary{padding:9px 12px}.nav-links .cta:not(.secondary){padding:10px 13px}}
 @media(max-width:767px){body.nav-open{overflow:hidden}.nav-inner{height:68px}.brand{font-size:20px}.nav-toggle{display:inline-flex;flex-direction:column;flex:0 0 auto}.nav-links{display:none;position:absolute;left:20px;right:20px;top:calc(100% + 10px);z-index:41;margin:0;padding:16px;background:rgba(255,255,255,.98);border:1px solid #D9E2F1;border-radius:24px;box-shadow:0 24px 60px rgba(15,23,42,.18);backdrop-filter:blur(16px);flex-direction:column;align-items:stretch;gap:8px;white-space:normal}.nav-links.is-open{display:flex}.nav-links a{width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:16px}.nav-links a:not(.cta){background:#F8FAFC;color:#0F2A5F}.nav-links .cta.secondary{background:#fff;color:#0F2A5F}.nav-links .cta:not(.secondary){background:var(--blue);color:#fff}}
+
+
+/* Live checkout UX */
+.checkout-status{display:block;margin-top:10px;color:#4b6684;font-size:.82rem;font-weight:800;letter-spacing:-.01em}
+.checkout-status.warning,.checkout-status.error{color:#9A3412}
+.checkout-error{display:none;margin-top:14px;padding:14px;border:1px solid rgba(154,52,18,.18);border-radius:18px;background:linear-gradient(135deg,rgba(255,247,237,.96),rgba(255,255,255,.92));color:#7C2D12;font-size:.88rem;line-height:1.45;box-shadow:0 14px 34px rgba(154,52,18,.10)}
+.checkout-error.is-visible{display:block}
+.checkout-error strong{display:block;margin-bottom:4px;color:#7C2D12;font-size:.92rem}
+.checkout-error-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.checkout-error-actions button,.checkout-error-actions a{appearance:none;border:0;border-radius:999px;padding:10px 13px;font:inherit;font-size:.82rem;font-weight:900;text-decoration:none;cursor:pointer}
+.checkout-error-actions button{background:#0F2A5F;color:#fff}
+.checkout-error-actions a{background:#fff;color:#0F2A5F;border:1px solid rgba(15,42,95,.16)}
+.checkout-cta[aria-busy="true"]{pointer-events:none;opacity:.82;position:relative}
+.checkout-cta[aria-busy="true"]::before{content:"";width:14px;height:14px;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;display:inline-block;margin-right:8px;vertical-align:-2px;animation:checkoutSpin .75s linear infinite}
+@keyframes checkoutSpin{to{transform:rotate(360deg)}}
 
 </style>
 </head>
@@ -863,178 +880,153 @@ footer{
 <script type="application/json" id="neumopractice-stripe-config">
 {
   "mode": "live",
-  "products": {
-    "pro": "prod_UgGMTmZKxjPv1w",
-    "proYearly": "prod_UiUovLz8kDWpkX",
-    "clinicPro": "prod_UgGSYQv6E5VRoU"
-  },
-  "prices": {
-    "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
-    "STRIPE_PRICE_PRO_YEARLY": "price_1Tj3ohECXG2UiJoddpTdrla7",
-    "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
-    "STRIPE_PRICE_CLINIC_YEARLY": "price_1Tj47TECXG2UiJodCvwWwikO"
-  },
-  "trialDays": 60,
-  "checkoutLinks": {
+  "checkoutEndpoint": "https://lyqvcuopvwsphhwktqpo.supabase.co/functions/v1/create-public-checkout-session",
+  "planKeys": {
     "pro": {
-      "monthly": "https://buy.stripe.com/bJefZh7KX27n4t27O94ko02",
-      "yearly": "https://buy.stripe.com/aFacN54yL27n1gQ4BX4ko00"
+      "monthly": "pro_monthly",
+      "yearly": "pro_annual"
     },
     "clinicPro": {
-      "monthly": "",
-      "yearly": "https://buy.stripe.com/7sYaEX2qDcM1cZy9Wh4ko01"
-    }
-  },
-  "checkoutEndpoint": "https://lyqvcuopvwsphhwktqpo.supabase.co/functions/v1/create-checkout-session",
-  "paymentLinkIds": {
-    "pro": {
-      "monthly": "plink_1Tj4FeECXG2UiJodK8sNToss",
-      "yearly": "plink_1Tj41iECXG2UiJodzV67g3Gj"
-    },
-    "clinicPro": {
-      "monthly": "",
-      "yearly": "plink_1Tj48AECXG2UiJod1biPZdpJ"
-    }
-  },
-  "live": {
-    "products": {
-      "pro": "prod_UgGMTmZKxjPv1w",
-      "proYearly": "prod_UiUovLz8kDWpkX",
-      "clinicPro": "prod_UgGSYQv6E5VRoU"
-    },
-    "prices": {
-      "STRIPE_PRICE_PRO_MONTHLY": "price_1TgtpYECXG2UiJodbTTdXuo2",
-      "STRIPE_PRICE_PRO_YEARLY": "price_1Tj3ohECXG2UiJoddpTdrla7",
-      "STRIPE_PRICE_CLINIC_MONTHLY": "price_1TgtveECXG2UiJodKBjdP7QN",
-      "STRIPE_PRICE_CLINIC_YEARLY": "price_1Tj47TECXG2UiJodCvwWwikO"
-    },
-    "trialDays": 60,
-    "checkoutLinks": {
-      "pro": {
-        "monthly": "https://buy.stripe.com/bJefZh7KX27n4t27O94ko02",
-        "yearly": "https://buy.stripe.com/aFacN54yL27n1gQ4BX4ko00"
-      },
-      "clinicPro": {
-        "monthly": "",
-        "yearly": "https://buy.stripe.com/7sYaEX2qDcM1cZy9Wh4ko01"
-      }
-    },
-    "checkoutEndpoint": "https://lyqvcuopvwsphhwktqpo.supabase.co/functions/v1/create-checkout-session",
-    "paymentLinkIds": {
-      "pro": {
-        "monthly": "plink_1Tj4FeECXG2UiJodK8sNToss",
-        "yearly": "plink_1Tj41iECXG2UiJodzV67g3Gj"
-      },
-      "clinicPro": {
-        "monthly": "",
-        "yearly": "plink_1Tj48AECXG2UiJod1biPZdpJ"
-      }
-    }
-  },
-  "test": {
-    "products": {
-      "pro": "prod_UgeEHgBYLx4hEp",
-      "clinicPro": "prod_UgeE5dvqNxQbAM"
-    },
-    "prices": {
-      "STRIPE_PRICE_PRO_MONTHLY": "price_1ThGvgECXG2UiJodWpoIhLlO",
-      "STRIPE_PRICE_PRO_YEARLY": "price_1Thw2PECXG2UiJodnVcL5Aio",
-      "STRIPE_PRICE_CLINIC_MONTHLY": "price_1ThGvhECXG2UiJodhOdSgR4a",
-      "STRIPE_PRICE_CLINIC_YEARLY": "price_1Thw5IECXG2UiJodrfeoTBiW"
-    },
-    "trialDays": 60,
-    "checkoutLinks": {
-      "pro": {
-        "monthly": "",
-        "yearly": ""
-      },
-      "clinicPro": {
-        "monthly": "",
-        "yearly": "https://buy.stripe.com/test_aFacN54yL27n1gQ4BX4ko00"
-      }
-    },
-    "checkoutEndpoint": "https://lyqvcuopvwsphhwktqpo.supabase.co/functions/v1/create-checkout-session",
-    "paymentLinkIds": {
-      "pro": {
-        "monthly": "",
-        "yearly": "plink_1ThwJZECXG2UiJodLP242ZoY"
-      },
-      "clinicPro": {
-        "monthly": "",
-        "yearly": "plink_1ThwHZECXG2UiJod17ei6frK"
-      }
+      "monthly": "clinic_pro_monthly",
+      "yearly": "clinic_pro_annual"
     }
   }
 }
 </script>
 
 <script>
-window.NEUMOPRACTICE_STRIPE_CONFIG = JSON.parse(document.getElementById("neumopractice-stripe-config").textContent);
-
-const STRIPE_PRICE_KEYS = {
-  pro: {
-    monthly: "STRIPE_PRICE_PRO_MONTHLY",
-    yearly: "STRIPE_PRICE_PRO_YEARLY"
-  },
-  clinicPro: {
-    monthly: "STRIPE_PRICE_CLINIC_MONTHLY",
-    yearly: "STRIPE_PRICE_CLINIC_YEARLY"
+window.NEUMOPRACTICE_STRIPE_CONFIG = (() => {
+  const node = document.getElementById("neumopractice-stripe-config");
+  if (!node) return {};
+  try {
+    return JSON.parse(node.textContent || "{}");
+  } catch (error) {
+    console.warn("No se pudo leer la configuración de Stripe.");
+    return {};
   }
-};
+})();
 
-function getCheckoutPlanLabel(plan){
-  return plan === "clinicPro" ? "CLINIC PRO" : "PRO";
-}
-
-function getCheckoutUrl(plan, period){
-  return "";
-}
-
-function getCheckoutEndpoint(){
-  return window.NEUMOPRACTICE_STRIPE_CONFIG?.checkoutEndpoint || "";
-}
-
-const STRIPE_PLAN_MAP = {
-  pro: {
-    monthly: "pro_monthly",
-    yearly: "pro_annual"
-  },
-  clinicPro: {
-    monthly: "clinic_pro_monthly",
-    yearly: "clinic_pro_annual"
-  }
-};
+const CHECKOUT_ENDPOINT = window.NEUMOPRACTICE_STRIPE_CONFIG.checkoutEndpoint || "";
+const PLAN_KEYS = window.NEUMOPRACTICE_STRIPE_CONFIG.planKeys || {};
+const SUPPORT_URL = "https://wa.me/529981254481";
 
 function getCheckoutPlanKey(plan, period){
-  return STRIPE_PLAN_MAP[plan]?.[period] || "";
+  return PLAN_KEYS[plan]?.[period] || "";
 }
 
-function getCheckoutPriceId(plan, period){
-  const key = STRIPE_PRICE_KEYS[plan]?.[period];
-  return key ? (window.NEUMOPRACTICE_STRIPE_CONFIG?.prices?.[key] || "") : "";
+function getCheckoutStatusText(){
+  return "Checkout seguro · $0 MXN hoy · 60 días gratis";
+}
+
+function ensureCheckoutError(card){
+  let errorBox = card.querySelector("[data-checkout-error]");
+  if(!errorBox){
+    errorBox = document.createElement("div");
+    errorBox.className = "checkout-error";
+    errorBox.setAttribute("data-checkout-error", "");
+    errorBox.setAttribute("role", "status");
+    errorBox.setAttribute("aria-live", "polite");
+    errorBox.innerHTML = '<strong>⚠ No pudimos abrir el checkout en este momento.</strong><span>Intenta nuevamente o habla con soporte para ayudarte a iniciar tus 60 días gratis.</span><div class="checkout-error-actions"><button type="button" data-checkout-retry>Intentar de nuevo</button><a href="' + SUPPORT_URL + '" target="_blank" rel="noopener">Hablar con soporte</a></div>';
+    card.appendChild(errorBox);
+  }
+  return errorBox;
+}
+
+function hideCheckoutError(card){
+  const errorBox = card.querySelector("[data-checkout-error]");
+  if(errorBox) errorBox.classList.remove("is-visible");
+}
+
+function showCheckoutError(button, message){
+  const card = button.closest(".price-card");
+  if(!card) return;
+  const errorBox = ensureCheckoutError(card);
+  const text = errorBox.querySelector("span");
+  if(text && message) text.textContent = message;
+  errorBox.classList.add("is-visible");
+  const retry = errorBox.querySelector("[data-checkout-retry]");
+  if(retry) retry.onclick = () => openLiveCheckout(button);
+}
+
+function isStripeCheckoutUrl(url){
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" && parsed.hostname === "checkout.stripe.com";
+  } catch (error) {
+    return false;
+  }
 }
 
 function updateCheckoutButton(card, plan, period){
   const button = card.querySelector("[data-checkout-button]");
   const status = card.querySelector("[data-checkout-status]");
-  const url = getCheckoutUrl(plan, period);
-  const priceId = getCheckoutPriceId(plan, period);
-  const endpoint = getCheckoutEndpoint();
+  const planKey = getCheckoutPlanKey(plan, period);
 
   if(button){
     button.dataset.plan = plan;
     button.dataset.period = period;
-    button.dataset.priceId = priceId;
-    button.href = endpoint ? "#" : "#checkout-pendiente";
+    button.dataset.planKey = planKey;
+    button.removeAttribute("data-price-id");
+    button.href = "#pricing";
     button.target = "";
     button.rel = "";
+    button.classList.add("checkout-cta");
   }
 
   if(status){
-    status.classList.toggle("warning", !endpoint);
-    status.textContent = endpoint
-      ? "Checkout seguro con Trial de 60 días habilitado."
-      : "Conecta el checkout de Stripe con prueba de 60 días.";
+    status.classList.toggle("warning", !planKey);
+    status.textContent = planKey ? getCheckoutStatusText() : "Este plan estará disponible próximamente.";
+  }
+
+  hideCheckoutError(card);
+}
+
+function setCheckoutLoading(button, isLoading){
+  if(isLoading){
+    button.dataset.defaultText = button.textContent.trim();
+    button.textContent = "Abriendo checkout seguro…";
+    button.setAttribute("aria-busy", "true");
+    button.setAttribute("aria-disabled", "true");
+  } else {
+    button.textContent = button.dataset.defaultText || "Empezar 60 días gratis";
+    button.removeAttribute("aria-busy");
+    button.removeAttribute("aria-disabled");
+  }
+}
+
+async function openLiveCheckout(button){
+  const card = button.closest(".price-card");
+  const planKey = button.dataset.planKey || (card ? getCheckoutPlanKey(button.dataset.plan, button.dataset.period) : "");
+
+  if(!card || !planKey){
+    showCheckoutError(button, "Este plan aún no está disponible para iniciar checkout. Habla con soporte y te ayudamos a activarlo.");
+    return;
+  }
+
+  if(!CHECKOUT_ENDPOINT){
+    showCheckoutError(button, "El checkout seguro no está disponible en este momento. Habla con soporte y te ayudamos a iniciar.");
+    return;
+  }
+
+  hideCheckoutError(card);
+  setCheckoutLoading(button, true);
+
+  try {
+    const response = await fetch(CHECKOUT_ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ plan: planKey })
+    });
+    let payload = {};
+    try { payload = await response.json(); } catch (error) { payload = {}; }
+    if(!response.ok || !isStripeCheckoutUrl(payload.url)){
+      throw new Error(payload.error || "No se pudo crear la sesión de checkout.");
+    }
+    window.location.assign(payload.url);
+  } catch (error) {
+    console.warn("Checkout no disponible:", error && error.message ? error.message : error);
+    setCheckoutLoading(button, false);
+    showCheckoutError(button, "No pudimos abrir el checkout en este momento. Intenta nuevamente o habla con soporte.");
   }
 }
 
@@ -1059,43 +1051,9 @@ document.querySelectorAll("[data-checkout-button]").forEach((button) => {
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    const planKey = getCheckoutPlanKey(button.dataset.plan, button.dataset.period);
-    const endpoint = getCheckoutEndpoint();
-
-    if(endpoint && planKey){
-      button.setAttribute("aria-busy", "true");
-      const originalText = button.textContent;
-      button.textContent = "Abriendo checkout...";
-
-      fetch(endpoint, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          plan: planKey
-        })
-      })
-      .then((response) => {
-        if(!response.ok) throw new Error("checkout_request_failed");
-        return response.json();
-      })
-      .then((payload) => {
-        if(!payload?.url) throw new Error("checkout_url_missing");
-        window.location.href = payload.url;
-      })
-      .catch(() => {
-        alert(`No pudimos abrir Stripe Checkout con Trial de 60 días.\nPlan solicitado: ${planKey || "desconocido"}`);
-      })
-      .finally(() => {
-        button.removeAttribute("aria-busy");
-        button.textContent = originalText;
-      });
-      return;
-    }
-
-    alert(`No hay método de pago listo para ${getCheckoutPlanLabel(button.dataset.plan)} ${button.dataset.period === "yearly" ? "anual" : "mensual"} con Trial de 60 días.`);
+    openLiveCheckout(button);
   });
 });
-
 </script>
 
 
