@@ -260,6 +260,9 @@ footer{
 .footer-brand h2{margin:0 0 4px;color:#FFFFFF;font-size:30px;letter-spacing:-.03em}
 .footer-brand{color:#DCEBFF}
 .footer-brand p{margin:0;color:#93C3FF}
+.footer-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.footer-actions .cta{box-shadow:0 14px 34px rgba(2,14,39,.18)}
+.footer-actions .cta.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.28)}
 
   h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
   .nav-links{display:none}.preview-body{grid-template-columns:1fr}.preview-sidebar{display:none}
@@ -478,8 +481,8 @@ footer{
       <a href="#ai">IA Clínica</a>
       <a href="#pricing">Precios</a>
       <a href="#faq">FAQs</a>
-      <a href="https://app.neumopractice.com" class="cta secondary">Login</a>
-      <a href="#pricing" class="cta">Empezar 60 días gratis</a>
+      <a href="https://app.neumopractice.com/?auth=login" class="cta secondary" data-login-link>Iniciar sesión</a>
+      <a href="https://app.neumopractice.com/?auth=signup" class="cta" data-signup-link>Comenzar gratis</a>
     </div>
   </div>
 </nav>
@@ -489,9 +492,9 @@ footer{
     <span class="launch-offer-eyebrow">OFERTA DE LANZAMIENTO</span>
     <div class="launch-offer-copy">
       <span class="launch-offer-message"><span>60 días gratis</span> para migrar tu operación.</span>
-      <span class="launch-offer-note">Sin costo inicial.</span>
+      <span class="launch-offer-note">Sin tarjeta. Empieza hoy.</span>
     </div>
-    <a class="launch-offer-cta" href="#pricing">Empezar ahora</a>
+    <a class="launch-offer-cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
   </div>
 </div>
 
@@ -499,14 +502,14 @@ footer{
   <div class="container hero-grid">
     <div>
       <div class="badge">Disponible para clínicas de neumología pediátrica con 60 días gratis.</div>
-      <h1>Menos captura.<br><span class="blue">Más medicina.</span></h1>
+      <h1>Tu consulta,<br><span class="blue">con menos captura.</span></h1>
       <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
       <p class="lead hero-highlight" style="font-weight:850;margin-top:-12px">Ahorra hasta 15 minutos por consulta con IA Clínica integrada.</p>
       <div class="hero-actions">
-        <a class="cta" href="#pricing">Empezar 60 días gratis</a>
-        <a class="cta secondary" href="#features">Ver cómo funciona</a>
+        <a class="cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
+        <a class="cta secondary" href="https://app.neumopractice.com/?auth=login" data-login-link>Iniciar sesión</a>
       </div>
-      <div class="micro">Producto disponible · 60 días gratis para migrar tu operación</div>
+      <div class="micro">Sin tarjeta. Cancela cuando quieras.</div>
     </div>
     <div class="app-product-mockup" aria-hidden="true">
       <div class="mockup-shell">
@@ -691,7 +694,7 @@ footer{
             <p><strong>Subespecialidad en Neumología Pediátrica</strong> · Instituto Nacional de Pediatría / UNAM <span>Cédula Profesional: 15613508</span></p>
           </div>
           <p class="clinical-founder-trust">Respaldado desde su etapa beta por 15 médicos fundadores.</p>
-          <a class="cta" href="#pricing">Empezar 60 días gratis</a>
+          <a class="cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
         </div>
       </div>
     </div>
@@ -704,10 +707,10 @@ footer{
       <div class="value-badge">OFERTA DE LANZAMIENTO</div>
       <h2>60 días gratis para migrar tu operación.</h2>
       <p>Empieza hoy, migra con calma y decide después.</p>
-      <p style="margin-top:10px;font-weight:950;color:#1D4ED8">Sin costo inicial.</p>
+      <p style="margin-top:10px;font-weight:950;color:#1D4ED8">Sin tarjeta. Configura tu clínica en minutos.</p>
     </div>
     <div class="pricing">
-      <div class="price-card featured" data-stripe-product-id="prod_UgGMTmZKxjPv1w" data-stripe-yearly-product-id="prod_UiUovLz8kDWpkX" data-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-price-yearly="price_1Tj3ohECXG2UiJoddpTdrla7" data-live-price-monthly="price_1TgtpYECXG2UiJodbTTdXuo2" data-live-price-yearly="price_1Tj3ohECXG2UiJoddpTdrla7">
+      <div class="price-card featured">
         <div class="plan-badge">MEJOR VALOR</div>
         <div class="trial-badge">✓ Incluye 60 días gratis</div>
         <h3 class="plan-name">NeumoPractice PRO</h3>
@@ -717,8 +720,8 @@ footer{
         <p class="savings">Ahorra $3,600 al año</p>
         <div class="monthly-alt">O $799 MXN pagando mes a mes</div>
         <div class="billing-options" role="group" aria-label="Elegir frecuencia de pago para PRO">
-          <button class="billing-option active" type="button" data-plan="pro" data-period="yearly"><strong>Pagar anual</strong><span>$5,988 MXN / año</span></button>
-          <button class="billing-option" type="button" data-plan="pro" data-period="monthly"><strong>Pagar mensual</strong><span>$799 MXN / mes</span></button>
+          <button class="billing-option active" type="button" data-plan="pro" data-period="yearly"><strong>Anual después del trial</strong><span>$5,988 MXN / año</span></button>
+          <button class="billing-option" type="button" data-plan="pro" data-period="monthly"><strong>Mensual después del trial</strong><span>$799 MXN / mes</span></button>
         </div>
         <ul class="plan-benefits">
           <li><span class="check">✓</span>1 médico</li>
@@ -731,12 +734,12 @@ footer{
           <li><span class="check">✓</span>Finanzas básicas</li>
           <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta checkout-cta" href="#" data-checkout-button data-plan="pro" data-period="yearly" rel="noopener">Empezar 60 días gratis</a>
-        <div class="checkout-status" data-checkout-status></div>
+        <a class="cta" href="https://app.neumopractice.com/?auth=signup&plan_interest=pro&billing_period_interest=yearly" data-signup-link data-plan-interest="pro" data-period-interest="yearly">Probar 60 días gratis</a>
+        <div class="checkout-status" data-plan-status>Sin tarjeta. El plan se guarda como preferencia.</div>
         <p class="trial-card-note">Perfecto para migrar pacientes, agenda, recetas e historial sin interrumpir tu consulta.</p>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
-      <div class="price-card" data-stripe-product-id="prod_UgGSYQv6E5VRoU" data-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-price-yearly="price_1Tj47TECXG2UiJodCvwWwikO" data-live-price-monthly="price_1TgtveECXG2UiJodKBjdP7QN" data-live-price-yearly="price_1Tj47TECXG2UiJodCvwWwikO">
+      <div class="price-card">
         <div class="plan-badge">CLÍNICAS Y EQUIPOS</div>
         <div class="trial-badge">60 días gratis</div>
         <h3 class="plan-name">NeumoPractice CLINIC PRO</h3>
@@ -746,8 +749,8 @@ footer{
         <p class="savings">Ahorra $6,000 al año</p>
         <div class="monthly-alt">O $1,999 MXN pagando mes a mes</div>
         <div class="billing-options" role="group" aria-label="Elegir frecuencia de pago para CLINIC PRO">
-          <button class="billing-option active" type="button" data-plan="clinicPro" data-period="yearly"><strong>Pagar anual</strong><span>$17,988 MXN / año</span></button>
-          <button class="billing-option" type="button" data-plan="clinicPro" data-period="monthly"><strong>Pagar mensual</strong><span>$1,999 MXN / mes</span></button>
+          <button class="billing-option active" type="button" data-plan="clinicPro" data-period="yearly"><strong>Anual después del trial</strong><span>$17,988 MXN / año</span></button>
+          <button class="billing-option" type="button" data-plan="clinicPro" data-period="monthly"><strong>Mensual después del trial</strong><span>$1,999 MXN / mes</span></button>
         </div>
         <ul class="plan-benefits">
           <li><span class="check">✓</span>Hasta 5 médicos</li>
@@ -759,8 +762,8 @@ footer{
           <li><span class="check">✓</span>Base de datos unificada</li>
           <li><span class="check">✓</span>Soporte incluido</li>
         </ul>
-        <a class="cta outline checkout-cta" href="#" data-checkout-button data-plan="clinicPro" data-period="yearly" rel="noopener">Empezar 60 días gratis</a>
-        <div class="checkout-status" data-checkout-status></div>
+        <a class="cta outline" href="https://app.neumopractice.com/?auth=signup&plan_interest=clinic_pro&billing_period_interest=yearly" data-signup-link data-plan-interest="clinic_pro" data-period-interest="yearly">Probar 60 días gratis</a>
+        <div class="checkout-status" data-plan-status>Sin tarjeta. El plan se guarda como preferencia.</div>
         <p class="trial-card-note">Perfecto para migrar pacientes, agenda, recetas e historial sin interrumpir tu consulta.</p>
         <div class="card-footer">✓ Todo incluido. Sin pagos extra.</div>
       </div>
@@ -859,6 +862,10 @@ footer{
     </div>
     <div class="footer-inner">
       <div class="footer-brand"><h2>NeumoPractice</h2><p>Menos captura. Más medicina.</p></div>
+      <div class="footer-actions">
+        <a class="cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
+        <a class="cta secondary" href="https://app.neumopractice.com/?auth=login" data-login-link>Iniciar sesión</a>
+      </div>
       <div>© 2026 NeumoPractice. Producto clínico disponible.</div>
     </div>
     <p class="footer-closing" style="margin:22px 0 0;max-width:900px;">
@@ -877,185 +884,53 @@ footer{
   </div>
 </footer>
 
-<script type="application/json" id="neumopractice-stripe-config">
-{
-  "mode": "live",
-  "checkoutEndpoint": "https://lyqvcuopvwsphhwktqpo.supabase.co/functions/v1/create-public-checkout-session",
-  "planKeys": {
-    "pro": {
-      "monthly": "pro_monthly",
-      "yearly": "pro_annual"
-    },
-    "clinicPro": {
-      "monthly": "clinic_pro_monthly",
-      "yearly": "clinic_pro_annual"
-    }
-  }
-}
-</script>
-
 <script>
-window.NEUMOPRACTICE_STRIPE_CONFIG = (() => {
-  const node = document.getElementById("neumopractice-stripe-config");
-  if (!node) return {};
-  try {
-    return JSON.parse(node.textContent || "{}");
-  } catch (error) {
-    console.warn("No se pudo leer la configuración de Stripe.");
-    return {};
+(function(){
+  const APP_ORIGIN = "https://app.neumopractice.com/";
+  const PLAN_LABELS = {pro:"PRO", clinic_pro:"CLINIC PRO", clinicPro:"CLINIC PRO"};
+  function signupUrl(plan, period){
+    const url = new URL(APP_ORIGIN);
+    url.searchParams.set("auth", "signup");
+    const planKey = plan === "clinicPro" ? "clinic_pro" : plan;
+    if(planKey) url.searchParams.set("plan_interest", planKey);
+    if(period) url.searchParams.set("billing_period_interest", period);
+    return url.toString();
   }
+  function loginUrl(){
+    const url = new URL(APP_ORIGIN);
+    url.searchParams.set("auth", "login");
+    return url.toString();
+  }
+  function refreshSignupLinks(scope){
+    (scope || document).querySelectorAll("[data-signup-link]").forEach((link) => {
+      link.href = signupUrl(link.dataset.planInterest || link.dataset.plan || "", link.dataset.periodInterest || link.dataset.period || "");
+    });
+    (scope || document).querySelectorAll("[data-login-link]").forEach((link) => {
+      link.href = loginUrl();
+    });
+  }
+  document.querySelectorAll(".billing-option").forEach((option) => {
+    option.addEventListener("click", () => {
+      const card = option.closest(".price-card");
+      if(!card) return;
+      card.querySelectorAll(".billing-option").forEach((item) => item.classList.toggle("active", item === option));
+      const link = card.querySelector("[data-signup-link]");
+      const plan = option.dataset.plan === "clinicPro" ? "clinic_pro" : option.dataset.plan;
+      const period = option.dataset.period || "";
+      if(link){
+        link.dataset.planInterest = plan || "";
+        link.dataset.periodInterest = period;
+        link.href = signupUrl(plan, period);
+      }
+      const status = card.querySelector("[data-plan-status]");
+      if(status){
+        status.textContent = "Sin tarjeta. Guardaremos " + (PLAN_LABELS[plan] || "este plan") + " como preferencia para tu onboarding.";
+      }
+    });
+  });
+  refreshSignupLinks(document);
 })();
-
-const CHECKOUT_ENDPOINT = window.NEUMOPRACTICE_STRIPE_CONFIG.checkoutEndpoint || "";
-const PLAN_KEYS = window.NEUMOPRACTICE_STRIPE_CONFIG.planKeys || {};
-const SUPPORT_URL = "https://wa.me/529981254481";
-
-function getCheckoutPlanKey(plan, period){
-  return PLAN_KEYS[plan]?.[period] || "";
-}
-
-function getCheckoutStatusText(){
-  return "Checkout seguro · $0 MXN hoy · 60 días gratis";
-}
-
-function ensureCheckoutError(card){
-  let errorBox = card.querySelector("[data-checkout-error]");
-  if(!errorBox){
-    errorBox = document.createElement("div");
-    errorBox.className = "checkout-error";
-    errorBox.setAttribute("data-checkout-error", "");
-    errorBox.setAttribute("role", "status");
-    errorBox.setAttribute("aria-live", "polite");
-    errorBox.innerHTML = '<strong>⚠ No pudimos abrir el checkout en este momento.</strong><span>Intenta nuevamente o habla con soporte para ayudarte a iniciar tus 60 días gratis.</span><div class="checkout-error-actions"><button type="button" data-checkout-retry>Intentar de nuevo</button><a href="' + SUPPORT_URL + '" target="_blank" rel="noopener">Hablar con soporte</a></div>';
-    card.appendChild(errorBox);
-  }
-  return errorBox;
-}
-
-function hideCheckoutError(card){
-  const errorBox = card.querySelector("[data-checkout-error]");
-  if(errorBox) errorBox.classList.remove("is-visible");
-}
-
-function showCheckoutError(button, message){
-  const card = button.closest(".price-card");
-  if(!card) return;
-  const errorBox = ensureCheckoutError(card);
-  const text = errorBox.querySelector("span");
-  if(text && message) text.textContent = message;
-  errorBox.classList.add("is-visible");
-  const retry = errorBox.querySelector("[data-checkout-retry]");
-  if(retry) retry.onclick = () => openLiveCheckout(button);
-}
-
-function isStripeCheckoutUrl(url){
-  try {
-    const parsed = new URL(url);
-    return parsed.protocol === "https:" && parsed.hostname === "checkout.stripe.com";
-  } catch (error) {
-    return false;
-  }
-}
-
-function updateCheckoutButton(card, plan, period){
-  const button = card.querySelector("[data-checkout-button]");
-  const status = card.querySelector("[data-checkout-status]");
-  const planKey = getCheckoutPlanKey(plan, period);
-
-  if(button){
-    button.dataset.plan = plan;
-    button.dataset.period = period;
-    button.dataset.planKey = planKey;
-    button.removeAttribute("data-price-id");
-    button.href = "#pricing";
-    button.target = "";
-    button.rel = "";
-    button.classList.add("checkout-cta");
-  }
-
-  if(status){
-    status.classList.toggle("warning", !planKey);
-    status.textContent = planKey ? getCheckoutStatusText() : "Este plan estará disponible próximamente.";
-  }
-
-  hideCheckoutError(card);
-}
-
-function setCheckoutLoading(button, isLoading){
-  if(isLoading){
-    button.dataset.defaultText = button.textContent.trim();
-    button.textContent = "Abriendo checkout seguro…";
-    button.setAttribute("aria-busy", "true");
-    button.setAttribute("aria-disabled", "true");
-  } else {
-    button.textContent = button.dataset.defaultText || "Empezar 60 días gratis";
-    button.removeAttribute("aria-busy");
-    button.removeAttribute("aria-disabled");
-  }
-}
-
-async function openLiveCheckout(button){
-  const card = button.closest(".price-card");
-  const planKey = button.dataset.planKey || (card ? getCheckoutPlanKey(button.dataset.plan, button.dataset.period) : "");
-
-  if(!card || !planKey){
-    showCheckoutError(button, "Este plan aún no está disponible para iniciar checkout. Habla con soporte y te ayudamos a activarlo.");
-    return;
-  }
-
-  if(!CHECKOUT_ENDPOINT){
-    showCheckoutError(button, "El checkout seguro no está disponible en este momento. Habla con soporte y te ayudamos a iniciar.");
-    return;
-  }
-
-  hideCheckoutError(card);
-  setCheckoutLoading(button, true);
-
-  try {
-    const response = await fetch(CHECKOUT_ENDPOINT, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({ plan: planKey })
-    });
-    let payload = {};
-    try { payload = await response.json(); } catch (error) { payload = {}; }
-    if(!response.ok || !isStripeCheckoutUrl(payload.url)){
-      throw new Error(payload.error || "No se pudo crear la sesión de checkout.");
-    }
-    window.location.assign(payload.url);
-  } catch (error) {
-    console.warn("Checkout no disponible:", error && error.message ? error.message : error);
-    setCheckoutLoading(button, false);
-    showCheckoutError(button, "No pudimos abrir el checkout en este momento. Intenta nuevamente o habla con soporte.");
-  }
-}
-
-document.querySelectorAll(".billing-option").forEach((option) => {
-  option.addEventListener("click", () => {
-    const card = option.closest(".price-card");
-    if(!card) return;
-    const plan = option.dataset.plan;
-    const period = option.dataset.period;
-    card.querySelectorAll(".billing-option").forEach((item) => {
-      item.classList.toggle("active", item === option);
-    });
-    updateCheckoutButton(card, plan, period);
-  });
-});
-
-document.querySelectorAll("[data-checkout-button]").forEach((button) => {
-  const card = button.closest(".price-card");
-  if(card){
-    updateCheckoutButton(card, button.dataset.plan, button.dataset.period);
-  }
-
-  button.addEventListener("click", (event) => {
-    event.preventDefault();
-    openLiveCheckout(button);
-  });
-});
 </script>
-
 
 <script>
 (function(){
