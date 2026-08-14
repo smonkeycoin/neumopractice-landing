@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeumoPractice | Menos captura. Más medicina.</title>
-<meta name="description" content="NeumoPractice es una plataforma clínica para neumología pediátrica con agenda, expediente, recetas, estudios, finanzas e IA clínica.">
+<meta name="description" content="NeumoPractice es una plataforma clínica para neumología pediátrica y respiratoria de adultos con agenda, expediente, recetas, estudios, finanzas e IA clínica.">
 <link rel="icon" href="assets/favicon.ico">
 <style>
 :root{
@@ -50,70 +50,7 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 14px 30px rgba(37,99,235,.25);
 }
 .cta.secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
-.hero{
-  margin-top:26px;
-  padding:88px 0 64px;
-  position:relative;
-  overflow:hidden;
-  color:#EAF3FF;
-  background:
-    radial-gradient(900px 220px at 15% 20%, rgba(40,199,255,.35), transparent 55%),
-    radial-gradient(900px 260px at 88% -10%, rgba(255,255,255,.14), transparent 45%),
-    linear-gradient(150deg,var(--r3-navy) 0%,var(--r3-deep) 55%,var(--blue) 100%);
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:24px 14px 22px;
-  border-radius:34px;
-  border:1px solid rgba(186,226,255,.24);
-  pointer-events:none;
-  box-shadow:0 0 0 1px rgba(255,255,255,.08) inset;
-}
-.hero .container{position:relative;z-index:1}
-.hero .badge,
-.hero .micro{color:#DCEEFF}
-.hero-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:42px;align-items:center}
 .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #DBEAFE;color:#1E40AF;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:900}
-.hero .badge{
-  background:rgba(255,255,255,.92);
-  color:#0F2A5F;
-  border:1px solid rgba(96,165,250,.35);
-  box-shadow:0 14px 30px rgba(8,21,56,.22);
-}
-h1{font-size:64px;line-height:.95;letter-spacing:-.07em;margin:22px 0 18px;color:#FFFFFF}
-h1 .blue{color:var(--r3-cyan)}
-.lead{font-size:20px;line-height:1.55;color:#E1ECFF;max-width:650px;margin:0 0 26px}
-.hero-highlight{color:#8EDCFF}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 20px}
-.micro{font-size:13px;color:#64748B;font-weight:700}
-.hero .micro{color:#BFD7FF}
-.hero .hero-actions{margin:30px 0 24px}
-.hero-card{
-  background:#fff;border:1px solid #DBEAFE;border-radius:32px;padding:20px;box-shadow:var(--shadow);
-  transform:rotate(1deg);
-}
-.hero .hero-card{
-  border:1px solid rgba(255,255,255,.26);
-  background:linear-gradient(145deg,rgba(9,32,77,.78),rgba(16,62,138,.72));
-  color:#F1F6FF;
-}
-.app-preview{
-  border-radius:24px;background:#F8FAFC;border:1px solid var(--line);overflow:hidden;
-}
-.preview-top{height:48px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 16px}
-.dot{width:10px;height:10px;border-radius:50%;background:#CBD5E1}.dot:nth-child(1){background:#FCA5A5}.dot:nth-child(2){background:#FDE68A}.dot:nth-child(3){background:#86EFAC}
-.preview-body{display:grid;grid-template-columns:160px 1fr;min-height:390px}
-.preview-sidebar{background:#fff;border-right:1px solid var(--line);padding:16px}
-.preview-line{height:12px;background:#EAF1FF;border-radius:999px;margin:12px 0}.preview-line.w60{width:60%}.preview-line.w80{width:80%}
-.preview-main{padding:18px}
-.preview-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}
-.kpi b{display:block;font-size:20px}.kpi span{font-size:10px;color:var(--muted);font-weight:800}
-.calendar-mini{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px}
-.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-.day{height:42px;border-radius:10px;background:#F8FAFC;border:1px solid #EEF2F7;padding:5px;font-size:9px;font-weight:800;color:#64748B}
-.event{height:6px;border-radius:99px;margin-top:4px}.yellow{background:#F59E0B}.green{background:#22C55E}.orange{background:#F97316}.bluebg{background:#60A5FA}
 .section{padding:72px 0}
 .section-head{text-align:center;max-width:760px;margin:0 auto 36px}
 .section-head h2{font-size:42px;line-height:1.05;letter-spacing:-.055em;margin:0 0 12px}
@@ -264,8 +201,9 @@ footer{
 .footer-actions .cta{box-shadow:0 14px 34px rgba(2,14,39,.18)}
 .footer-actions .cta.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.28)}
 
-  h1{font-size:46px}.features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
-  .nav-links{display:none}.preview-body{grid-template-columns:1fr}.preview-sidebar{display:none}
+@media(max-width:900px){
+  .features,.steps,.pricing,.pricing-trust{grid-template-columns:1fr}
+  .nav-links{display:none}
   .brand-mark{width:42px;height:42px}
   .pricing-intro h2{font-size:36px}
   .price-card.featured{transform:none}
@@ -316,14 +254,6 @@ footer{
 
 /* NeumoPractice Landing V2 Operativa */
 .cta.whatsapp{background:#22C55E;box-shadow:0 14px 30px rgba(34,197,94,.25)}
-.hero-card{background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 55%,#2563EB 100%)!important;border:1px solid rgba(255,255,255,.16)!important;color:#fff}
-.app-preview{background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important}
-.preview-top{background:rgba(255,255,255,.14)!important;border-bottom:1px solid rgba(255,255,255,.16)!important}
-.preview-sidebar{background:rgba(255,255,255,.10)!important;border-right:1px solid rgba(255,255,255,.14)!important}
-.preview-line{background:rgba(219,234,254,.42)!important}.preview-main{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
-.kpi{background:rgba(255,255,255,.13)!important;border:1px solid rgba(255,255,255,.18)!important;color:#fff}.kpi span{color:#DBEAFE!important}
-.calendar-mini{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.18)!important}
-.day{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.12)!important;color:#E0F2FE!important}
 .ai-clinical-deep{background:#fff;border:1px solid #DBEAFE;border-radius:34px;padding:38px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1.05fr;gap:26px;align-items:center}
 .soap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .soap-card{background:linear-gradient(135deg,#EFF6FF,#FFFFFF);border:1px solid #BFDBFE;border-radius:18px;padding:16px}
@@ -384,30 +314,11 @@ footer{
   .soap-grid,.faq-grid{grid-template-columns:1fr}
 }
 
-
-/* NeumoPractice static app mockup */
-.app-product-mockup{justify-self:end;width:min(100%,620px);aspect-ratio:4/5;border-radius:34px;padding:16px;background:linear-gradient(145deg,#BFE0FF 0%,#EAF5FF 48%,#6EA8FF 100%);border:1px solid rgba(255,255,255,.72);box-shadow:0 28px 80px rgba(15,23,42,.18),0 0 42px rgba(37,99,235,.18);transform:rotate(1deg);animation:mockupIn .55s ease both;pointer-events:none}
-.mockup-shell{height:100%;border-radius:26px;padding:10px;background:linear-gradient(145deg,#0F2A5F,#2563EB);overflow:hidden}
-.mockup-window{height:100%;display:grid;grid-template-rows:44px 1fr;border-radius:20px;overflow:hidden;background:#F8FAFC;border:1px solid rgba(255,255,255,.72);box-shadow:0 18px 50px rgba(9,28,68,.22)}
-.mockup-topbar{display:flex;align-items:center;gap:10px;background:#071A3D;color:#DCEBFF;padding:0 14px;font-size:12px;font-weight:900}.mockup-window-dots{display:flex;gap:6px}.mockup-window-dots span{width:9px;height:9px;border-radius:50%;display:block}.mockup-window-dots span:nth-child(1){background:#F87171}.mockup-window-dots span:nth-child(2){background:#FBBF24}.mockup-window-dots span:nth-child(3){background:#34D399}
-.mockup-body{min-height:0;display:grid;grid-template-columns:116px 1fr;background:#F3F7FC}.mockup-sidebar{padding:14px 10px;background:#EAF2FB;border-right:1px solid #D9E7F7;display:grid;align-content:start;gap:7px}.mockup-nav-item{display:flex;align-items:center;gap:7px;padding:8px;border-radius:11px;color:#64748B;font-size:11px;font-weight:850}.mockup-nav-icon{width:8px;height:8px;border-radius:50%;background:#9DB7D7}.mockup-nav-item.active{background:#FFFFFF;color:#1D4ED8;box-shadow:0 8px 20px rgba(37,99,235,.12)}.mockup-nav-item.active .mockup-nav-icon{background:#2563EB}
-.mockup-main{min-width:0;padding:12px;display:grid;gap:8px;align-content:start}.mockup-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:10px;box-shadow:0 12px 28px rgba(15,23,42,.055)}.mockup-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.mockup-card-title{color:var(--r3-navy);font-size:13px;font-weight:950}.mockup-pill{border-radius:999px;background:#DBEAFE;color:#1D4ED8;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.patient-summary-card{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}.patient-avatar{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#DBEAFE,#FFFFFF);border:1px solid #BFDBFE;color:#1D4ED8;font-size:14px;font-weight:950}.patient-name{display:block;color:var(--r3-navy);font-size:18px;line-height:1;font-weight:950}.patient-meta{display:block;margin-top:4px;color:#475569;font-size:11px;font-weight:850}.patient-exp{display:block;margin-top:3px;color:#94A3B8;font-size:10px;font-weight:800}.patient-update{text-align:right;color:#64748B;font-size:10px;font-weight:850}.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.metric-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:9px;box-shadow:0 8px 18px rgba(15,23,42,.045)}.metric-card strong{display:block;color:var(--r3-navy);font-size:20px;line-height:1;font-weight:950}.metric-card span{display:block;margin-top:5px;color:#64748B;font-size:10px;font-weight:850}.metric-unit{display:inline-block;margin-top:2px;color:#94A3B8;font-size:9px;font-weight:850}.percentile-card{padding:11px 12px}.percentile-list{display:grid;gap:8px}.percentile-row{display:grid;grid-template-columns:88px 1fr 48px;gap:9px;align-items:center}.percentile-label{color:#64748B;font-size:9px;font-weight:950;letter-spacing:.03em;text-transform:uppercase}.percentile-value{display:block;margin-top:2px;color:var(--r3-navy);font-size:11px;font-weight:950}.percentile-track{position:relative;height:9px;border-radius:999px;background:linear-gradient(90deg,#FEF3C7 0%,#DFF7E7 24%,#D1FAE5 50%,#DFF7E7 76%,#FEF3C7 100%);box-shadow:inset 0 0 0 1px rgba(15,23,42,.06)}.percentile-marker{position:absolute;top:50%;left:var(--pct);width:13px;height:13px;border-radius:50%;background:#2563EB;border:2px solid #FFFFFF;box-shadow:0 4px 10px rgba(37,99,235,.3);transform:translate(-50%,-50%)}.percentile-scale{display:flex;justify-content:space-between;margin-top:4px;color:#94A3B8;font-size:8px;font-weight:850}.percentile-stat{text-align:right}.percentile-p{display:block;color:#1D4ED8;font-size:14px;font-weight:950}.percentile-z{display:block;margin-top:2px;color:#64748B;font-size:10px;font-weight:850}.clinical-mini{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.clinical-mini p{margin:0;color:#475569;font-size:11px;line-height:1.35;font-weight:760}.clinical-status{display:inline-flex;border-radius:999px;background:#DCFCE7;color:#166534;padding:5px 8px;font-size:9px;font-weight:950;white-space:nowrap}.mockup-note{margin-top:6px;color:#94A3B8;font-size:9px;font-weight:800}.agenda-list{display:grid;gap:6px}.agenda-row{display:grid;grid-template-columns:38px 1fr auto;gap:7px;align-items:center;border-top:1px solid #EEF2F7;padding-top:6px}.agenda-row:first-child{border-top:0;padding-top:0}.agenda-time{color:#2563EB;font-size:11px;font-weight:950}.agenda-name{display:block;color:var(--r3-navy);font-size:11px;font-weight:950}.agenda-detail{display:block;color:#64748B;font-size:9px;font-weight:760;margin-top:1px}.agenda-status{border-radius:999px;background:#F1F5F9;color:#475569;padding:4px 6px;font-size:8px;font-weight:950}.agenda-status.live{background:#DCFCE7;color:#166534}.agenda-status.arrived{background:#FEF3C7;color:#92400E}
-@keyframes mockupIn{from{opacity:0;transform:translateY(14px) rotate(1deg)}to{opacity:1;transform:translateY(0) rotate(1deg)}}@media(prefers-reduced-motion:reduce){.app-product-mockup{animation:none}}
-@media(max-width:950px){.hero-grid{grid-template-columns:1fr}.app-product-mockup{justify-self:center;width:min(92%,520px);transform:none}.mockup-body{grid-template-columns:92px 1fr}.mockup-sidebar{padding:12px 8px}.mockup-nav-item{font-size:10px;padding:7px}.mockup-main{padding:10px;gap:7px}.patient-summary-card{grid-template-columns:auto 1fr}.patient-update{grid-column:1/-1;text-align:left}.metrics-row{gap:6px}.metric-card{padding:8px}.metric-card strong{font-size:18px}.percentile-row{grid-template-columns:78px 1fr 42px;gap:7px}.agenda-row{grid-template-columns:38px 1fr}.agenda-status{display:none}}@media(max-width:420px){.mockup-body{grid-template-columns:1fr}.mockup-sidebar{display:none}.mockup-topbar{font-size:10px}.app-product-mockup{width:min(92vw,360px);aspect-ratio:3/4;padding:10px}.mockup-shell{padding:8px}.mockup-window{grid-template-rows:38px 1fr}.mockup-main{padding:8px;gap:6px}.patient-summary-card{grid-template-columns:auto 1fr;padding:8px}.patient-avatar{width:32px;height:32px;border-radius:11px;font-size:12px}.patient-name{font-size:15px}.patient-meta{font-size:9px}.patient-exp,.patient-update,.mockup-note,.clinical-mini,.agenda-row:nth-child(3){display:none}.metrics-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.metric-card{min-width:0;padding:7px}.metric-card strong{font-size:13px;white-space:nowrap}.metric-card span,.metric-unit{font-size:8px}.mockup-card{padding:8px;border-radius:14px;min-width:0}.mockup-card-head{margin-bottom:6px}.mockup-card-title{font-size:11px}.mockup-pill{font-size:8px;padding:4px 6px}.percentile-row{grid-template-columns:54px minmax(0,1fr) 32px;gap:5px}.percentile-label{font-size:7px}.percentile-value{font-size:8px}.percentile-p{font-size:11px}.percentile-z{font-size:7px}.percentile-scale{font-size:7px}.agenda-row{grid-template-columns:32px 1fr}.agenda-name{font-size:10px}.agenda-detail{font-size:8px}}
-
-
 @media(max-width:950px){
   .footer-trust{grid-template-columns:1fr!important;}
 }
 
-.launch-offer-bar{background:linear-gradient(90deg,#071A3D 0%,#123A80 52%,#2563EB 100%);color:#FFFFFF;border-bottom:1px solid rgba(191,219,254,.28);box-shadow:0 10px 28px rgba(15,23,42,.10)}
-.launch-offer-inner{min-height:58px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:10px 0}
-.launch-offer-eyebrow{display:inline-flex;align-items:center;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(191,219,254,.28);color:#DCEEFF;padding:7px 10px;font-size:11px;font-weight:950;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
-.launch-offer-message{font-size:17px;font-weight:950;line-height:1.2}.launch-offer-note{font-size:13px;font-weight:850;color:#CFE5FF;white-space:nowrap}
-.launch-offer-cta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#FFFFFF;color:#1D4ED8;font-weight:950;padding:9px 15px;box-shadow:0 10px 24px rgba(2,16,40,.18);white-space:nowrap}.launch-offer-cta:focus-visible{outline:3px solid #93C5FD;outline-offset:3px}
 #clinical-origin,#pricing,#migration-support{scroll-margin-top:92px}
-@media(max-width:640px){.launch-offer-inner{justify-content:space-between;gap:10px;padding:12px 0}.launch-offer-eyebrow{display:none}.launch-offer-copy{display:grid;gap:2px}.launch-offer-message{font-size:16px}.launch-offer-message span{display:block}.launch-offer-note{font-size:12px}.launch-offer-cta{padding:9px 13px;font-size:13px}}
-@media(max-width:360px){.launch-offer-inner{align-items:flex-start}.launch-offer-cta{width:100%}}
 
 /* Melissa clinical origin + launch cleanup */
 .clinical-origin{padding:78px 0 52px;background:linear-gradient(180deg,#FFFFFF 0%,#F4F8FF 100%)}
@@ -431,6 +342,87 @@ footer{
 
 
 
+/* Adaptive demo: pediatria + neumologia adulto */
+.adaptive-demo{--mode-accent:#28C7FF;--mode-glow:rgba(40,199,255,.34);--mode-soft:rgba(40,199,255,.12);padding:28px 0 38px;background:radial-gradient(760px 320px at 12% 10%,rgba(40,199,255,.22),transparent 62%),radial-gradient(760px 340px at 88% 20%,rgba(168,85,247,.22),transparent 62%),linear-gradient(180deg,#06142E 0%,#0B1F46 54%,#081832 100%);color:#EAF3FF;overflow:hidden}
+.adaptive-demo[data-mode="adult"]{--mode-accent:#A855F7;--mode-glow:rgba(168,85,247,.34);--mode-soft:rgba(168,85,247,.13)}
+.adaptive-demo .container{position:relative;z-index:1}
+.adaptive-demo-wrap{border:1px solid rgba(191,219,254,.18);border-radius:34px;padding:28px 30px 26px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:0 28px 76px rgba(2,10,31,.44),0 0 72px var(--mode-glow);transition:box-shadow .32s ease,border-color .32s ease}
+.adaptive-demo-head{text-align:center;max-width:900px;margin:0 auto 18px}
+.adaptive-eyebrow{display:inline-flex;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(191,219,254,.22);color:#DCEEFF;padding:8px 12px;font-size:12px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.adaptive-demo h2{font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-.055em;color:#FFFFFF;margin:0 0 12px}
+.adaptive-demo h2 .dual-gradient{background:linear-gradient(90deg,#8EDCFF 0%,#FFFFFF 48%,#C084FC 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.adaptive-demo-head p{color:#CFE0FA;font-size:18px;line-height:1.55;margin:0 auto;max-width:720px}
+.mode-switch{width:min(760px,100%);margin:18px auto 22px;display:grid;grid-template-columns:1fr 104px 1fr;gap:14px;align-items:center}
+.mode-option,.mode-toggle{min-height:52px;cursor:pointer;font:inherit}
+.mode-option{border:1px solid rgba(191,219,254,.22);background:rgba(255,255,255,.075);color:#BDD1EC;border-radius:18px;padding:12px 14px;font-size:13px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;transition:background .24s ease,color .24s ease,border-color .24s ease,box-shadow .24s ease}
+.mode-option[aria-pressed="true"]{color:#FFFFFF;border-color:var(--mode-accent);background:linear-gradient(135deg,var(--mode-soft),rgba(255,255,255,.09));box-shadow:0 0 26px var(--mode-glow)}
+.mode-toggle{border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:6px;background:linear-gradient(90deg,rgba(40,199,255,.34),rgba(168,85,247,.36));box-shadow:0 0 30px var(--mode-glow),inset 0 0 0 1px rgba(255,255,255,.08)}
+.mode-toggle-knob{width:40px;height:40px;display:block;border-radius:50%;background:#FFFFFF;box-shadow:0 8px 24px rgba(0,0,0,.28),0 0 22px rgba(255,255,255,.55);transform:translateX(0);transition:transform .32s ease}
+.adaptive-demo[data-mode="adult"] .mode-toggle-knob{transform:translateX(48px)}
+.mode-option:focus-visible,.mode-toggle:focus-visible{outline:3px solid #FFFFFF;outline-offset:4px}
+.adaptive-stage{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:22px;align-items:start}
+.adaptive-frame{position:relative;min-height:390px;border-radius:28px;padding:14px;background:linear-gradient(145deg,rgba(11,31,70,.96),rgba(15,42,95,.72));border:1px solid rgba(191,219,254,.2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 22px 52px rgba(0,0,0,.28);overflow:hidden}
+.adaptive-frame:before{content:"";position:absolute;inset:-40% -20% auto;height:260px;background:radial-gradient(circle,var(--mode-glow),transparent 62%);pointer-events:none}
+.dashboard-shell{position:relative;height:100%;min-height:362px;display:grid;grid-template-columns:118px 1fr;overflow:hidden;border-radius:22px;background:#F5F8FC;color:#0B1F46;border:1px solid rgba(255,255,255,.62)}
+.dashboard-rail{padding:14px 10px;background:#E9F0FA;border-right:1px solid #D9E5F4;display:grid;align-content:start;gap:8px}
+.rail-brand{font-size:11px;font-weight:950;color:#123A80;margin:2px 2px 8px}
+.rail-item{border-radius:12px;padding:8px;color:#64748B;font-size:11px;font-weight:850}
+.rail-item.is-active{background:#FFFFFF;color:var(--mode-accent);box-shadow:0 8px 18px rgba(15,23,42,.08)}
+.dashboard-main{position:relative;min-width:0;padding:14px;overflow:hidden}
+.mode-panel{position:absolute;inset:14px;display:grid;gap:9px;align-content:start;opacity:0;transform:translateY(10px) scale(.992);pointer-events:none;transition:opacity .32s ease,transform .32s ease}
+.mode-panel.is-active{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.demo-topline{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.demo-title{font-size:20px;font-weight:950;letter-spacing:-.03em;color:#0B1F46}
+.demo-pill{border-radius:999px;background:var(--mode-soft);color:#0F2A5F;border:1px solid rgba(37,99,235,.2);padding:6px 9px;font-size:10px;font-weight:950;white-space:nowrap}
+.demo-card{background:#FFFFFF;border:1px solid #E1E8F2;border-radius:16px;padding:10px;box-shadow:0 12px 26px rgba(15,23,42,.055)}
+.patient-demo{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
+.demo-avatar{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--mode-soft),#FFFFFF);color:var(--mode-accent);border:1px solid rgba(37,99,235,.18);font-size:14px;font-weight:950}
+.demo-name{display:block;font-size:18px;font-weight:950;line-height:1;color:#0B1F46}
+.demo-meta{display:block;margin-top:5px;color:#52647A;font-size:12px;font-weight:850}
+.demo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.demo-stat strong{display:block;font-size:20px;line-height:1;color:#0B1F46;font-weight:950}
+.demo-stat span{display:block;margin-top:5px;color:#64748B;font-size:10px;font-weight:850}
+.percentile-demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.percentile-demo-row{display:grid;grid-template-columns:54px 1fr 38px;gap:8px;align-items:center}
+.percentile-demo-row b{font-size:11px;color:#0B1F46}.percentile-demo-row small{color:#64748B;font-weight:850}
+.demo-track{position:relative;height:9px;border-radius:99px;background:linear-gradient(90deg,#E0F2FE,#D1FAE5 50%,#FDE68A)}
+.demo-track span{position:absolute;top:50%;left:var(--pct);width:13px;height:13px;border-radius:50%;background:var(--mode-accent);border:2px solid #FFFFFF;box-shadow:0 5px 13px var(--mode-glow);transform:translate(-50%,-50%)}
+.clinical-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.clinical-list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.clinical-list li{display:flex;justify-content:space-between;gap:10px;color:#52647A;font-size:12px;font-weight:850}
+.clinical-list strong{color:#0B1F46}
+.mini-chart{height:92px;border-radius:14px;background:linear-gradient(180deg,rgba(15,42,95,.08) 1px,transparent 1px) 0 0/100% 24px,linear-gradient(90deg,rgba(15,42,95,.07) 1px,transparent 1px) 0 0/24px 100%,#F8FAFC;position:relative;overflow:hidden}
+.mini-chart:before,.mini-chart:after{content:"";position:absolute;left:12px;right:12px;border-radius:999px;transform-origin:left center}
+.mini-chart:before{top:48px;height:3px;background:var(--mode-accent);box-shadow:0 0 14px var(--mode-glow);transform:rotate(-17deg)}
+.mini-chart:after{top:60px;height:2px;background:rgba(15,42,95,.34);transform:rotate(-6deg)}
+.adult-score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.adult-score{border-radius:14px;background:#F8FAFC;border:1px solid #E2E8F0;padding:10px}
+.adult-score strong{display:block;color:#0B1F46;font-size:18px;font-weight:950}.adult-score span{display:block;color:#64748B;font-size:10px;font-weight:850;margin-top:4px}
+.mode-copy-card{display:flex;flex-direction:column;justify-content:space-between;gap:12px;border-radius:26px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(191,219,254,.2)}
+.mode-copy-eyebrow{color:var(--mode-accent);font-size:12px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+.mode-copy-card h3{margin:8px 0 6px;color:#FFFFFF;font-size:24px;line-height:1.05;letter-spacing:-.04em}
+.mode-copy-card p{margin:0;color:#CFE0FA;line-height:1.55;font-size:15px}
+.mode-copy-card>p:last-child{font-size:11px;color:#9FB7D8;line-height:1.4}
+.mode-common{display:grid;gap:7px;margin-top:12px}
+.mode-common span{border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:8px 10px;color:#EAF3FF;font-size:12px;font-weight:900}
+.adaptive-trust{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid rgba(191,219,254,.18);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.055)}
+.adaptive-trust-item{padding:16px;border-left:1px solid rgba(191,219,254,.14)}
+.adaptive-trust-item:first-child{border-left:0}
+.adaptive-trust-item strong{display:block;color:#FFFFFF;font-size:14px;margin-bottom:5px}
+.adaptive-trust-item p{margin:0;color:#BFD4F2;font-size:12px;line-height:1.45}
+.adaptive-demo-cta{margin-top:18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.adaptive-demo-cta .cta{background:linear-gradient(90deg,#2563EB,var(--mode-accent));box-shadow:0 18px 38px var(--mode-glow)}
+.adaptive-demo-cta .cta.secondary{background:rgba(255,255,255,.1);color:#FFFFFF;border-color:rgba(255,255,255,.24);box-shadow:none}
+.adaptive-demo-cta p{flex:0 0 100%;margin:6px 0 0;color:#CFE0FA;font-size:14px;font-weight:850}
+.adaptive-demo-cta p+p{margin-top:0}
+.mode-copy-card .adaptive-demo-cta{justify-content:flex-start;text-align:left}
+.mode-copy-card .adaptive-demo-cta .cta{flex:1 1 0;min-width:0;padding:10px 11px;font-size:13px;text-align:center}
+.mode-copy-card .adaptive-demo-cta p{font-size:12px;margin-top:4px}
+@media(max-width:950px){.adaptive-demo{padding:28px 0 36px}.adaptive-demo-wrap{padding:22px;border-radius:28px}.adaptive-demo-head{text-align:left;margin-bottom:18px}.adaptive-demo-head p{font-size:16px}.mode-switch{grid-template-columns:1fr 76px 1fr;gap:8px;margin:20px 0}.mode-option{font-size:11px;padding:10px 8px;border-radius:16px}.mode-toggle{min-height:50px}.mode-toggle-knob{width:36px;height:36px}.adaptive-demo[data-mode="adult"] .mode-toggle-knob{transform:translateX(28px)}.adaptive-stage{grid-template-columns:1fr}.adaptive-frame{min-height:500px;padding:10px;border-radius:24px}.dashboard-shell{min-height:480px;grid-template-columns:92px 1fr}.dashboard-rail{padding:12px 7px}.rail-item{font-size:10px;padding:7px}.dashboard-main{padding:10px}.mode-panel{inset:10px}.demo-grid{grid-template-columns:repeat(2,1fr)}.percentile-demo-grid,.clinical-grid{grid-template-columns:1fr}.mode-copy-card{padding:20px;border-radius:22px}.adaptive-trust{grid-template-columns:1fr 1fr}.adaptive-trust-item:nth-child(odd){border-left:0}.adaptive-trust-item:nth-child(n+3){border-top:1px solid rgba(191,219,254,.14)}}
+@media(max-width:430px){.container{width:min(100% - 28px,1180px)}.adaptive-demo-wrap{padding:18px}.adaptive-demo h2{font-size:31px}.adaptive-demo-head p{font-size:15px}.mode-switch{grid-template-columns:1fr;gap:8px}.mode-toggle{order:3;width:100%;min-height:48px}.mode-toggle-knob{width:34px;height:34px}.adaptive-demo[data-mode="adult"] .mode-toggle-knob{transform:translateX(calc(100vw - 112px))}.adaptive-frame{min-height:458px}.dashboard-shell{grid-template-columns:1fr;min-height:438px}.dashboard-rail{display:none}.patient-demo{grid-template-columns:auto 1fr}.patient-demo .demo-pill{grid-column:1/-1;justify-self:start}.demo-name{font-size:16px}.demo-meta{font-size:11px}.demo-stat strong{font-size:17px}.percentile-demo-row{grid-template-columns:48px 1fr 34px}.demo-card{padding:10px}.clinical-list li{font-size:11px}.adult-score-grid{grid-template-columns:1fr 1fr}.mode-copy-card h3{font-size:24px}.adaptive-trust{grid-template-columns:1fr}.adaptive-trust-item,.adaptive-trust-item:nth-child(odd){border-left:0;border-top:1px solid rgba(191,219,254,.14)}.adaptive-trust-item:first-child{border-top:0}}
+@media(max-width:360px){.adaptive-demo h2{font-size:29px}.mode-option{min-height:48px}.adaptive-frame{min-height:440px}.dashboard-shell{min-height:420px}.mode-panel{gap:8px}.mini-chart{height:74px}}
+@media(prefers-reduced-motion:reduce){.adaptive-demo-wrap,.mode-option,.mode-toggle-knob,.mode-panel{transition:none!important}}
+
 /* Header navigation restore */
 .nav{z-index:40}
 .nav-inner{position:relative}
@@ -445,7 +437,6 @@ footer{
 .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.launch-offer-bar{position:relative;z-index:10}
 @media(max-width:1100px){.nav-inner{gap:12px}.nav-links{gap:13px}.nav-links a:not(.cta){font-size:13px}.nav-links .cta.secondary{padding:9px 12px}.nav-links .cta:not(.secondary){padding:10px 13px}}
 @media(max-width:767px){body.nav-open{overflow:hidden}.nav-inner{height:68px}.brand{font-size:20px}.nav-toggle{display:inline-flex;flex-direction:column;flex:0 0 auto}.nav-links{display:none;position:absolute;left:20px;right:20px;top:calc(100% + 10px);z-index:41;margin:0;padding:16px;background:rgba(255,255,255,.98);border:1px solid #D9E2F1;border-radius:24px;box-shadow:0 24px 60px rgba(15,23,42,.18);backdrop-filter:blur(16px);flex-direction:column;align-items:stretch;gap:8px;white-space:normal}.nav-links.is-open{display:flex}.nav-links a{width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:16px}.nav-links a:not(.cta){background:#F8FAFC;color:#0F2A5F}.nav-links .cta.secondary{background:#fff;color:#0F2A5F}.nav-links .cta:not(.secondary){background:var(--blue);color:#fff}}
 
@@ -487,94 +478,164 @@ footer{
   </div>
 </nav>
 
-<div class="launch-offer-bar" id="launch-offer-bar" aria-label="Oferta de lanzamiento">
-  <div class="container launch-offer-inner">
-    <span class="launch-offer-eyebrow">OFERTA DE LANZAMIENTO</span>
-    <div class="launch-offer-copy">
-      <span class="launch-offer-message"><span>60 días gratis</span> para migrar tu operación.</span>
-      <span class="launch-offer-note">Sin tarjeta. Empieza hoy.</span>
-    </div>
-    <a class="launch-offer-cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="badge">Disponible para clínicas de neumología pediátrica con 60 días gratis.</div>
-      <h1>Tu consulta,<br><span class="blue">con menos captura.</span></h1>
-      <p class="lead">Agenda, expediente clínico, recetas, estudios de gabinete, finanzas e IA clínica en una sola plataforma diseñada para el flujo real de neumología pediátrica.</p>
-      <p class="lead hero-highlight" style="font-weight:850;margin-top:-12px">Ahorra hasta 15 minutos por consulta con IA Clínica integrada.</p>
-      <div class="hero-actions">
-        <a class="cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
-        <a class="cta secondary" href="https://app.neumopractice.com/?auth=login" data-login-link>Iniciar sesión</a>
+<header class="adaptive-demo" id="demo-adaptativo" data-mode="pedia" aria-labelledby="adaptive-demo-title">
+  <div class="container">
+    <div class="adaptive-demo-wrap">
+      <div class="adaptive-demo-head">
+        <div class="adaptive-eyebrow">NEUMOPRACTICE</div>
+        <h2 id="adaptive-demo-title">Un solo sistema.<br><span class="dual-gradient">Dos formas de ejercer la neumología.</span></h2>
+        <p>Cambia entre Neumo Pediatría y Neumología según el paciente que tienes enfrente, sin cambiar de plataforma.</p>
       </div>
-      <div class="micro">Sin tarjeta. Cancela cuando quieras.</div>
-    </div>
-    <div class="app-product-mockup" aria-hidden="true">
-      <div class="mockup-shell">
-        <div class="mockup-window">
-          <div class="mockup-topbar"><span class="mockup-window-dots"><span></span><span></span><span></span></span><span>NeumoPractice · Resumen del paciente</span></div>
-          <div class="mockup-body">
-            <div class="mockup-sidebar">
-              <div class="mockup-nav-item"><span class="mockup-nav-icon"></span>Agenda</div>
-              <div class="mockup-nav-item active"><span class="mockup-nav-icon"></span>Pacientes</div>
-              <div class="mockup-nav-item"><span class="mockup-nav-icon"></span>Consulta</div>
-              <div class="mockup-nav-item"><span class="mockup-nav-icon"></span>Recetas</div>
-              <div class="mockup-nav-item"><span class="mockup-nav-icon"></span>Estudios</div>
-              <div class="mockup-nav-item"><span class="mockup-nav-icon"></span>Finanzas</div>
+
+      <div class="mode-switch" role="group" aria-label="Seleccionar enfoque clínico de NeumoPractice">
+        <button class="mode-option" type="button" data-mode-button="pedia" aria-pressed="true">Neumo Pediatría</button>
+        <button class="mode-toggle" type="button" data-mode-toggle aria-label="Cambiar entre Neumo Pediatría y Neumología" aria-pressed="false">
+          <span class="mode-toggle-knob" aria-hidden="true"></span>
+        </button>
+        <button class="mode-option" type="button" data-mode-button="adult" aria-pressed="false">Neumología</button>
+      </div>
+
+      <div class="adaptive-stage">
+        <div class="adaptive-frame" aria-live="polite">
+          <div class="dashboard-shell">
+            <div class="dashboard-rail" aria-hidden="true">
+              <div class="rail-brand">NeumoPractice</div>
+              <div class="rail-item">Agenda</div>
+              <div class="rail-item is-active">Paciente</div>
+              <div class="rail-item">Consulta</div>
+              <div class="rail-item">Receta</div>
+              <div class="rail-item">Estudios</div>
             </div>
-            <div class="mockup-main">
-              <div class="mockup-card patient-summary-card">
-                <div class="patient-avatar">MG</div>
-                <div>
-                  <span class="patient-name">Mateo G.</span>
-                  <span class="patient-meta">8 años 4 meses · Masculino</span>
-                  <span class="patient-exp">Exp. NP-2026-1158</span>
+            <div class="dashboard-main">
+              <div class="mode-panel is-active" data-mode-panel="pedia">
+                <div class="demo-topline">
+                  <span class="demo-title">Paciente pediátrico</span>
+                  <span class="demo-pill">Resumen pediátrico</span>
                 </div>
-                <div class="patient-update"><span class="mockup-pill">Resumen pediátrico</span><br>Hoy, 09:12</div>
-              </div>
-              <div class="metrics-row">
-                <div class="metric-card"><strong>25.8 kg</strong><span>Peso</span></div>
-                <div class="metric-card"><strong>128.4 cm</strong><span>Talla</span></div>
-                <div class="metric-card"><strong>15.7</strong><span>IMC</span><em class="metric-unit">kg/m²</em></div>
-              </div>
-              <div class="mockup-card percentile-card">
-                <div class="mockup-card-head"><span class="mockup-card-title">Percentiles pediátricos</span><span class="mockup-pill">Ver evolución</span></div>
-                <div class="percentile-list">
-                  <div class="percentile-row">
-                    <div><span class="percentile-label">Peso para la edad</span><span class="percentile-value">25.8 kg</span></div>
-                    <div><div class="percentile-track"><span class="percentile-marker" style="--pct:48%"></span></div><div class="percentile-scale"><span>3</span><span>15</span><span>50</span><span>85</span><span>97</span></div></div>
-                    <div class="percentile-stat"><span class="percentile-p">P48</span><span class="percentile-z">Z -0.05</span></div>
+                <div class="demo-card patient-demo">
+                  <div class="demo-avatar">LR</div>
+                  <div>
+                    <span class="demo-name">Lucía R.</span>
+                    <span class="demo-meta">Edad: 5 años 3 meses · Seguimiento respiratorio</span>
                   </div>
-                  <div class="percentile-row">
-                    <div><span class="percentile-label">Talla para la edad</span><span class="percentile-value">128.4 cm</span></div>
-                    <div><div class="percentile-track"><span class="percentile-marker" style="--pct:52%"></span></div><div class="percentile-scale"><span>3</span><span>15</span><span>50</span><span>85</span><span>97</span></div></div>
-                    <div class="percentile-stat"><span class="percentile-p">P52</span><span class="percentile-z">Z +0.05</span></div>
-                  </div>
-                  <div class="percentile-row">
-                    <div><span class="percentile-label">IMC para la edad</span><span class="percentile-value">15.7 kg/m²</span></div>
-                    <div><div class="percentile-track"><span class="percentile-marker" style="--pct:45%"></span></div><div class="percentile-scale"><span>3</span><span>15</span><span>50</span><span>85</span><span>97</span></div></div>
-                    <div class="percentile-stat"><span class="percentile-p">P45</span><span class="percentile-z">Z -0.12</span></div>
+                  <span class="demo-pill">Demo visual</span>
+                </div>
+                <div class="demo-grid">
+                  <div class="demo-card demo-stat"><strong>110 cm</strong><span>Talla</span></div>
+                  <div class="demo-card demo-stat"><strong>18.7 kg</strong><span>Peso</span></div>
+                  <div class="demo-card demo-stat"><strong>15.4</strong><span>IMC</span></div>
+                  <div class="demo-card demo-stat"><strong>P72</strong><span>IMC / edad</span></div>
+                </div>
+                <div class="demo-card">
+                  <div class="demo-topline"><span class="demo-title">Percentiles</span><span class="demo-pill">P3 P15 P50 P85 P97</span></div>
+                  <div class="percentile-demo-grid">
+                    <div class="percentile-demo-row"><b>Peso</b><div class="demo-track"><span style="--pct:58%"></span></div><small>P58</small></div>
+                    <div class="percentile-demo-row"><b>Talla</b><div class="demo-track"><span style="--pct:64%"></span></div><small>P64</small></div>
+                    <div class="percentile-demo-row"><b>IMC</b><div class="demo-track"><span style="--pct:72%"></span></div><small>P72</small></div>
+                    <div class="percentile-demo-row"><b>FEV1</b><div class="demo-track"><span style="--pct:92%"></span></div><small>92%</small></div>
                   </div>
                 </div>
-                <div class="mockup-note">Datos ficticios para demostración visual.</div>
+                <div class="clinical-grid">
+                  <div class="demo-card">
+                    <div class="demo-title">Antecedentes pediátricos</div>
+                    <ul class="clinical-list">
+                      <li><span>Prematurez</span><strong>No</strong></li>
+                      <li><span>Asma familiar</span><strong>Madre</strong></li>
+                      <li><span>Alergias</span><strong>Rinitis</strong></li>
+                    </ul>
+                  </div>
+                  <div class="demo-card">
+                    <div class="demo-title">Función pulmonar</div>
+                    <div class="mini-chart" aria-hidden="true"></div>
+                    <ul class="clinical-list">
+                      <li><span>FVC</span><strong>94% predicho</strong></li>
+                      <li><span>Z-score</span><strong>-0.4</strong></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="mockup-card clinical-mini">
-                <div><div class="mockup-card-title">Resumen clínico</div><p>Crecimiento armónico y antropometría dentro de rangos esperados para la edad.</p><div class="mockup-note">Demo clínica ficticia</div></div>
-                <span class="clinical-status">Seguimiento estable</span>
-              </div>
-              <div class="mockup-card agenda-card">
-                <div class="mockup-card-head"><span class="mockup-card-title">Agenda clínica</span><span class="mockup-pill">En consulta</span></div>
-                <div class="agenda-list">
-                  <div class="agenda-row"><span class="agenda-time">09:30</span><div><span class="agenda-name">Mateo G.</span><span class="agenda-detail">Tos persistente · control</span></div><span class="agenda-status live">Checkout</span></div>
-                  <div class="agenda-row"><span class="agenda-time">10:15</span><div><span class="agenda-name">Sofía R.</span><span class="agenda-detail">Asma · espirometría</span></div><span class="agenda-status arrived">Llegó</span></div>
-                  <div class="agenda-row"><span class="agenda-time">11:00</span><div><span class="agenda-name">Daniel P.</span><span class="agenda-detail">Revisión de estudios</span></div><span class="agenda-status">Confirmada</span></div>
+
+              <div class="mode-panel" data-mode-panel="adult">
+                <div class="demo-topline">
+                  <span class="demo-title">Paciente adulto</span>
+                  <span class="demo-pill">Resumen respiratorio</span>
+                </div>
+                <div class="demo-card patient-demo">
+                  <div class="demo-avatar">JM</div>
+                  <div>
+                    <span class="demo-name">Javier M.</span>
+                    <span class="demo-meta">Edad: 45 años · Sexo masculino · Seguimiento adulto</span>
+                  </div>
+                  <span class="demo-pill">Demo visual</span>
+                </div>
+                <div class="demo-grid">
+                  <div class="demo-card demo-stat"><strong>EPOC</strong><span>Diagnóstico</span></div>
+                  <div class="demo-card demo-stat"><strong>1.72 L</strong><span>FEV1</span></div>
+                  <div class="demo-card demo-stat"><strong>2.92 L</strong><span>FVC</span></div>
+                  <div class="demo-card demo-stat"><strong>0.59</strong><span>FEV1/FVC</span></div>
+                </div>
+                <div class="clinical-grid">
+                  <div class="demo-card">
+                    <div class="demo-title">Historia respiratoria</div>
+                    <ul class="clinical-list">
+                      <li><span>Tabaquismo</span><strong>18 paquetes/año</strong></li>
+                      <li><span>Exposición</span><strong>Biomasa previa</strong></li>
+                      <li><span>mMRC</span><strong>2</strong></li>
+                      <li><span>CAT</span><strong>18 impacto medio</strong></li>
+                    </ul>
+                  </div>
+                  <div class="demo-card">
+                    <div class="demo-title">Función pulmonar</div>
+                    <div class="mini-chart" aria-hidden="true"></div>
+                    <ul class="clinical-list">
+                      <li><span>FEV1</span><strong>58% predicho</strong></li>
+                      <li><span>BDR</span><strong>No significativo</strong></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="adult-score-grid">
+                  <div class="adult-score"><strong>GOLD 2</strong><span>Moderado</span></div>
+                  <div class="adult-score"><strong>412 m</strong><span>Marcha 6 min</span></div>
+                  <div class="adult-score"><strong>86%</strong><span>Desaturación nadir</span></div>
+                </div>
+                <div class="demo-card">
+                  <div class="demo-title">Plan clínico</div>
+                  <ul class="clinical-list">
+                    <li><span>Seguimiento</span><strong>Control respiratorio</strong></li>
+                    <li><span>Estudios</span><strong>Espirometría + DLCO</strong></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <aside class="mode-copy-card">
+          <div>
+            <span class="mode-copy-eyebrow" data-mode-eyebrow>NEUMO PEDIATRÍA</span>
+            <h3 data-active-mode-label>El mismo expediente cambia de enfoque.</h3>
+            <p data-mode-copy>Desde antecedentes y crecimiento hasta función pulmonar y seguimiento respiratorio pediátrico.</p>
+            <div class="adaptive-demo-cta">
+              <a class="cta" href="https://app.neumopractice.com/?auth=signup" data-signup-link>Comenzar 60 días gratis</a>
+              <a class="cta secondary" href="https://app.neumopractice.com/?auth=login" data-login-link>Iniciar sesión</a>
+              <p>Un núcleo. Todos tus pacientes.</p>
+              <p>Sin tarjeta. Cancela cuando quieras.</p>
+              <p>Menos captura. Más medicina.</p>
+            </div>
+            <div class="mode-common">
+              <span>Mismo expediente. Misma cuenta. Mismo flujo.</span>
+              <span>NeumoPractice adapta la experiencia clínica al paciente que tienes enfrente.</span>
+            </div>
+          </div>
+          <p>Datos ficticios para demostración visual de landing. No modifican pacientes reales ni módulos clínicos internos.</p>
+        </aside>
+      </div>
+
+      <div class="adaptive-trust" aria-label="Confianza NeumoPractice">
+        <div class="adaptive-trust-item"><strong>Una sola cuenta</strong><p>Pediatría y adultos dentro del mismo ecosistema.</p></div>
+        <div class="adaptive-trust-item"><strong>Expediente adaptativo</strong><p>La información clínica cambia según el enfoque.</p></div>
+        <div class="adaptive-trust-item"><strong>Seguro y confiable</strong><p>Manejo responsable de información clínica.</p></div>
+        <div class="adaptive-trust-item"><strong>Más tiempo para lo importante</strong><p>Menos captura. Más medicina.</p></div>
       </div>
     </div>
   </div>
@@ -598,7 +659,7 @@ footer{
   <div class="container">
     <div class="section-head">
       <h2>Todo el consultorio en una sola plataforma.</h2>
-      <p>NeumoPractice concentra los módulos que la doctora y recepción necesitan para operar sin duplicar captura, incluyendo IA Clínica integrada al flujo de consulta.</p>
+      <p>NeumoPractice concentra los módulos que el médico y recepción necesitan para operar sin duplicar captura, incluyendo IA Clínica integrada al flujo de consulta.</p>
     </div>
     <div class="features">
       <div class="feature"><div class="icon"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="30" rx="6"/><path d="M16 6v8M32 6v8M9 18h30"/></svg></div><h3>Agenda en vivo</h3><p>Estados por cita: confirmada, llegó, en consulta, checkout pendiente y finalizada.</p></div>
@@ -682,7 +743,7 @@ footer{
         </div>
         <div class="clinical-origin-copyblock">
           <div class="clinical-eyebrow">HECHO DESDE LA CONSULTA</div>
-          <h2 class="clinical-origin-title">Construido por neumólogos pediatras, para neumólogos.</h2>
+          <h2 class="clinical-origin-title">Construido desde neumología clínica, para neumólogos.</h2>
           <p class="clinical-origin-copy">NeumoPractice nació dentro de la práctica clínica real: consultas, recetas, seguimiento de pacientes, agenda y operación cotidiana. Cada flujo fue diseñado para reducir captura y devolverle tiempo a la medicina.</p>
           <div class="clinical-founder-signature">
             <strong>Dra. Melissa G. Iglesias</strong>
@@ -797,7 +858,7 @@ footer{
           <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">IA Clínica</td><td style="padding:16px;border-bottom:1px solid var(--line)">❌</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
           <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Estudios e imágenes</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
           <tr><td style="padding:16px;border-bottom:1px solid var(--line);font-weight:850">Recetas</td><td style="padding:16px;border-bottom:1px solid var(--line)">⚠️</td><td style="padding:16px;border-bottom:1px solid var(--line)">✅</td></tr>
-          <tr><td style="padding:16px;font-weight:850">Crecimiento CDC/WHO</td><td style="padding:16px">❌</td><td style="padding:16px">✅</td></tr>
+          <tr><td style="padding:16px;font-weight:850">Crecimiento y función pulmonar</td><td style="padding:16px">❌</td><td style="padding:16px">✅</td></tr>
         </tbody>
       </table>
     </div>
@@ -846,8 +907,8 @@ footer{
       </article>
       <article class="footer-trust-card">
         <span class="footer-trust-icon" aria-hidden="true">🫁</span>
-        <strong class="footer-trust-title">Diseñado para neumología pediátrica</strong>
-        <p class="footer-trust-copy">No para todas las especialidades. Para la tuya.</p>
+        <strong class="footer-trust-title">Diseñado para neumología</strong>
+        <p class="footer-trust-copy">Pediatría y adultos dentro del mismo ecosistema.</p>
       </article>
       <article class="footer-trust-card">
         <span class="footer-trust-icon" aria-hidden="true">🔒</span>
@@ -883,6 +944,45 @@ footer{
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  const demo = document.querySelector('[data-mode]');
+  if(!demo) return;
+  const buttons = Array.from(demo.querySelectorAll('[data-mode-button]'));
+  const toggle = demo.querySelector('[data-mode-toggle]');
+  const panels = Array.from(demo.querySelectorAll('[data-mode-panel]'));
+  const eyebrow = demo.querySelector('[data-mode-eyebrow]');
+  const copy = demo.querySelector('[data-mode-copy]');
+  const label = demo.querySelector('[data-active-mode-label]');
+  const content = {
+    pedia: {
+      eyebrow: 'NEUMO PEDIATRÍA',
+      copy: 'Desde antecedentes y crecimiento hasta función pulmonar y seguimiento respiratorio pediátrico.',
+      label: 'El mismo expediente cambia de enfoque.'
+    },
+    adult: {
+      eyebrow: 'NEUMOLOGÍA',
+      copy: 'Historia respiratoria, función pulmonar y seguimiento clínico adulto dentro del mismo flujo.',
+      label: 'El mismo núcleo clínico, ahora respiratorio adulto.'
+    }
+  };
+  function setMode(mode){
+    const next = mode === 'adult' ? 'adult' : 'pedia';
+    demo.dataset.mode = next;
+    buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.modeButton === next)));
+    panels.forEach((panel) => panel.classList.toggle('is-active', panel.dataset.modePanel === next));
+    if(toggle) toggle.setAttribute('aria-pressed', String(next === 'adult'));
+    if(eyebrow) eyebrow.textContent = content[next].eyebrow;
+    if(copy) copy.textContent = content[next].copy;
+    if(label) label.textContent = content[next].label;
+  }
+  buttons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.modeButton)));
+  if(toggle){
+    toggle.addEventListener('click', () => setMode(demo.dataset.mode === 'adult' ? 'pedia' : 'adult'));
+  }
+})();
+</script>
 
 <script>
 (function(){
